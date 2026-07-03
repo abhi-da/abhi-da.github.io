@@ -104,7 +104,7 @@ author:
   avatar           : "/assets/images/bio.jpg"
   bio              : "I just exist"
   location         : "Mumbai"
-  employer         : "Indira Gandhi Institute of Development Research"
+  employer         : "Indira Gandhi Institute </br> of Development Research"
   email            : "abhijeet.m@igidr.ac.in"
   uri              :
   home             : "https://abhi-da.github.io/"# null (default), "absolute or relative url to link to author home"
