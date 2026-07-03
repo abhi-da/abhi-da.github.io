@@ -32,10 +32,10 @@ var store = [{
         "title": "Teaching Assistant-Mathematics for Economist (2025)",
         "excerpt":"Helped in grading answer sheets. Took some tutorial classes on logic and real analysis. ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/teaching/course1",
+        "url": "http://localhost:4000/teaching/course2",
         "teaser":null},{
         "title": "Teaching Assistant-Microeconomics II (2025)",
         "excerpt":"Helped in grading answer sheets. ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/teaching/course1",
+        "url": "http://localhost:4000/teaching/course3",
         "teaser":null}]
