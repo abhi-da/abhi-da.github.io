@@ -9,9 +9,6 @@ redirect_from:
 classes: wide
 ---
 
-
-
-
 Look at all the work that I do, results that I have! 
 
 
