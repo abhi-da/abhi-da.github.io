@@ -64,7 +64,7 @@ Currently none.
 
 ## Conference Presentations
 
-- **Pricing, Technology, and Enforcement in Markets with Digital Piracy: A Hotelling Approach**  
+- **Competitive Altruism in Public Goods Provision**  
   ICEPAD 2026, BITS Pilani Goa Campus.
 
 - **Pricing, Technology, and Enforcement in Markets with Digital Piracy: A Hotelling Approach**  
