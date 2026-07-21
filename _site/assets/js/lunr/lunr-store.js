@@ -63,4 +63,9 @@ var store = [{
         "excerpt":"Helped in grading answer sheets. ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/teaching/course3",
+        "teaser":null},{
+        "title": "Teaching Assistant-Mathematics for Economist (2026)",
+        "excerpt":"Helped in grading answer sheets, took bridge course for masters student and tutorial classes. ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/teaching/course4",
         "teaser":null}]
