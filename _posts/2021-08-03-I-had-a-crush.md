@@ -1,10 +1,13 @@
 ---
-title: "I had a crush."
-categories: literary
 layout: single
+title: "I had a crush."
+date: 2026-07-21
+category: "Literary"
+subcategory: "Essays & Prose"
+tags: [Literary, Reflections, Prose]
 classes: wide
+excerpt: "A short reflection on quiet feelings and unspoken thoughts."
 ---
-
 
 I had a crush. Yes, I used Stare  her ,of course, the positive one, sitting on the last bench of the class.
 
@@ -41,3 +44,9 @@ Irritated with myself, I blocked her. And I was happy.
 At the present time, she's in my WhatsApp. Unblocked.
 
 Not my girlfriend, though just as a friend. Neither she feels anything for me nor I do feel. And I'm glad but at the same time I miss my writings. Actually, I want to write Romance but I'm pretty fucked cause I don't know what to write. This piece of writing was from a past post which I had posted on Quora, just made little changes and it's good to go. 
+
+---
+<br>
+<div style="text-align: right;">
+  <em>— अभिजीत मिश्रा</em>
+</div>

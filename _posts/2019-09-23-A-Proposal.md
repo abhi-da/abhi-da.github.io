@@ -1,10 +1,13 @@
 ---
-title: "A Proposal."
-categories: literary
 layout: single
+title: "A Proposal"
+date: 2026-07-21
+category: "Literary"
+subcategory: "Essays & Prose"
+tags: [Literary, Prose, Love Letter, Reflections]
 classes: wide
+excerpt: "It's 3:30 AM and I am still awake. I altered the sleeping position, drank water, read books, listened to songs—all in vain."
 ---
-
 
 It's 3:30 AM and I am still Awake. 
 

@@ -9,7 +9,7 @@
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
+future: true
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
@@ -284,9 +284,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-  code:
+  notes:
     output: true
-    permalink: /:collection/:path/
+    permalink: /notes/:path/
 
 
 # Defaults

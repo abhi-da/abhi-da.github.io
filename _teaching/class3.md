@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant-Microeconomics II (2025)"
+title: "Teaching Assistant-Microeconomics II (2026)"
 collection: teaching
 type: "Post Graduate Course"
 permalink: /teaching/course3

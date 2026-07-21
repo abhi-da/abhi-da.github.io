@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Only the main Sass file needs front matter (the two lines of dashes at the very top)
 ---
 
 @charset "utf-8";
@@ -30,4 +30,23 @@
 
 .cv_font {
   font-size: .65em;
+}
+
+/* Print Styles for PDF Export */
+@media print {
+  .masthead, .page__footer, .sidebar, .author__urls-wrapper, button, .greedy-nav {
+    display: none !important;
+  }
+  
+  .page__content, article, .page {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
 }

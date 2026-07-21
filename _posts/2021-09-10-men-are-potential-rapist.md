@@ -1,10 +1,13 @@
 ---
-title: "Men are potential rapists"
-categories: opinion
 layout: single
+title: "Men Are Potential Rapists"
+date: 2026-07-21
+category: "Opinion"
+subcategory: "Social Perspectives"
+tags: [Opinion, Feminism, Social Issues, Reflections]
 classes: wide
+excerpt: "How reading, discussions, and understanding the female perspective shifted my point of view on a heavily debated statement."
 ---
-
 I've seen men getting offended by these words when men are tagged as potential rapists. There's an Argument from their side citing, "NOT ALL MEN" 
 
 Not to blame them or the men community but I myself was a part of that group that posed that argument. 

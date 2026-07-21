@@ -18,6 +18,9 @@ main:
   - title: "Thesis"
     url: /thesis/
     
+  - title: "Notes"
+    url: /notes/
+    
     
   - title: "Blogs"
     url: /blog/
