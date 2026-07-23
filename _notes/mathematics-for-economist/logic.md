@@ -5,57 +5,48 @@ date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
 ---
-<button onclick="window.print()" class="btn btn--primary">📄 Save Note as PDF</button>
-## 1. Fundamentals & Definitions
+You might have seen MEMES like: ![useless_math](/home/eren-rb/Pictures/bridge course/useless_math_meme.jpg)
 
-A **proposition** is a declarative statement that is either strictly **true ($T$)** or **false ($F$)**, but never both simultaneously.
+But is it really the case?
 
-* $P$: "The market is in general equilibrium."
-* $Q$: "Prices adjust instantaneously to clear supply and demand."
+See, you may not use the exact same problems in your daily life, but it teaches you how to use a that particular tool. It controls the world. We use it to put man in the moon. Yet, it is considered useless by most of the people.
 
----
+The graduate mathematics is very different then higher secondary schools mathematics, at least in India. There's a lot of rigour in graduate texts. By rigor, I mean doing the same maths with great precision. In senior secondary school, continuity is often taught intuitively: "a function is continuous if you can draw its graph in a single, free-flowing pen stroke without lifting your paper."At the graduate level, however, math demands absolute precision. Intuitive rules are replaced with formal, rigorous definitions (like the $\epsilon$-$\delta$ criterion) which we will study later in limits and continuity.We need this level of rigour because human visual intuition breaks down when dealing with complex functions. For example, $x \cdot \sin\left(\frac{1}{x}\right)$ cannot be hand-drawn. Also, computers cannot read or draw such images on their own. To make them draw such graphs, we need to feed exact definitions to them.
 
-## 2. Logical Operators & Truth Tables
+Imagine senior secondary as knowing how to use Python libraries, while in graduation, you are actually building them.
 
-We form compound propositions using logical connectives.
+When you know where a particular formula or theorem comes from, the result becomes very interesting.
 
-### 2.1 Conjunction (AND: $\land$)
-The conjunction $P \land Q$ is true **only when both** $P$ and $Q$ are true.
+For example, what does the idiom "Chhattis ka aakda" mean, and how do you think it originated?
 
-| $P$ | $Q$ | $P \land Q$ |
-| :---: | :---: | :---: |
-| $T$ | $T$ | **$T$** |
-| $T$ | $F$ | **$F$** |
-| $F$ | $T$ | **$F$** |
-| $F$ | $F$ | **$F$** |
+Let me ask a simple question. Take a solid ball in 3D space. Is it possible to cut it into 5 pieces, rotate those pieces around, reassemble them without stretching anything, and end up with two identical solid balls of the exact same size as the original? The intuition would say - No. That is not possible. Cause the volume then doubles.
 
-### 2.2 Material Implication (IF... THEN: $\rightarrow$)
-The conditional statement $P \rightarrow Q$ asserts that $P$ implies $Q$. It is **false only when** the premise $P$ is true and the conclusion $Q$ is false.
+However, [Banach–Tarski paradox](https://en.wikipedia.org/wiki/Banach%E2%80%93Tarski_paradox) says, we can.
 
-$$\text{Premise } (P) \implies \text{Conclusion } (Q)$$
+And No. I have got no idea about how the proof is done. These were just to stimulate the curiosity in the mind that intuition is not always correct and hence we need to define things precisely.
 
-| $P$ | $Q$ | $P \rightarrow Q$ |
-| :---: | :---: | :---: |
-| $T$ | $T$ | **$T$** |
-| $T$ | $F$ | **$F$** |
-| $F$ | $T$ | **$T$** |
-| $F$ | $F$ | **$T$** |
+For example, How many months have 28 days? Some would say February. But that is wrong, All 12 months have 28 days.
+Precision would mean, How many months have only 28 days. And that again cannot be February, cause we don't know if we are talking about leap or not a leap year.
 
----
+Now, the above texts were to generate a bit of curiosity in the mind. I hope math sounds interesting now.
 
-## 3. Important Equivalences
+With that, let me tell you how to approach math. You cannot just read it like a novel. You can skip things which are not useful. You can move backward and forward between texts. Every author has written books on the basis of their understanding; the same doesn't apply to you.
 
-Two statements are **logically equivalent** ($\equiv$) if they share identical truth values across all possible scenarios.
+But you will need to practice and understand how things are working. The more you practice, the better you get. By practicing, I don't mean by-hearting.
 
-### De Morgan's Laws
-1. $\neg (P \land Q) \equiv \neg P \lor \neg Q$
-2. $\neg (P \lor Q) \equiv \neg P \land \neg Q$
+The above paragraph were some written by me, and some ideas were borrowed from [How to think like a Mathematician-2009](https://blngcc.wordpress.com/wp-content/uploads/2008/11/2-kevin-houston-how-to-think-like-a-mathematician.pdf)
 
-### Contraposition
-A conditional statement is logically equivalent to its **contrapositive**:
+With that, Let us begin with our topic: **Logic**
 
-$$(P \rightarrow Q) \equiv (\neg Q \rightarrow \neg P)$$
+It is advisable to give a read to chapter 0 of [Mathematical Proofs: A Transition to Advanced Mathematics - Chartrand et al](https://www.amazon.in/Mathematical-Proofs-Transition-Advanced-Mathematics/dp/0321797094).
 
-> **Example:** 
-> * **Original:** "If a consumer maximizes utility, then their marginal rate of substitution equals the price ratio."
-> * **Contrapositive:** "If a consumer's marginal rate of substitution does not equal the price ratio, then they are not maximizing utility."
+## Logic
+
+### Statements
+
+A sentence which can be either _true_ or _false_ but not _both_ is a statement. For example,
+
+1. 2 is an even number. This statement is true.
+2. 6 is a prime number. This statement is false.
+
+Now sometimes, a sentence can be true or false, but you cannot declare immediately.
