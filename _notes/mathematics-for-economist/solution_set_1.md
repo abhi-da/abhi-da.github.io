@@ -5,17 +5,8 @@ date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
 ---
-
----
-layout: single
-title: "Introduction to  Logic"
-date: 2026-07-21
-subject: "Mathematics for Economists"
-toc: true
-wide: true
----
 <style>
-  /* Override theme container limits for screen view */
+  /* Base styles for both */
   body, 
   main, 
   article, 
@@ -28,44 +19,54 @@ wide: true
     margin: 0 auto !important; /* Centers the content */
   }
 
-  /* Make tables stretch cleanly across the wider space */
-  table {
+table {
     width: 100% !important;
     display: table !important; /* Fixes themes that force horizontal table scrolling */
   }
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease;
+  }
+
+  /* First button (Back) - Secondary look */
+  .back-btn:first-child {
+    background-color: transparent;
+    color: #555;
+    border-color: #ccc;
+  }
+
+  .back-btn:first-child:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+
+  /* Second button (Download PDF) - Accent/Primary look */
+  .back-btn:last-child {
+    background-color: #2563eb; /* Clean blue */
+    color: #ffffff;
+  }
+
+  .back-btn:last-child:hover {
+    background-color: #1d4ed8;
+  }
+
+  /* Hide buttons during PDF print export */
+  @media print {
+    .back-btn, .nav-buttons, div:has(.back-btn) {
+      display: none !important;
+    }
+  }
 </style>
-/* Base styles for both */
-.back-btn {
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: background-color 0.2s ease;
-}
 
-/* First button (Back) - Secondary look */
-.back-btn:first-child {
-  background-color: transparent;
-  color: #555;
-  border-color: #ccc;
-}
-
-.back-btn:first-child:hover {
-  background-color: #f0f0f0;
-  color: #000;
-}
-
-/* Second button (Download PDF) - Accent/Primary look */
-.back-btn:last-child {
-  background-color: #2563eb; /* Clean blue */
-  color: #ffffff;
-}
-
-.back-btn:last-child:hover {
-  background-color: #1d4ed8;
-}
+<div style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+  <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
+</div>
 
 # Logic Exercises — Answer Set
 
