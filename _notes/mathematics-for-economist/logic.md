@@ -7,58 +7,51 @@ toc: true
 wide: true
 ---
 <style>
-  /* Override theme container limits for screen view */
-  body, 
-  main, 
-  article, 
-  .container, 
-  .wrapper, 
-  .content, 
-  .post-content {
-    max-width: 100% !important; /* Changes maximum reading width to 90% of screen */
-    width: 100% !important;
-    margin: 0 auto !important; /* Centers the content */
+  /* Base styles for both */
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease;
   }
 
-  /* Make tables stretch cleanly across the wider space */
-  table {
-    width: 100% !important;
-    display: table !important; /* Fixes themes that force horizontal table scrolling */
+  /* First button (Back) - Secondary look */
+  .back-btn:first-child {
+    background-color: transparent;
+    color: #555;
+    border-color: #ccc;
+  }
+
+  .back-btn:first-child:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+
+  /* Second button (Download PDF) - Accent/Primary look */
+  .back-btn:last-child {
+    background-color: #2563eb; /* Clean blue */
+    color: #ffffff;
+  }
+
+  .back-btn:last-child:hover {
+    background-color: #1d4ed8;
+  }
+
+  /* Hide buttons during PDF print export */
+  @media print {
+    .back-btn, .nav-buttons, div:has(.back-btn) {
+      display: none !important;
+    }
   }
 </style>
-/* Base styles for both */
-.back-btn {
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: background-color 0.2s ease;
-}
 
-/* First button (Back) - Secondary look */
-.back-btn:first-child {
-  background-color: transparent;
-  color: #555;
-  border-color: #ccc;
-}
-
-.back-btn:first-child:hover {
-  background-color: #f0f0f0;
-  color: #000;
-}
-
-/* Second button (Download PDF) - Accent/Primary look */
-.back-btn:last-child {
-  background-color: #2563eb; /* Clean blue */
-  color: #ffffff;
-}
-
-.back-btn:last-child:hover {
-  background-color: #1d4ed8;
-}
-
+<div style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+  <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
+</div>
 
 
 You might have seen MEMES like: ![Math Meme]({{ '/assets/images/useless_math_meme.jpg' | relative_url }})
