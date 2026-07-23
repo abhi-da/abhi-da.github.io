@@ -6,6 +6,31 @@ subject: "Mathematics for Economists"
 toc: true
 wide: true
 ---
+<style>
+  /* Override theme container limits for screen view */
+  body, 
+  main, 
+  article, 
+  .container, 
+  .wrapper, 
+  .content, 
+  .post-content {
+    max-width: 100% !important; /* Changes maximum reading width to 90% of screen */
+    width: 100% !important;
+    margin: 0 auto !important; /* Centers the content */
+  }
+
+  /* Make tables stretch cleanly across the wider space */
+  table {
+    width: 100% !important;
+    display: table !important; /* Fixes themes that force horizontal table scrolling */
+  }
+</style>
+<div style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+  <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
+</div>
+
 
 # Logic Exercises — Problem Set
 
@@ -20,7 +45,7 @@ wide: true
 
 ---
 
-**Exercise 2.** Let $P$: 15 is odd. and $Q$: 21 is prime. State each of the following in words and determine whether it is true or false.
+## **Exercise 2.** Let $P$: 15 is odd. and $Q$: 21 is prime. State each of the following in words and determine whether it is true or false.
 
 **(a)** $P \lor Q$
 **(b)** $P \land Q$
@@ -29,7 +54,7 @@ wide: true
 
 ---
 
-**Exercise 3.** Consider the statements $P$: $\sqrt{2}$ is rational. and $Q$: $22/7$ is rational. Write each of the following statements in words and indicate whether it is true or false.
+## **Exercise 3.** Consider the statements $P$: $\sqrt{2}$ is rational. and $Q$: $22/7$ is rational. Write each of the following statements in words and indicate whether it is true or false.
 
 **(a)** $P \Rightarrow Q$
 **(b)** $Q \Rightarrow P$
@@ -38,7 +63,7 @@ wide: true
 
 ---
 
-**Exercise 4.** Consider the statements:
+## **Exercise 4.** Consider the statements:
 $P$: $\sqrt{2}$ is rational.
 $Q$: $\sqrt{23}$ is rational.
 $R$: $\sqrt{3}$ is rational.
@@ -52,7 +77,7 @@ Write each of the following statements in words and indicate whether the stateme
 
 ---
 
-**Exercise 5.** Each of the following describes an implication. Write the implication in the form "if, then."
+## **Exercise 5.** Each of the following describes an implication. Write the implication in the form "if, then."
 
 **(a)** Any point on the straight line with equation $2y + x - 3 = 0$ whose $x$-coordinate is an integer also has an integer for its $y$-coordinate.
 **(b)** The square of every odd integer is odd.
@@ -63,19 +88,19 @@ Write each of the following statements in words and indicate whether the stateme
 
 ---
 
-**Exercise 6.** Determine all values of $n$ in the domain $S = \{1, 2, 3\}$ for which the following is a true statement:
+## **Exercise 6.** Determine all values of $n$ in the domain $S = \{1, 2, 3\}$ for which the following is a true statement:
 
 > A necessary and sufficient condition for $\dfrac{n^2+n}{3}$ to be even is that $\dfrac{n^2+n}{2}$ is odd.
 
 ---
 
-**Exercise 7.** Determine all values of $n$ in the domain $S = \{2, 3, 4\}$ for which the following is a true statement:
+## **Exercise 7.** Determine all values of $n$ in the domain $S = \{2, 3, 4\}$ for which the following is a true statement:
 
 > The integer $\dfrac{n(n-1)}{3}$ is odd if and only if $\dfrac{n(n+1)}{2}$ is even.
 
 ---
 
-**Exercise 8.** For statements $P$ and $Q$, determine whether the compound statement
+## **Exercise 8.** For statements $P$ and $Q$, determine whether the compound statement
 
 $$(P \lor Q) \lor (Q \Rightarrow P)$$
 
@@ -83,7 +108,7 @@ is a tautology, a contradiction, or neither.
 
 ---
 
-**Exercise 9.** For statements $P$ and $Q$, determine whether the compound statement
+## **Exercise 9.** For statements $P$ and $Q$, determine whether the compound statement
 
 $$((P \Rightarrow Q) \Rightarrow P) \Rightarrow (P \Rightarrow (Q \Rightarrow P))$$
 
@@ -91,19 +116,19 @@ is a tautology, a contradiction, or neither.
 
 ---
 
-**Exercise 10.** For statements $P$, $Q$ and $R$, use a truth table to show that each of the following pairs of statements are logically equivalent.
+## **Exercise 10.** For statements $P$, $Q$ and $R$, use a truth table to show that each of the following pairs of statements are logically equivalent.
 
 **(a)** $(P \land Q) \Leftrightarrow P$ and $P \Rightarrow Q$.
 **(b)** $P \Rightarrow (Q \lor R)$ and $(\sim Q) \Rightarrow ((\sim P) \lor R)$.
 
 ---
 
-**Exercise 11.** For statements $P$ and $Q$, show that $(\sim Q) \Rightarrow (P \land (\sim P))$ and $Q$ are logically equivalent.
+## **Exercise 11.** For statements $P$ and $Q$, show that $(\sim Q) \Rightarrow (P \land (\sim P))$ and $Q$ are logically equivalent.
 
 ---
 
-**Exercise 12.** For statements $P$, $Q$ and $R$, show that $(P \lor Q) \Rightarrow R$ and $(P \Rightarrow R) \land (Q \Rightarrow R)$ are logically equivalent.
+## **Exercise 12.** For statements $P$, $Q$ and $R$, show that $(P \lor Q) \Rightarrow R$ and $(P \Rightarrow R) \land (Q \Rightarrow R)$ are logically equivalent.
 
 ---
 
-**Exercise 13.** Two compound statements $S$ and $T$ are comprised of the same component statements $P$, $Q$ and $R$. If $S$ and $T$ are not logically equivalent, then what can we conclude from this?
+## **Exercise 13.** Two compound statements $S$ and $T$ are comprised of the same component statements $P$, $Q$ and $R$. If $S$ and $T$ are not logically equivalent, then what can we conclude from this?

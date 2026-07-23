@@ -26,7 +26,10 @@ wide: true
     display: table !important; /* Fixes themes that force horizontal table scrolling */
   }
 </style>
-<button onclick="window.print()">📄 Download as PDF</button>
+<div style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+  <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
+</div>
 
 You might have seen MEMES like: ![Math Meme]({{ '/assets/images/useless_math_meme.jpg' | relative_url }})
 
