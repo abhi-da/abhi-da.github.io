@@ -15,8 +15,8 @@ wide: true
   .wrapper, 
   .content, 
   .post-content {
-    max-width: 90% !important; /* Changes maximum reading width to 90% of screen */
-    width: 90% !important;
+    max-width: 100% !important; /* Changes maximum reading width to 90% of screen */
+    width: 100% !important;
     margin: 0 auto !important; /* Centers the content */
   }
 
@@ -57,7 +57,7 @@ With that, let me tell you how to approach math. You cannot just read it like a 
 
 But you will need to practice and understand how things are working. The more you practice, the better you get. By practicing, I don't mean by-hearting.
 
-The above paragraph were some written by me, and some ideas were borrowed from [How to think like a Mathematician-2009](https://blngcc.wordpress.com/wp-content/uploads/2008/11/2-kevin-houston-how-to-think-like-a-mathematician.pdf)
+The above paragraph were partly written by me, and some ideas were borrowed from [How to think like a Mathematician-2009](https://blngcc.wordpress.com/wp-content/uploads/2008/11/2-kevin-houston-how-to-think-like-a-mathematician.pdf)
 
 With that, Let us begin with our topic: **Logic**
 
