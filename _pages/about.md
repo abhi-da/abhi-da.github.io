@@ -9,7 +9,6 @@ redirect_from:
 classes: wide
 ---
 
-## Professional
 
 Check out the work I do and the stuff I've built so far!
 
