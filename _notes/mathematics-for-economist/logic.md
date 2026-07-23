@@ -6,6 +6,9 @@ subject: "Mathematics for Economists"
 toc: true
 wide: true
 ---
+
+<button onclick="window.print()">📄 Download as PDF</button>
+
 You might have seen MEMES like: ![Math Meme]({{ '/assets/images/useless_math_meme.jpg' | relative_url }})
 
 But is it really the case?
