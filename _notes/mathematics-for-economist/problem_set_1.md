@@ -4,11 +4,12 @@ title: "Problem Set - 1"
 date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
+wide: true
 ---
 
 # Logic Exercises — Problem Set
 
-**Exercise 1.** State the negation of each of the following statements.
+### **Exercise 1.** State the negation of each of the following statements.
 
 **(a)** The real number $r$ is at most 2.
 **(b)** The absolute value of the real number $a$ is less than 3.
