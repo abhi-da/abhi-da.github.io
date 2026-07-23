@@ -8,19 +8,25 @@ redirect_from:
   - /about.html
 classes: wide
 ---
+Hi, I am Abhijeet! I study Economics and I am currently doing my PhD at the Indira Gandhi Institute of Development Research (IGIDR) in Mumbai. Before this, I completed my master's degree at CESP, JNU. 
 
+My research focuses on network economics—basically trying to understand how human networks form, why people connect, and why those connections sometimes break. 
 
-Check out the work I do and the stuff I've built so far!
+### My View on Research
+I do not believe we can predict human behavior. We are not like physical matter—our actions are far too unpredictable. To me, trying to predict people misses the point, and if we ever fully figured people out, life would lose its charm!
+
+What I truly enjoy is the process itself: sitting down with complex math, tweaking equations step-by-step, and working through problems until everything lands on a clean result. For me, the beauty is in doing the work, not just the final answer.
 
 ---
 
-## Personal
+Outside of my main research, I am deeply interested in philosophy—especially the ideas of Albert Camus. I often spend time just sitting and reflecting, genuinely curious about where life goes next.
 
-In my free time, I just like building things and figuring stuff out. There's a different kind of fun in sitting with tough theory or math—breaking down equations and models step-by-step until everything finally makes sense. It feels like solving a good puzzle. 
+I also love exploring random hobbies in my free time:
+* <i class="fas fa-fw fa-desktop"></i> **Tech & Linux:** Building electronics, tinkering with my PC setup, trying out different Linux Distributions, and collecting cool gadgets.
+* <i class="fas fa-fw fa-dumbbell"></i> **Fitness:** Gym workouts, bodyweight training, and playing badminton.
+* <i class="fas fa-fw fa-tv"></i> **Anime:** Big fan of story-driven shows like *Death Note*, *Vinland Saga*, and especially *Attack on Titan*.
 
-I also love picking up random knowledge from all over the place. Right now, I'm reading *Physics for Future Presidents* and finding some really cool insights in it.
+---
 
-Outside of research and reading:
-* <i class="fas fa-fw fa-desktop"></i> **Tech & Linux:** I love tinkering with DIY electronics, my PC, hopping Linux distros, and trying out new desktop environments. I also have a bad habit of buying gadgets only to never use them to their full potential!
-* <i class="fas fa-fw fa-dumbbell"></i> **Fitness & Sports:** Hit the gym regularly, do calisthenics, and play a decent game of badminton.
-* <i class="fas fa-fw fa-tv"></i> **Anime:** Huge fan of *Attack on Titan* (top favorite), along with *Death Note* and *Vinland Saga*.
+> "We're born free. All of us. Free. Some don't believe it, some try to take it away. To hell with them! Water like fire, mountains of ice... Lay your eyes on that, and you'll know what freedom is, that it's worth fighting for! Fight to live, risk it all for even a glimmer of real freedom!... Fight. Fight. Fight. FIGHT! FIGHT!!!"  
+> — **Eren Yeager, Attack on Titan**
