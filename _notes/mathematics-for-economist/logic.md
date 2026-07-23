@@ -8,6 +8,22 @@ wide: true
 ---
 <style>
   /* Base styles for both */
+  body, 
+  main, 
+  article, 
+  .container, 
+  .wrapper, 
+  .content, 
+  .post-content {
+    max-width: 100% !important; /* Changes maximum reading width to 90% of screen */
+    width: 100% !important;
+    margin: 0 auto !important; /* Centers the content */
+  }
+
+table {
+    width: 100% !important;
+    display: table !important; /* Fixes themes that force horizontal table scrolling */
+  }
   .back-btn {
     padding: 8px 16px;
     font-size: 14px;
