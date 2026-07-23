@@ -5,7 +5,7 @@ date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
 ---
-You might have seen MEMES like: ![useless_math](/home/eren-rb/Pictures/bridge course/useless_math_meme.jpg)
+You might have seen MEMES like: ![Math Meme]({{ '/assets/images/useless_math_meme.jpg' | relative_url }})
 
 But is it really the case?
 
