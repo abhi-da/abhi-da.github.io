@@ -6,7 +6,12 @@ subject: "Mathematics for Economists"
 toc: true
 wide: true
 ---
-
+<style>
+  body, main, .container {
+    max-width: 90% !important;
+    width: 90% !important;
+  }
+</style>
 <button onclick="window.print()">📄 Download as PDF</button>
 
 You might have seen MEMES like: ![Math Meme]({{ '/assets/images/useless_math_meme.jpg' | relative_url }})

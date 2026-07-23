@@ -34,19 +34,27 @@
 
 /* Print Styles for PDF Export */
 @media print {
-  .masthead, .page__footer, .sidebar, .author__urls-wrapper, button, .greedy-nav {
-    display: none !important;
-  }
-  
-  .page__content, article, .page {
-    width: 100% !important;
+  /* 1. Force the page container to take 100% width and remove web margins */
+  body, .container, main, article, .content {
     max-width: 100% !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  body {
-    background: #fff !important;
-    color: #000 !important;
+  /* 2. Set clean page margins inside the PDF layout */
+  @page {
+    size: A4;
+    margin: 15mm; /* Gives clean breathing space around content */
+  }
+
+  /* 3. Hide web UI elements (buttons, dark mode icons, page footers, navigation) */
+  nav, footer, .yin-yang-icon, .nav-buttons, button {
+    display: none !important;
+  }
+
+  /* 4. Ensure tables stretch properly across the printable width */
+  table {
+    width: 100% !important;
   }
 }
