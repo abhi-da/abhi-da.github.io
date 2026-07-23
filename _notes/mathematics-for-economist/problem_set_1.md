@@ -26,10 +26,38 @@ wide: true
     display: table !important; /* Fixes themes that force horizontal table scrolling */
   }
 </style>
-<div style="display: flex; gap: 10px; margin-bottom: 20px;">
-  <button class="back-btn" onclick="history.back()">← Back</button>
-  <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
-</div>
+/* Base styles for both */
+.back-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+/* First button (Back) - Secondary look */
+.back-btn:first-child {
+  background-color: transparent;
+  color: #555;
+  border-color: #ccc;
+}
+
+.back-btn:first-child:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Second button (Download PDF) - Accent/Primary look */
+.back-btn:last-child {
+  background-color: #2563eb; /* Clean blue */
+  color: #ffffff;
+}
+
+.back-btn:last-child:hover {
+  background-color: #1d4ed8;
+}
 
 
 # Logic Exercises — Problem Set

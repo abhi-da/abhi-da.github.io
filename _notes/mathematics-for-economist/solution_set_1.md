@@ -6,6 +6,67 @@ subject: "Mathematics for Economists"
 toc: true
 ---
 
+---
+layout: single
+title: "Introduction to  Logic"
+date: 2026-07-21
+subject: "Mathematics for Economists"
+toc: true
+wide: true
+---
+<style>
+  /* Override theme container limits for screen view */
+  body, 
+  main, 
+  article, 
+  .container, 
+  .wrapper, 
+  .content, 
+  .post-content {
+    max-width: 100% !important; /* Changes maximum reading width to 90% of screen */
+    width: 100% !important;
+    margin: 0 auto !important; /* Centers the content */
+  }
+
+  /* Make tables stretch cleanly across the wider space */
+  table {
+    width: 100% !important;
+    display: table !important; /* Fixes themes that force horizontal table scrolling */
+  }
+</style>
+/* Base styles for both */
+.back-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+/* First button (Back) - Secondary look */
+.back-btn:first-child {
+  background-color: transparent;
+  color: #555;
+  border-color: #ccc;
+}
+
+.back-btn:first-child:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Second button (Download PDF) - Accent/Primary look */
+.back-btn:last-child {
+  background-color: #2563eb; /* Clean blue */
+  color: #ffffff;
+}
+
+.back-btn:last-child:hover {
+  background-color: #1d4ed8;
+}
+
 # Logic Exercises — Answer Set
 
 **1(a)** Negation: The real number $r$ is greater than 2.
