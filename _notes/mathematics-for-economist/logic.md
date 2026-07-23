@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Introduction to Propositional Logic"
+title: "Introduction to  Logic"
 date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
