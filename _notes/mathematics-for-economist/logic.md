@@ -7,9 +7,23 @@ toc: true
 wide: true
 ---
 <style>
-  body, main, .container {
-    max-width: 90% !important;
+  /* Override theme container limits for screen view */
+  body, 
+  main, 
+  article, 
+  .container, 
+  .wrapper, 
+  .content, 
+  .post-content {
+    max-width: 90% !important; /* Changes maximum reading width to 90% of screen */
     width: 90% !important;
+    margin: 0 auto !important; /* Centers the content */
+  }
+
+  /* Make tables stretch cleanly across the wider space */
+  table {
+    width: 100% !important;
+    display: table !important; /* Fixes themes that force horizontal table scrolling */
   }
 </style>
 <button onclick="window.print()">📄 Download as PDF</button>
