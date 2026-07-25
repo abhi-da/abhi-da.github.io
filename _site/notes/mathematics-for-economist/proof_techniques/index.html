@@ -1,0 +1,883 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Proof Techniques - Abhijeet</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Abhijeet">
+<meta property="og:title" content="Proof Techniques">
+<meta property="og:url" content="http://localhost:4000/notes/mathematics-for-economist/proof_techniques/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-07-21T00:00:00+05:30">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/notes/mathematics-for-economist/proof_techniques/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Abhijeet Mishra",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Abhijeet Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Academicons -->
+<link rel="stylesheet" href="/assets/css/academicons.min.css"/>
+
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Abhijeet</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/publications/" >Publications</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/talks/" >Talks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/teaching/" >Teaching</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/cv/" >CV</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/contact/" >Contact</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/thesis/" >Thesis</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/notes/" >Notes</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/blog/" >Blogs</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Proof Techniques">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="July 21, 2026">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Proof Techniques
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#setting-the-scene">Setting the Scene</a></li>
+  <li><a href="#some-vocabulary-youll-see-constantly">Some Vocabulary You’ll See Constantly</a></li>
+  <li><a href="#reading-an-implication-correctly">Reading an Implication Correctly</a>
+    <ul>
+      <li><a href="#trivial-proof-when-qx-is-just-always-true">Trivial Proof: When $Q(x)$ Is Just Always True</a></li>
+      <li><a href="#vacuous-proof-when-px-is-just-always-false">Vacuous Proof: When $P(x)$ Is Just Always False</a></li>
+    </ul>
+  </li>
+  <li><a href="#direct-proof--the-workhorse">Direct Proof — the Workhorse</a>
+    <ul>
+      <li><a href="#before-the-example-two-definitions-well-lean-on-constantly">Before the Example: Two Definitions We’ll Lean On Constantly</a></li>
+      <li><a href="#worked-example">Worked Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#proof-by-contrapositive">Proof by Contrapositive</a>
+    <ul>
+      <li><a href="#why-bother-a-case-where-direct-proof-genuinely-struggles">Why Bother? A Case Where Direct Proof Genuinely Struggles</a></li>
+    </ul>
+  </li>
+  <li><a href="#proof-by-cases">Proof by Cases</a>
+    <ul>
+      <li><a href="#worked-example-1">Worked Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#disproving-a-statement-counterexamples">Disproving a Statement: Counterexamples</a></li>
+  <li><a href="#proof-by-contradiction">Proof by Contradiction</a>
+    <ul>
+      <li><a href="#a-clean-classic-example">A Clean, Classic Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#comparing-all-three-techniques-on-the-same-result">Comparing All Three Techniques on the Same Result</a>
+    <ul>
+      <li><a href="#a-trickier-comparison-inequalities">A Trickier Comparison: Inequalities</a></li>
+      <li><a href="#a-cheat-sheet-what-to-assume-and-what-counts-as-a-mistake">A Cheat Sheet: What to Assume, and What Counts as a Mistake</a></li>
+    </ul>
+  </li>
+  <li><a href="#mathematical-induction">Mathematical Induction</a>
+    <ul>
+      <li><a href="#the-idea-before-the-formal-statement">The Idea, Before the Formal Statement</a></li>
+      <li><a href="#the-formal-principle">The Formal Principle</a></li>
+      <li><a href="#worked-example-the-sum-of-the-first-n-positive-integers">Worked Example: The Sum of the First $n$ Positive Integers</a></li>
+      <li><a href="#where-this-formula-actually-comes-from--gausss-trick">Where This Formula Actually Comes From — Gauss’s Trick</a></li>
+    </ul>
+  </li>
+  <li><a href="#putting-it-all-together">Putting It All Together</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <style>
+  /* Override theme container limits for screen view */
+  body, 
+  main, 
+  article, 
+  .container, 
+  .wrapper, 
+  .content, 
+  .post-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  table {
+    width: 100% !important;
+    display: table !important;
+  }
+
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease;
+  }
+
+  .back-btn:first-child {
+    background-color: transparent;
+    color: #555;
+    border-color: #ccc;
+  }
+  .back-btn:first-child:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+
+  .back-btn:last-child {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+  .back-btn:last-child:hover {
+    background-color: #1d4ed8;
+  }
+
+  @media print {
+    @page {
+      margin: 0.5in;
+    }
+    .no-print {
+      display: none !important;
+    }
+  }
+</style>
+
+<div class="no-print" style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+  <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
+</div>
+<h1 id="how-do-we-prove-something-is-true">How Do We <em>Prove</em> Something Is True?</h1>
+
+<h2 id="setting-the-scene">Setting the Scene</h2>
+
+<p>Up to now, you’ve built a toolbox — statements, connectives, quantifiers, logical equivalence. Time to actually use it.</p>
+
+<p>From here on, we ask one question, over and over: <strong>given a mathematical statement that is true, how do we <em>show</em> that it’s true?</strong></p>
+
+<p>This is genuinely different from what “proof” meant in school. In school, “prove” often meant “manipulate the algebra until you reach the given answer.” Here, “prove” means: start from what’s known, and reason forward, step by step, using only logically valid moves, until you reach the claim — with every step defensible if someone challenges it.</p>
+
+<h2 id="some-vocabulary-youll-see-constantly">Some Vocabulary You’ll See Constantly</h2>
+
+<p>Mathematicians have a small set of words for “a true statement,” and the choice of word signals something about the statement’s role, not its truth. None of these words means “more true” than another — a statement is either true or it isn’t. They differ in <em>why we’re stating it</em>.</p>
+
+<ul>
+  <li><strong>Axiom</strong> — a starting statement we simply <em>agree</em> to accept, without proof. It’s the foundation everything else is built on. Example: Euclid’s parallel postulate — through a point not on a line, there is exactly one line parallel to it. We don’t prove axioms; we choose them as our starting rules of the game.</li>
+  <li><strong>Theorem</strong> — a true statement that has been proved, and is significant enough that we’ll lean on it later to prove other things. Not every true fact earns this label — “2 + 3 = 5” is true, but nobody calls it a theorem.</li>
+  <li><strong>Proposition / Result / Observation / Fact</strong> — other names for a true, provable statement, chosen based on how important or how difficult it is. In this course we’ll mostly say “Result,” because most of what we prove here exists to <em>illustrate a technique</em>, not to become a famous fact you’ll cite for the rest of your career.</li>
+  <li><strong>Lemma</strong> — a “helper” result. It isn’t interesting on its own; its whole purpose is to make the proof of some <em>other</em>, more important result possible. (Fun fact: the German word is <em>hilfsatz</em>, literally “helping theorem.”)</li>
+  <li><strong>Corollary</strong> — a result that falls out almost for free once some earlier result is already proved.</li>
+</ul>
+
+<p>Nearly every result you’ll meet in this course is phrased as an implication: <em>if [some condition], then [some conclusion]</em>. So before we can prove anything, we need to understand exactly what we’re being asked to establish about that implication.</p>
+
+<hr />
+
+<h2 id="reading-an-implication-correctly">Reading an Implication Correctly</h2>
+
+<p>Most results look like this:</p>
+
+<blockquote>
+  <p>Let $x \in S$. If $P(x)$, then $Q(x)$.</p>
+</blockquote>
+
+<p>or equivalently</p>
+
+<blockquote>
+  <p>For all $x \in S$, if $P(x)$, then $Q(x)$.</p>
+</blockquote>
+
+<p>Both are just informal ways of writing the quantified statement $\forall x \in S,\ P(x) \Rightarrow Q(x)$.</p>
+
+<p>Here’s the part that trips people up: <strong>this statement isn’t really about one specific $x$.</strong> It’s a claim about <em>every single</em> $x$ in the domain $S$ at once. It’s true only if $P(x) \Rightarrow Q(x)$ holds for <em>every</em> $x \in S$ — and false if there’s even <em>one</em> $x \in S$ where it fails.</p>
+
+<p>Recall the implication’s truth table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">$P(x)$</th>
+      <th style="text-align: center">$Q(x)$</th>
+      <th style="text-align: center">$P(x) \Rightarrow Q(x)$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Look closely at this table, and two shortcuts jump out — cases where you don’t even need to check both $P(x)$ and $Q(x)$ properly, because the outcome is guaranteed no matter what.</p>
+
+<h3 id="trivial-proof-when-qx-is-just-always-true">Trivial Proof: When $Q(x)$ Is Just Always True</h3>
+
+<p>Look at the table again: whenever $Q(x)$ is true, the whole row reads T — regardless of what $P(x)$ is. So if you can show $Q(x)$ is true for <em>every</em> $x$ in the domain, without even touching $P(x)$, you’re done. This is called a <strong>trivial proof</strong>, and no, “trivial” isn’t an insult here — it’s a technical term for “the conclusion holds unconditionally, so the hypothesis was never needed.”</p>
+
+<p><strong>Example.</strong> <em>Let $x \in \mathbb{R}$. If $x &lt; 0$, then $x^2 + 1 &gt; 0$.</em></p>
+
+<p>We never actually need $x &lt; 0$ here. For <strong>any</strong> real $x$, $x^2 \geq 0$, so $x^2 + 1 \geq 1 &gt; 0$. Done — $Q(x)$ was true all along, for every real number, hypothesis or no hypothesis.</p>
+
+<h3 id="vacuous-proof-when-px-is-just-always-false">Vacuous Proof: When $P(x)$ Is Just Always False</h3>
+
+<p>Now look at the F rows in the hypothesis column: whenever $P(x)$ is false, the whole implication is true, no matter what $Q(x)$ says. So if you can show $P(x)$ is <em>never</em> true on the domain, the implication is true automatically — for the slightly uncomfortable reason that the “if” part never even gets triggered. This is a <strong>vacuous proof</strong>.</p>
+
+<p><strong>Example.</strong> <em>Let $n \in \mathbb{Z}$. If $n^3 &gt; 0$ and $3$ is even, then [anything at all].</em> Since $3$ is never even, the hypothesis can never be true, so the implication holds vacuously — there’s simply nothing to check.</p>
+
+<p>These two tricks are rare — most results genuinely need both $P(x)$ and $Q(x)$ to interact. But they’re worth spotting, because when they apply, they save you all the real work.</p>
+
+<hr />
+
+<h2 id="direct-proof--the-workhorse">Direct Proof — the Workhorse</h2>
+
+<p>This is the technique you will use more than any other, by a wide margin. The idea is almost embarrassingly simple once it’s said out loud:</p>
+
+<blockquote>
+  <p>To prove $\forall x \in S,\ P(x) \Rightarrow Q(x)$: pick an <strong>arbitrary</strong> $x \in S$, <strong>assume</strong> $P(x)$ is true for that $x$, and <strong>show</strong> $Q(x)$ must also be true for that same $x$.</p>
+</blockquote>
+
+<p>Why is this enough to cover <em>every</em> $x \in S$, when we only checked one? Because we never used anything special about the $x$ we picked — no particular value, no extra property beyond “it’s in $S$ and $P(x)$ holds.” Since the argument works for a completely generic, unspecified element, it works for literally every element that satisfies $P$. This is the single most important idea to internalize about direct proofs: <strong>“arbitrary” is doing all the work.</strong></p>
+
+<p>There’s also a small logical shortcut hiding here. Go back to the truth table: whenever $P(x)$ is false, the implication is automatically true (we just saw this with vacuous proofs). So a direct proof only needs to worry about the case where $P(x)$ is true — that’s the <em>only</em> case where the implication could possibly fail, so that’s the only case we need to check by hand.</p>
+
+<h3 id="before-the-example-two-definitions-well-lean-on-constantly">Before the Example: Two Definitions We’ll Lean On Constantly</h3>
+
+<p>We’ll use even and odd integers to illustrate proof techniques for a while, so let’s nail down precise definitions — because in this course, “even” isn’t a vague idea, it’s a specific, checkable condition.</p>
+
+<ul>
+  <li>An integer $n$ is <strong>even</strong> if $n = 2k$ for some integer $k$.</li>
+  <li>An integer $n$ is <strong>odd</strong> if $n = 2k + 1$ for some integer $k$.</li>
+</ul>
+
+<p>Notice we <em>defined</em> odd this way rather than as “not even” — technically equivalent, but far more useful, because it hands you a concrete algebraic form ($2k+1$) to compute with.</p>
+
+<p>We’ll also freely use three facts about integers, without re-proving them each time:</p>
+
+<ol>
+  <li>The negative of an integer is an integer.</li>
+  <li>The sum (or difference) of two integers is an integer.</li>
+  <li>The product of two integers is an integer.</li>
+</ol>
+
+<p>But — and this is important — properties of <em>even and odd</em> integers specifically are <strong>not</strong> free. “The sum of two even integers is even” sounds obvious, but until it’s proved from the definition above, we’re not allowed to use it.</p>
+
+<h3 id="worked-example">Worked Example</h3>
+
+<blockquote>
+  <p><strong>Result.</strong> If $n$ is an odd integer, then $3n + 7$ is an even integer.</p>
+</blockquote>
+
+<p><strong>Proof.</strong> Assume $n$ is an odd integer. Since $n$ is odd, we can write $n = 2k + 1$ for some integer $k$. Then
+\(3n + 7 = 3(2k+1) + 7 = 6k + 3 + 7 = 6k + 10 = 2(3k+5).\)
+Since $3k + 5$ is an integer (product and sum of integers), $3n + 7$ is even by definition. $\blacksquare$</p>
+
+<p><strong>What just happened, in plain terms:</strong></p>
+
+<ul>
+  <li>We didn’t pick a <em>specific</em> odd number like $n = 7$. We let $n$ stand for <em>any</em> odd integer at all, which is why the proof covers all of them at once.</li>
+  <li>We used the <em>definition</em> of odd — writing $n$ as $2k+1$ — rather than any vague description. This is non-negotiable: to use “$n$ is odd” in a calculation, you must convert it to its defining algebraic form.</li>
+  <li>The whole goal was to force the final expression into the shape “$2 \times (\text{some integer})$”, because that’s exactly what the definition of <em>even</em> demands. Once you see $6k+10$, spotting that it factors as $2(3k+5)$ is really just working backward from what you needed to show.</li>
+</ul>
+
+<p><strong>One phrasing detail worth noticing:</strong> the proof says <em>“Since $n$ is odd, we can write…”</em> — not <em>“if $n$ is odd.”</em> We already assumed $n$ is odd in the first line; by the second line it’s an established fact for this proof, not a hypothesis still up in the air. Small wording, but it reflects a real distinction in what you currently know versus what you’re still assuming.</p>
+
+<hr />
+
+<h2 id="proof-by-contrapositive">Proof by Contrapositive</h2>
+
+<p>Sometimes a direct proof forces you into a mess. Here’s the escape hatch.</p>
+
+<p>For statements $P$ and $Q$, the <strong>contrapositive</strong> of $P \Rightarrow Q$ is $(\sim Q) \Rightarrow (\sim P)$. The critical fact — and it’s worth checking on a truth table until it feels obvious — is that <strong>an implication and its contrapositive are logically equivalent</strong>:
+\(P \Rightarrow Q \;\equiv\; (\sim Q) \Rightarrow (\sim P).\)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">$P$</th>
+      <th style="text-align: center">$Q$</th>
+      <th style="text-align: center">$P\Rightarrow Q$</th>
+      <th style="text-align: center">$\sim Q$</th>
+      <th style="text-align: center">$\sim P$</th>
+      <th style="text-align: center">$(\sim Q)\Rightarrow(\sim P)$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The last two columns match on every row — so proving one is exactly as good as proving the other. This means: <strong>to prove $P(x) \Rightarrow Q(x)$ for all $x \in S$, it is completely legitimate to instead assume $\sim Q(x)$ and prove $\sim P(x)$.</strong> You’re not cutting a corner — you’re proving a <em>different but equivalent</em> statement, and equivalence means the truth of one guarantees the truth of the other.</p>
+
+<h3 id="why-bother-a-case-where-direct-proof-genuinely-struggles">Why Bother? A Case Where Direct Proof Genuinely Struggles</h3>
+
+<blockquote>
+  <p><strong>Result.</strong> Let $x \in \mathbb{Z}$. If $5x - 7$ is even, then $x$ is odd.</p>
+</blockquote>
+
+<p>Try a direct proof first, just to feel the pain: assume $5x - 7$ is even, so $5x - 7 = 2a$ for some integer $a$. Solving for $x$ gives $x = (2a+7)/5$. Now you’re stuck — it isn’t even obvious from this expression that $x$ is an integer, let alone odd, even though we already know $x$ <em>is</em> an integer because the problem told us so. The algebra fights you.</p>
+
+<p>Now try the contrapositive. We want $(\sim Q(x)) \Rightarrow (\sim P(x))$: <em>if $x$ is even, then $5x-7$ is odd.</em></p>
+
+<p><strong>Proof.</strong> Assume $x$ is even. Then $x = 2a$ for some integer $a$. So
+\(5x - 7 = 5(2a) - 7 = 10a - 7 = 10a - 8 + 1 = 2(5a-4) + 1.\)
+Since $5a - 4$ is an integer, $5x - 7$ is odd. $\blacksquare$</p>
+
+<p>Night and day. Substituting $x = 2a$ into $5x - 7$ is trivial algebra; substituting a messy expression for $x$ was not.</p>
+
+<p><strong>How do you know in advance which technique to reach for?</strong> A useful rule of thumb: ask which starting assumption gives you something <em>simpler</em> to substitute. A direct proof of this result would force you to start from “$5x - 7$ is even” — a clunky expression. The contrapositive instead lets you start from “$x$ is even” — clean and immediately usable. When the <em>conclusion’s negation</em> is simpler to work with than the <em>hypothesis itself</em>, that’s your signal to try the contrapositive.</p>
+
+<hr />
+
+<h2 id="proof-by-cases">Proof by Cases</h2>
+
+<p>Sometimes an element $x$ doesn’t hand you one clean algebraic form to substitute — but it does fall into one of a small number of categories, and each category is easy to handle on its own. <strong>Proof by cases</strong> means: split the domain into pieces that cover every possibility, and prove the result separately within each piece.</p>
+
+<p>Common ways to split (you’ll see these constantly):</p>
+
+<ul>
+  <li>$n$ even, or $n$ odd (covers all integers)</li>
+  <li>$x = 0$, or $x &lt; 0$, or $x &gt; 0$ (covers all reals)</li>
+  <li>$n = 1$, or $n \geq 2$ (covers all positive integers)</li>
+</ul>
+
+<p>The only rule: your cases must genuinely cover the <em>entire</em> domain between them, with no element slipping through the gaps.</p>
+
+<h3 id="worked-example-1">Worked Example</h3>
+
+<blockquote>
+  <p><strong>Result.</strong> If $n \in \mathbb{Z}$, then $n^2 + 3n + 5$ is an odd integer.</p>
+</blockquote>
+
+<p>Here, there’s no single algebraic substitution that handles all integers at once — but “even or odd” splits $\mathbb{Z}$ completely, and each half is easy.</p>
+
+<p><strong>Proof.</strong> We proceed by cases.</p>
+
+<p><strong>Case 1: $n$ is even.</strong> Then $n = 2x$ for some integer $x$. So
+\(n^2+3n+5 = (2x)^2 + 3(2x) + 5 = 4x^2+6x+5 = 2(2x^2+3x+2)+1.\)
+Since $2x^2+3x+2$ is an integer, $n^2+3n+5$ is odd.</p>
+
+<p><strong>Case 2: $n$ is odd.</strong> Then $n = 2y+1$ for some integer $y$. So
+\(n^2+3n+5 = (2y+1)^2+3(2y+1)+5 = 4y^2+10y+9 = 2(2y^2+5y+4)+1.\)
+Since $2y^2+5y+4$ is an integer, $n^2+3n+5$ is odd. $\blacksquare$</p>
+
+<p>Since every integer is either even or odd, and the result holds in both cases, it holds for every integer.</p>
+
+<p><strong>A related idea you’ll see by name:</strong> two integers $x, y$ are of the <strong>same parity</strong> if both are even or both are odd, and of <strong>opposite parity</strong> if one is even and the other odd. Any result phrased in terms of “same parity” or “opposite parity” is basically begging for a proof by cases, since the definition itself is a two-way split.</p>
+
+<hr />
+
+<h2 id="disproving-a-statement-counterexamples">Disproving a Statement: Counterexamples</h2>
+
+<p>Not every quantified claim you’re handed will be true — and showing a claim is <em>false</em> uses a completely different (and much shorter) strategy than proving it true.</p>
+
+<p>Recall: $\sim(\forall x \in S,\ R(x)) \equiv \exists x \in S,\ \sim R(x)$. In words: if “$R(x)$ holds for all $x$” is false, that’s exactly the same as saying “some $x$ makes $R(x)$ false.” Such an $x$ is called a <strong>counterexample</strong>.</p>
+
+<p>This matters because it tells you the proof burden is completely asymmetric:</p>
+
+<ul>
+  <li>To prove $\forall x \in S,\ R(x)$, you must handle <em>every</em> $x$ — one exception ruins it.</li>
+  <li>To disprove it, you only need <em>one</em> $x$ that fails. A single counterexample is a complete, valid proof of falsehood — nothing more is required.</li>
+</ul>
+
+<p><strong>Example.</strong> Consider the claim: <em>for every real $x$, $(x^2-1)^2 &gt; 0$.</em></p>
+
+<p>Try $x = 1$: $(1^2-1)^2 = 0^2 = 0$, which is <em>not</em> greater than $0$. So $x=1$ is a counterexample, and the claim is false. ($x = -1$ also works, and these turn out to be the <em>only</em> two counterexamples — meaning the modified claim “for every real $x \neq \pm 1$, $(x^2-1)^2 &gt; 0$” is actually true.)</p>
+
+<hr />
+
+<h2 id="proof-by-contradiction">Proof by Contradiction</h2>
+
+<p>This technique doesn’t care whether your statement is phrased as an implication at all — it works on any statement $R$ you’re trying to establish.</p>
+
+<p>The idea: <strong>assume $R$ is false, and show that this assumption forces something impossible</strong> — a statement $C$ that is both true and false at once ($C: P \land (\sim P)$ for some fact $P$ you already know). Once you’ve derived an impossibility from “$R$ is false,” that assumption itself must have been the problem — so $R$ has to be true after all.</p>
+
+<p>If $R$ happens to be the implication $\forall x \in S,\ P(x) \Rightarrow Q(x)$, here’s the useful part: negating it gives
+\(\sim(\forall x \in S,\ P(x)\Rightarrow Q(x)) \;\equiv\; \exists x \in S,\ (P(x) \land \sim Q(x)).\)</p>
+
+<p>So a proof by contradiction of an implication always starts the same way: <strong>assume there exists some $x \in S$ for which $P(x)$ is true and $Q(x)$ is false — i.e., assume a counterexample exists — and derive an impossibility from that assumption.</strong> You’ll often see proofs literally open with the phrase <em>“Assume, to the contrary, that…”</em> — that phrase is your cue that a contradiction is coming.</p>
+
+<h3 id="a-clean-classic-example">A Clean, Classic Example</h3>
+
+<blockquote>
+  <p><strong>Result.</strong> There is no smallest positive real number.</p>
+</blockquote>
+
+<p>This isn’t an implication, so direct proof and contrapositive don’t naturally apply here — but contradiction handles it easily.</p>
+
+<p><strong>Proof.</strong> Assume, to the contrary, that there <em>is</em> a smallest positive real number; call it $r$. Since $0 &lt; r/2 &lt; r$, the number $r/2$ is a positive real number smaller than $r$. But we assumed $r$ was the <em>smallest</em> positive real number — contradiction. $\blacksquare$</p>
+
+<p>The trick, as always with contradiction, is to name the thing you’re assuming exists (here, $r$), and then hunt for something that breaks the very property that made it special.</p>
+
+<hr />
+
+<h2 id="comparing-all-three-techniques-on-the-same-result">Comparing All Three Techniques on the Same Result</h2>
+
+<p>It’s worth seeing direct proof, contrapositive, and contradiction attack the <em>same</em> claim side by side, so the differences stop being abstract.</p>
+
+<blockquote>
+  <p><strong>Result.</strong> If $n$ is an even integer, then $3n + 7$ is odd.</p>
+</blockquote>
+
+<p><strong>Direct proof.</strong> Let $n$ be even, so $n = 2x$ for some integer $x$. Then
+\(3n+7 = 3(2x)+7 = 6x+7 = 2(3x+3)+1.\)
+Since $3x+3$ is an integer, $3n+7$ is odd. $\blacksquare$</p>
+
+<p><strong>Contrapositive.</strong> Assume $3n+7$ is even, so $3n+7 = 2y$ for some integer $y$. Then
+\(n = (3n+7) + (-2n-7) = 2y - 2n - 7 = 2(y-n-4)+1.\)
+Since $y - n - 4$ is an integer, $n$ is odd. $\blacksquare$</p>
+
+<p><strong>Contradiction.</strong> Assume, to the contrary, that there’s an even integer $n$ with $3n+7$ <em>also</em> even. Since $n$ is even, $n = 2x$, so $3n+7 = 6x+7 = 2(3x+3)+1$, which is odd — contradicting our assumption that it’s even. $\blacksquare$</p>
+
+<p>All three are valid. But look at how different the <em>effort</em> is: the direct proof is one clean substitution; the contrapositive requires an awkward algebraic rearrangement of $n$ in terms of $y$; the contradiction proof basically repeats the direct proof’s calculation and then adds a contradiction at the end. <strong>When a direct proof is available and clean, most mathematicians reach for it first</strong> — it’s usually the easiest to both write and read. But this is a guideline, not a rule; sometimes, as with $5x-7$ earlier, direct proof is the one that fights back.</p>
+
+<h3 id="a-trickier-comparison-inequalities">A Trickier Comparison: Inequalities</h3>
+
+<blockquote>
+  <p><strong>Result.</strong> Let $x$ be a nonzero real number. If $x + \dfrac{1}{x} &lt; 2$, then $x &lt; 0$.</p>
+</blockquote>
+
+<p><strong>Direct proof.</strong> Assume $x + \frac{1}{x} &lt; 2$. Since $x \neq 0$, $x^2 &gt; 0$. Multiply both sides by $x^2$:
+\(x^2\left(x+\frac{1}{x}\right) &lt; 2x^2 \implies x^3 + x - 2x^2 &lt; 0 \implies x(x-1)^2 &lt; 0.\)
+Since $(x-1)^2 \geq 0$ always, and the product $x(x-1)^2$ is strictly negative, $(x-1)^2$ can’t be $0$ here — so $(x-1)^2 &gt; 0$ strictly. A negative number divided by a positive number is negative, so $x &lt; 0$. $\blacksquare$</p>
+
+<p><strong>Contrapositive.</strong> We instead prove: if $x \geq 0$, then $x + \frac{1}{x} \geq 2$.</p>
+
+<p><em>Strategy first:</em> working backward from the target inequality $x + \frac1x \ge 2$, multiplying through by $x$ gives $x^2+1 \ge 2x$, i.e. $(x-1)^2 \ge 0$ — which we already know is always true. Reversing that chain of steps gives the proof:</p>
+
+<p><strong>Proof.</strong> Assume $x \geq 0$; since $x \neq 0$, $x &gt; 0$. We know $(x-1)^2 \geq 0$, i.e., $x^2 - 2x + 1 \geq 0$, i.e., $x^2+1 \geq 2x$. Dividing both sides by the positive number $x$ gives $x + \frac{1}{x} \geq 2$, as desired. $\blacksquare$</p>
+
+<p><strong>Contradiction.</strong> Assume, to the contrary, that there’s a nonzero real $x$ with $x + \frac1x &lt; 2$ <em>and</em> $x \geq 0$. Since $x \ne 0$, $x &gt; 0$. Multiplying $x+\frac1x&lt;2$ by $x$ gives $x^2+1 &lt; 2x$, i.e. $(x-1)^2 &lt; 0$ — impossible, since a square can never be negative. Contradiction. $\blacksquare$</p>
+
+<p>Notice the contrapositive proof here is noticeably <em>cleaner</em> than the direct one — the direct proof has to fight to justify that $(x-1)^2$ is strictly positive rather than just non-negative, while the contrapositive sidesteps that entirely. This is exactly the kind of situation — inequalities where the conclusion’s negation gives you a friendlier starting point — where contrapositive tends to shine.</p>
+
+<h3 id="a-cheat-sheet-what-to-assume-and-what-counts-as-a-mistake">A Cheat Sheet: What to Assume, and What Counts as a Mistake</h3>
+
+<p>When you’re proving $\forall x \in S,\ P(x) \Rightarrow Q(x)$, here’s what’s valid to assume at the <em>start</em> of a proof, and what silently breaks the logic:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>You start by assuming…</th>
+      <th>What this means</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$P(x)$ true, for arbitrary $x$</td>
+      <td>✅ Direct proof. Goal: show $Q(x)$ true.</td>
+    </tr>
+    <tr>
+      <td>$\sim Q(x)$ true, for arbitrary $x$</td>
+      <td>✅ Proof by contrapositive. Goal: show $\sim P(x)$ true.</td>
+    </tr>
+    <tr>
+      <td>There exists $x$ with $P(x)$ true and $Q(x)$ false</td>
+      <td>✅ Proof by contradiction. Goal: derive an impossibility.</td>
+    </tr>
+    <tr>
+      <td>$P(x)$ false, for arbitrary $x$</td>
+      <td>❌ Mistake — this proves nothing about the implication.</td>
+    </tr>
+    <tr>
+      <td>$Q(x)$ false, for arbitrary $x$</td>
+      <td>❌ Mistake.</td>
+    </tr>
+    <tr>
+      <td>$P(x)$ and $Q(x)$ both false, for arbitrary $x$, or various other “there exists” combinations mixing true/false</td>
+      <td>❌ Mistake, except the one contradiction-style opening above.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The pattern to notice: a valid proof either (a) fixes an <em>arbitrary</em> element and assumes something about $P$ or $\sim Q$ specifically — never $\sim P$ or $Q$ alone — or (b) assumes the <em>existence</em> of a counterexample, for contradiction. Every other opening move quietly assumes something that doesn’t actually pin down the truth of the implication.</p>
+
+<hr />
+
+<h2 id="mathematical-induction">Mathematical Induction</h2>
+
+<p>All four techniques so far — direct, contrapositive, cases, contradiction — can, in principle, be used to prove a statement about <em>every</em> element of a set. But for one particular kind of domain — the positive integers — there’s a technique tailor-made for the job, because of how that set is built: $1, 2, 3, \ldots$, each one obtained from the last by adding $1$.</p>
+
+<h3 id="the-idea-before-the-formal-statement">The Idea, Before the Formal Statement</h3>
+
+<p>Imagine an infinite line of dominoes. If you can guarantee two things — (1) the first domino falls, and (2) <em>whenever</em> any domino falls, it knocks over the next one — then you know, without checking each one individually, that <em>every</em> domino eventually falls. That’s induction, in one picture.</p>
+
+<h3 id="the-formal-principle">The Formal Principle</h3>
+
+<p><strong>Principle of Mathematical Induction.</strong> For each positive integer $n$, let $P(n)$ be a statement. If</p>
+
+<ol>
+  <li>$P(1)$ is true, and</li>
+  <li>for every positive integer $k$, the implication “if $P(k)$, then $P(k+1)$” is true,</li>
+</ol>
+
+<p>then $P(n)$ is true for every positive integer $n$.</p>
+
+<p>Step (1) is called the <strong>base case</strong> — checking the first domino falls. Step (2) is called the <strong>inductive step</strong> — checking that each domino, if it falls, knocks over the next one. Crucially, in step (2) you are <em>not</em> claiming $P(k)$ is actually true for every $k$ — that would be assuming the very thing you’re trying to prove. You’re only claiming the <em>implication</em> $P(k) \Rightarrow P(k+1)$ holds, for an arbitrary fixed $k$. This is itself just… a direct proof, nested inside an induction argument.</p>
+
+<p><em>(Where does this principle itself come from? It follows from a deeper fact called the</em> <strong>Well-Ordering Principle</strong> <em>— that every nonempty subset of the positive integers has a smallest element. That’s a separate discussion; for now, treat induction as a tool you’re licensed to use.)</em></p>
+
+<h3 id="worked-example-the-sum-of-the-first-n-positive-integers">Worked Example: The Sum of the First $n$ Positive Integers</h3>
+
+<blockquote>
+  <p><strong>Result.</strong> For every positive integer $n$,
+\(1+2+3+\cdots+n = \frac{n(n+1)}{2}.\)</p>
+</blockquote>
+
+<p><strong>Proof.</strong> We use induction.</p>
+
+<p><strong>Base case ($n=1$):</strong> $1 = \frac{1 \cdot 2}{2}$, so the statement holds for $n=1$.</p>
+
+<p><strong>Inductive step:</strong> Assume, for some positive integer $k$, that
+\(1+2+3+\cdots+k = \frac{k(k+1)}{2}.\)
+(This assumption is called the <strong>inductive hypothesis</strong>.) We must show the statement also holds for $k+1$, i.e., that $1+2+\cdots+(k+1) = \frac{(k+1)(k+2)}{2}$.</p>
+
+\[1+2+\cdots+(k+1) = \underbrace{(1+2+\cdots+k)}_{\text{use the inductive hypothesis here}} + (k+1) = \frac{k(k+1)}{2} + (k+1) = \frac{k(k+1)+2(k+1)}{2} = \frac{(k+1)(k+2)}{2}.\]
+
+<p>By the Principle of Mathematical Induction, the formula holds for every positive integer $n$. $\blacksquare$</p>
+
+<p><strong>A word of warning that trips up almost everyone the first time:</strong> in the inductive step, we assumed the formula holds <em>for the one specific value $k$</em>, not for every positive integer up to $k$, and certainly not for all $n$. Writing “assume the formula is true for all positive integers $k$” would be circular — you’d be assuming the very conclusion you’re trying to reach. The inductive hypothesis is a single, local assumption: <em>if</em> it’s true at $k$, <em>then</em> it’s true at $k+1$ — and the base case is what gets this chain started.</p>
+
+<h3 id="where-this-formula-actually-comes-from--gausss-trick">Where This Formula Actually Comes From — Gauss’s Trick</h3>
+
+<p>The induction proof above is completely rigorous, but it doesn’t really explain <em>why</em> the formula is $\frac{n(n+1)}{2}$ — it just confirms it. There’s a famous, much more intuitive derivation, often attributed to a young Carl Friedrich Gauss.</p>
+
+<p>Let $S = 1+2+3+\cdots+n$. Write the same sum backward:
+\(S = n+(n-1)+(n-2)+\cdots+1.\)
+Now add the two versions of $S$ term by term:
+\(2S = (n+1)+(n+1)+(n+1)+\cdots+(n+1) \quad (n \text{ copies, one per term}).\)
+So $2S = n(n+1)$, giving $S = \frac{n(n+1)}{2}$ — the same formula, reached by a clever trick rather than by induction.</p>
+
+<p><strong>Why show you both?</strong> Induction is a completely general machine — it will grind through <em>any</em> claim about positive integers, whether or not a clever shortcut exists. Gauss’s trick is elegant but specific to this one sum; it doesn’t generalize to arbitrary claims. In this course, you’ll mostly rely on induction precisely <em>because</em> it’s the general-purpose tool, even when — as here — a shorter, cleverer argument happens to exist for a particular case.</p>
+
+<hr />
+
+<h2 id="putting-it-all-together">Putting It All Together</h2>
+
+<p>You now have five genuinely different strategies for proving $\forall x \in S,\ P(x) \Rightarrow Q(x)$ (plus induction, for when $S$ is specifically the positive integers), and one strategy for disproving it:</p>
+
+<ul>
+  <li><strong>Trivial / vacuous proof</strong> — for the rare cases where the truth table already guarantees the answer without real work.</li>
+  <li><strong>Direct proof</strong> — assume $P(x)$, derive $Q(x)$. Try this first.</li>
+  <li><strong>Proof by contrapositive</strong> — assume $\sim Q(x)$, derive $\sim P(x)$. Reach for this when the <em>negated conclusion</em> is easier to compute with than the original hypothesis.</li>
+  <li><strong>Proof by cases</strong> — split the domain into pieces that cover everything, and handle each piece separately.</li>
+  <li><strong>Proof by contradiction</strong> — assume a counterexample exists, and derive something impossible.</li>
+  <li><strong>Mathematical induction</strong> — for claims about all positive integers: check the base case, then show each case implies the next.</li>
+  <li><strong>Counterexample</strong> — to <em>disprove</em> a universal claim, one failing instance is a complete proof.</li>
+</ul>
+
+<p>None of these is “the right one” in general — picking a technique is itself part of the mathematical skill you’re building, and often the fastest way to find out which one fits is simply to <em>start</em> a direct proof and see whether the algebra cooperates.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-07-21T00:00:00+05:30">July 21, 2026</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/notes/mathematics-for-economist/problem_set_1/" class="pagination--pager" title="Problem Set - 1
+">Previous</a>
+    
+    
+      <a href="/notes/mathematics-for-economist/solution_set_1/" class="pagination--pager" title="Solution Set - 1
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+	
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/abhi-da"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Abhijeet Mishra. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

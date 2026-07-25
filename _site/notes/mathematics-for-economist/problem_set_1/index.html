@@ -1,0 +1,667 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Problem Set - 1 - Abhijeet</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Abhijeet">
+<meta property="og:title" content="Problem Set - 1">
+<meta property="og:url" content="http://localhost:4000/notes/mathematics-for-economist/problem_set_1/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-07-21T00:00:00+05:30">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/notes/mathematics-for-economist/problem_set_1/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Abhijeet Mishra",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Abhijeet Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Academicons -->
+<link rel="stylesheet" href="/assets/css/academicons.min.css"/>
+
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Abhijeet</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/publications/" >Publications</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/talks/" >Talks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/teaching/" >Teaching</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/cv/" >CV</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/contact/" >Contact</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/thesis/" >Thesis</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/notes/" >Notes</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/blog/" >Blogs</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Problem Set - 1">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="July 21, 2026">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Problem Set - 1
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              
+            </nav>
+          </aside>
+        
+        <style>
+  /* Override theme container limits for screen view */
+  body, 
+  main, 
+  article, 
+  .container, 
+  .wrapper, 
+  .content, 
+  .post-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  table {
+    width: 100% !important;
+    display: table !important;
+  }
+
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease;
+  }
+
+  .back-btn:first-child {
+    background-color: transparent;
+    color: #555;
+    border-color: #ccc;
+  }
+  .back-btn:first-child:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+
+  .back-btn:last-child {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+  .back-btn:last-child:hover {
+    background-color: #1d4ed8;
+  }
+
+  @media print {
+    @page {
+      margin: 0.5in;
+    }
+    .no-print {
+      display: none !important;
+    }
+  }
+</style>
+
+<div class="no-print" style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+  <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
+</div>
+<h1 id="logic-exercises--problem-set">Logic Exercises — Problem Set</h1>
+
+<p><strong>Exercise 1.</strong> State the negation of each of the following statements.</p>
+
+<p><strong>(a)</strong> The real number $r$ is at most 2.
+<strong>(b)</strong> The absolute value of the real number $a$ is less than 3.
+<strong>(c)</strong> Two angles of the triangle are $45°$.
+<strong>(d)</strong> The area of the circle is at least $9\pi$.
+<strong>(e)</strong> Two sides of the triangle have the same length.
+<strong>(f)</strong> The point $P$ in the plane lies outside of the circle $C$.</p>
+
+<hr />
+
+<p><strong>Exercise 2.</strong> Let $P$: 15 is odd. and $Q$: 21 is prime. State each of the following in words and determine whether it is true or false.</p>
+
+<p><strong>(a)</strong> $P \lor Q$
+<strong>(b)</strong> $P \land Q$
+<strong>(c)</strong> $(\sim P) \lor Q$
+<strong>(d)</strong> $P \land (\sim Q)$</p>
+
+<hr />
+
+<p><strong>Exercise 3.</strong> Consider the statements $P$: $\sqrt{2}$ is rational. and $Q$: $22/7$ is rational. Write each of the following statements in words and indicate whether it is true or false.</p>
+
+<p><strong>(a)</strong> $P \Rightarrow Q$
+<strong>(b)</strong> $Q \Rightarrow P$
+<strong>(c)</strong> $(\sim P) \Rightarrow (\sim Q)$
+<strong>(d)</strong> $(\sim Q) \Rightarrow (\sim P)$</p>
+
+<hr />
+
+<p><strong>Exercise 4.</strong> Consider the statements:
+$P$: $\sqrt{2}$ is rational.
+$Q$: $\sqrt{23}$ is rational.
+$R$: $\sqrt{3}$ is rational.</p>
+
+<p>Write each of the following statements in words and indicate whether the statement is true or false.</p>
+
+<p><strong>(a)</strong> $(P \land Q) \Rightarrow R$
+<strong>(b)</strong> $(P \land Q) \Rightarrow (\sim R)$
+<strong>(c)</strong> $((\sim P) \land Q) \Rightarrow R$
+<strong>(d)</strong> $(P \lor Q) \Rightarrow (\sim R)$</p>
+
+<hr />
+
+<p><strong>Exercise 5.</strong> Each of the following describes an implication. Write the implication in the form “if, then.”</p>
+
+<p><strong>(a)</strong> Any point on the straight line with equation $2y + x - 3 = 0$ whose $x$-coordinate is an integer also has an integer for its $y$-coordinate.
+<strong>(b)</strong> The square of every odd integer is odd.
+<strong>(c)</strong> Let $n \in \mathbb{Z}$. Whenever $3n + 7$ is even, $n$ is odd.
+<strong>(d)</strong> The derivative of the function $f(x) = \cos x$ is $f’(x) = -\sin x$.
+<strong>(e)</strong> Let $C$ be a circle of circumference $4\pi$. Then the area of $C$ is also $4\pi$.
+<strong>(f)</strong> The integer $n^3$ is even only if $n$ is even.</p>
+
+<hr />
+
+<p><strong>Exercise 6.</strong> Determine all values of $n$ in the domain $S = {1, 2, 3}$ for which the following is a true statement:</p>
+
+<blockquote>
+  <p>A necessary and sufficient condition for $\dfrac{n^2+n}{3}$ to be even is that $\dfrac{n^2+n}{2}$ is odd.</p>
+</blockquote>
+
+<p><em>(Note: source text for this problem was partially garbled during extraction — please confirm the exact expressions if this doesn’t match your source.)</em></p>
+
+<hr />
+
+<p><strong>Exercise 7.</strong> Determine all values of $n$ in the domain $S = {2, 3, 4}$ for which the following is a true statement:</p>
+
+<blockquote>
+  <p>The integer $\dfrac{n(n-1)}{3}$ is odd if and only if $\dfrac{n(n+1)}{2}$ is even.</p>
+</blockquote>
+
+<p><em>(Note: source text for this problem was partially garbled during extraction — please confirm the exact expressions if this doesn’t match your source.)</em></p>
+
+<hr />
+
+<p><strong>Exercise 8.</strong> For statements $P$ and $Q$, determine whether the compound statement</p>
+
+\[(P \lor Q) \lor (Q \Rightarrow P)\]
+
+<p>is a tautology, a contradiction, or neither.</p>
+
+<hr />
+
+<p><strong>Exercise 9.</strong> For statements $P$ and $Q$, determine whether the compound statement</p>
+
+\[((P \Rightarrow Q) \Rightarrow P) \Rightarrow (P \Rightarrow (Q \Rightarrow P))\]
+
+<p>is a tautology, a contradiction, or neither.</p>
+
+<hr />
+
+<p><strong>Exercise 10.</strong> For statements $P$, $Q$ and $R$, use a truth table to show that each of the following pairs of statements are logically equivalent.</p>
+
+<p><strong>(a)</strong> $(P \land Q) \Leftrightarrow P$ and $P \Rightarrow Q$.
+<strong>(b)</strong> $P \Rightarrow (Q \lor R)$ and $(\sim Q) \Rightarrow ((\sim P) \lor R)$.</p>
+
+<hr />
+
+<p><strong>Exercise 11.</strong> For statements $P$ and $Q$, show that $(\sim Q) \Rightarrow (P \land (\sim P))$ and $Q$ are logically equivalent.</p>
+
+<hr />
+
+<p><strong>Exercise 12.</strong> For statements $P$, $Q$ and $R$, show that $(P \lor Q) \Rightarrow R$ and $(P \Rightarrow R) \land (Q \Rightarrow R)$ are logically equivalent.</p>
+
+<hr />
+
+<p><strong>Exercise 13.</strong> Two compound statements $S$ and $T$ are comprised of the same component statements $P$, $Q$ and $R$. If $S$ and $T$ are not logically equivalent, then what can we conclude from this?</p>
+
+<hr />
+
+<p><strong>Exercise 14.</strong> Construct a truth table for $P \land (Q \Rightarrow (\sim P))$.</p>
+
+<hr />
+
+<p><strong>Exercise 15.</strong> Given that the implication $(Q \lor R) \Rightarrow (\sim P)$ is false and $Q$ is false, determine the truth values of $R$ and $P$.</p>
+
+<hr />
+
+<p><strong>Exercise 16.</strong> Find a compound statement involving the component statements $P$ and $Q$ that has the following truth table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">Q</th>
+      <th style="text-align: center">$\sim Q$</th>
+      <th style="text-align: center">?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><strong>Exercise 17.</strong> Determine the truth value of each of the following quantified statements:</p>
+
+<p><strong>(a)</strong> $\exists x \in \mathbb{R}, x^3 + 2 = 0$.
+<strong>(b)</strong> $\forall n \in \mathbb{N}, 2 \ge 3 - n$.
+<strong>(c)</strong> $\forall x \in \mathbb{R}, |x| = x$.
+<strong>(d)</strong> $\exists x \in \mathbb{Q}, x^4 - 4 = 0$.
+<strong>(e)</strong> $\exists x, y \in \mathbb{R}, x + y = \pi$.
+<strong>(f)</strong> $\forall x, y \in \mathbb{R}, x + y = x^2 + y^2$.</p>
+
+<hr />
+
+<p><strong>Exercise 18.</strong> Rewrite each of the implications below using (1) “only if” and (2) “sufficient.”</p>
+
+<p><strong>(a)</strong> If a function $f$ is differentiable, then $f$ is continuous.
+<strong>(b)</strong> If $x = -5$, then $x^2 = 25$.</p>
+
+<hr />
+
+<p><strong>Exercise 19.</strong> Let $P(n): n^2 - n + 5$ is a prime. be an open sentence over a domain $S$.</p>
+
+<p><strong>(a)</strong> Determine the truth values of the quantified statements $\forall n \in S, P(n)$ and $\exists n \in S, \sim P(n)$ for $S = {1, 2, 3, 4}$.
+<strong>(b)</strong> Determine the truth values of the quantified statements $\forall n \in S, P(n)$ and $\exists n \in S, \sim P(n)$ for $S = {1, 2, 3, 4, 5}$.
+<strong>(c)</strong> How are the statements in (a) and (b) related?</p>
+
+<hr />
+
+<p><strong>Exercise 20.</strong></p>
+
+<p><strong>(a)</strong> For statements $P$, $Q$ and $R$, show that
+\(((P \land Q) \Rightarrow R) \equiv ((P \land (\sim R)) \Rightarrow (\sim Q)).\)
+<strong>(b)</strong> For statements $P$, $Q$ and $R$, show that
+\(((P \land Q) \Rightarrow R) \equiv ((Q \land (\sim R)) \Rightarrow (\sim P)).\)</p>
+
+<hr />
+
+<p><strong>Exercise 21.</strong> For a fixed integer $n$, use Exercise 20 to restate the following implication in two different ways:</p>
+
+<blockquote>
+  <p>If $n$ is a prime and $n &gt; 2$, then $n$ is odd.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Exercise 22.</strong> For fixed integers $m$ and $n$, use Exercise 20 to restate the following implication in two different ways:</p>
+
+<blockquote>
+  <p>If $m$ is even and $n$ is odd, then $m + n$ is odd.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Exercise 23.</strong> For a real-valued function $f$ and a real number $x$, use Exercise 20 to restate the following implication in two different ways:</p>
+
+<blockquote>
+  <p>If $f’(x) = 3x^2 - 2x$ and $f(0) = 4$, then $f(x) = x^3 - x^2 + 4$.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Exercise 24.</strong> For the set $S = {1, 2, 3}$, give an example of three open sentences $P(n)$, $Q(n)$ and $R(n)$, each over the domain $S$, such that (1) each of $P(n)$, $Q(n)$ and $R(n)$ is a true statement for exactly two elements of $S$, (2) all of the implications $P(1) \Rightarrow Q(1)$, $Q(2) \Rightarrow R(2)$ and $R(3) \Rightarrow P(3)$ are true, and (3) the converse of each implication in (2) is false.</p>
+
+<hr />
+
+<p><strong>Exercise 25.</strong> Do there exist a set $S$ of cardinality 2 and a set ${P(n), Q(n), R(n)}$ of three open sentences over the domain $S$ such that the implications $P(a) \Rightarrow Q(a)$, $Q(b) \Rightarrow R(b)$ and $R(c) \Rightarrow P(c)$ are true, where $a, b, c \in S$, and the converses of these implications are all false? (Necessarily, at least two of these elements $a$, $b$, $c$ of $S$ are equal.)</p>
+
+<hr />
+
+<p><strong>Exercise 26.</strong> Let $A = {1, 2, \ldots, 6}$ and $B = {1, 2, \ldots, 7}$. For $x \in A$, let $P(x)$: $7x + 4$ is odd. For $y \in B$, let $Q(y)$: $5y + 9$ is odd. Let
+\(S = \{(x, y) : x \in A, y \in B, P(x) \Rightarrow Q(y) \text{ is false}\}.\)
+What is $|S|$?</p>
+
+<hr />
+
+<p><strong>Exercise 27.</strong> Let $P(x, y, z)$ be an open sentence, where the domains of $x$, $y$ and $z$ are $A$, $B$ and $C$, respectively.</p>
+
+<p><strong>(a)</strong> State the quantified statement $\forall x \in A, \forall y \in B, \exists z \in C, P(x, y, z)$ in words.
+<strong>(b)</strong> State the quantified statement $\forall x \in A, \forall y \in B, \exists z \in C, P(x, y, z)$ in words for $P(x, y, z): x = yz$.
+<strong>(c)</strong> Determine whether the quantified statement in (b) is true when $A = {4, 8}$, $B = {2, 4}$ and $C = {1, 2, 4}$.</p>
+
+<hr />
+
+<p><strong>Exercise 28.</strong> Let $P(x, y, z)$ be an open sentence, where the domains of $x$, $y$ and $z$ are $A$, $B$ and $C$, respectively.</p>
+
+<p><strong>(a)</strong> Express the negation of $\forall x \in A, \forall y \in B, \exists z \in C, P(x, y, z)$ in symbols.
+<strong>(b)</strong> Express $\sim(\forall x \in A, \forall y \in B, \exists z \in C, P(x, y, z))$ in words.
+<strong>(c)</strong> Determine whether $\sim(\forall x \in A, \forall y \in B, \exists z \in C, P(x, y, z))$ is true when $P(x, y, z): x + z = y$, for $A = {1, 3}$, $B = {3, 5, 7}$ and $C = {0, 2, 4, 6}$.</p>
+
+<hr />
+
+<p><strong>Exercise 29.</strong> Write each of the following using “if, then.”</p>
+
+<p><strong>(a)</strong> A sufficient condition for a triangle to be isosceles is that it has two equal angles.
+<strong>(b)</strong> Let $C$ be a circle of diameter $\sqrt{2}/\pi$. Then the area of $C$ is $1/2$.
+<strong>(c)</strong> The 4th power of every odd integer is odd.
+<strong>(d)</strong> Suppose that the slope of a line $\ell$ is 2. Then the equation of $\ell$ is $y = 2x + b$ for some real number $b$.
+<strong>(e)</strong> Whenever $a$ and $b$ are nonzero rational numbers, $a/b$ is a nonzero rational number.
+<strong>(f)</strong> For every three integers, there exist two of them whose sum is even.
+<strong>(g)</strong> A triangle is a right triangle if the sum of two of its angles is $90°$.
+<strong>(h)</strong> The number $\sqrt{3}$ is irrational.</p>
+
+<hr />
+
+<p><strong>Exercise 30.</strong> State the negation of each of the following statements.</p>
+
+<p><strong>(a)</strong> The real number $r$ has the property that $3 \le r &lt; \pi$.
+<strong>(b)</strong> The real number $r$ has the property that $|r - n| \ge \frac{1}{2}$ for every integer $n$.
+<strong>(c)</strong> The real number $r$ has the property that $rs = s$ for every real number $s$.</p>
+
+<hr />
+
+<p><strong>Exercise 31.</strong> Let ${S, T}$ be a partition of the set $\mathbb{N}$ of positive integers and let $U$ be a nonempty subset of $\mathbb{N}$. State the negation of each of the following statements.</p>
+
+<p><strong>(a)</strong> Every element of $U$ can be expressed as $x + y$, where $x \in S$ and $y \in T$.
+<strong>(b)</strong> For every $x \in S$ and $y \in T$, $xy \in S$.
+<strong>(c)</strong> For every element $x \in S$, there is an element $y \in T$ such that $y &gt; x$.</p>
+
+<hr />
+
+<p><strong>Exercise 32.</strong> Let $P(n)$ be an open sentence over the domain $\mathbb{N}$ of positive integers. State the negation of each of the following statements.</p>
+
+<p><strong>(a)</strong> If $P(n)$ is true for infinitely many $n \in \mathbb{N}$, then $P(n)$ cannot be false for infinitely many $n \in \mathbb{N}$.
+<strong>(b)</strong> There is no element $n \in \mathbb{N}$ such that $P(n)$ and $P(n+1)$ are both true.
+<strong>(c)</strong> If $P(n)$ is false for some positive integer $n$, then there is a smallest positive integer $m$ such that $P(m)$ is false.</p>
+
+<hr />
+
+<p><strong>Exercise 33.</strong> Each of the following describes an implication. Write the implication in the form “if, then.”</p>
+
+<p><strong>(a)</strong> For every odd integer $n \ge 3$, the integer $n + m$ is prime for some even integer $m$.
+<strong>(b)</strong> Let $n \in \mathbb{N}$. The integer $2n$ is even.
+<strong>(c)</strong> We only need to know that $n$ is odd to show that $3n + 4$ is odd.
+<strong>(d)</strong> Once we know that $n$ is an even integer, we can conclude that $n^3$ is even.
+<strong>(e)</strong> The only possibility for the integer $n - 3$ to be even is for $n$ to be odd.</p>
+
+<hr />
+
+<p><strong>Exercise 34.</strong> Let $P(n): 2n + 1$ is even. and $Q(n): 3n + 2$ is odd. be open sentences over the domain $S = {0, 1, 2}$. For which $n \in S$ is $P(n) \Rightarrow Q(n)$ true?</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-07-21T00:00:00+05:30">July 21, 2026</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/notes/mathematics-for-economist/logic/" class="pagination--pager" title="Introduction to Logic
+">Previous</a>
+    
+    
+      <a href="/notes/mathematics-for-economist/proof_techniques/" class="pagination--pager" title="Proof Techniques
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+	
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+
+<!-- end custom footer snippets -->
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/abhi-da"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Abhijeet Mishra. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

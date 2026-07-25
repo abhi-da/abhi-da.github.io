@@ -7,21 +7,23 @@
 -->
 <html lang="en" class="no-js">
   <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Introduction to Propositional Logic - Abhijeet</title>
-<meta name="description" content="📄 Save Note as PDF1. Fundamentals &amp; Definitions">
+<!-- begin _includes/seo.html --><title>Introduction to Logic - Abhijeet</title>
+<meta name="description" content="">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Abhijeet">
-<meta property="og:title" content="Introduction to Propositional Logic">
+<meta property="og:title" content="Introduction to Logic">
 <meta property="og:url" content="http://localhost:4000/notes/mathematics-for-economist/logic/">
 
 
-  <meta property="og:description" content="📄 Save Note as PDF1. Fundamentals &amp; Definitions">
+  <meta property="og:description" content="">
 
 
 
@@ -199,15 +201,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Introduction to Propositional Logic">
-    <meta itemprop="description" content="📄 Save Note as PDF1. Fundamentals &amp; Definitions">
+    <meta itemprop="headline" content="Introduction to Logic">
+    <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="July 21, 2026">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Introduction to Propositional Logic
+          <h1 id="page-title" class="page__title" itemprop="headline">Introduction to Logic
 </h1>
           
         </header>
@@ -219,135 +221,987 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
               <ul class="toc__menu">
-  <li><a href="#1-fundamentals--definitions">1. Fundamentals &amp; Definitions</a></li>
-  <li><a href="#2-logical-operators--truth-tables">2. Logical Operators &amp; Truth Tables</a>
+  <li><a href="#logic">Logic</a>
     <ul>
-      <li><a href="#21-conjunction-and-land">2.1 Conjunction (AND: $\land$)</a></li>
-      <li><a href="#22-material-implication-if-then-rightarrow">2.2 Material Implication (IF… THEN: $\rightarrow$)</a></li>
+      <li><a href="#statements">Statements</a></li>
+      <li><a href="#negations">Negations</a></li>
+      <li><a href="#conjunction">Conjunction</a></li>
+      <li><a href="#disjunction">Disjunction</a></li>
+      <li><a href="#implications">Implications</a></li>
+      <li><a href="#bi-conditionals">Bi-Conditionals</a></li>
+      <li><a href="#tautology-and-contradiction">Tautology and Contradiction</a></li>
+      <li><a href="#syllogism-and-modus-ponens">Syllogism and Modus Ponens</a></li>
+      <li><a href="#logical-equivalence">Logical Equivalence</a></li>
     </ul>
   </li>
-  <li><a href="#3-important-equivalences">3. Important Equivalences</a>
+  <li><a href="#29-some-fundamental-properties-of-logical-equivalence">2.9 Some Fundamental Properties of Logical Equivalence</a>
     <ul>
-      <li><a href="#de-morgans-laws">De Morgan’s Laws</a></li>
-      <li><a href="#contraposition">Contraposition</a></li>
+      <li><a href="#some-fundamental-logical-equivalences">Some Fundamental Logical Equivalences</a></li>
+    </ul>
+  </li>
+  <li><a href="#210-quantified-statements">2.10 Quantified Statements</a>
+    <ul>
+      <li><a href="#example">Example</a></li>
+      <li><a href="#turning-an-open-sentence-into-a-statement-quantifiers">Turning an open sentence into a statement: quantifiers</a></li>
+      <li><a href="#example-1">Example</a></li>
+      <li><a href="#two-variables">Two variables</a></li>
+      <li><a href="#negating-a-quantified-statement">Negating a quantified statement</a></li>
     </ul>
   </li>
 </ul>
             </nav>
           </aside>
         
-        <p><button onclick="window.print()" class="btn btn--primary">📄 Save Note as PDF</button></p>
-<h2 id="1-fundamentals--definitions">1. Fundamentals &amp; Definitions</h2>
+        <style>
+  /* Override theme container limits for screen view */
+  body, 
+  main, 
+  article, 
+  .container, 
+  .wrapper, 
+  .content, 
+  .post-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  table {
+    width: 100% !important;
+    display: table !important;
+  }
 
-<p>A <strong>proposition</strong> is a declarative statement that is either strictly <strong>true ($T$)</strong> or <strong>false ($F$)</strong>, but never both simultaneously.</p>
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease;
+  }
 
-<ul>
-  <li>$P$: “The market is in general equilibrium.”</li>
-  <li>$Q$: “Prices adjust instantaneously to clear supply and demand.”</li>
-</ul>
+  .back-btn:first-child {
+    background-color: transparent;
+    color: #555;
+    border-color: #ccc;
+  }
+  .back-btn:first-child:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
 
-<hr />
+  .back-btn:last-child {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+  .back-btn:last-child:hover {
+    background-color: #1d4ed8;
+  }
 
-<h2 id="2-logical-operators--truth-tables">2. Logical Operators &amp; Truth Tables</h2>
+  @media print {
+    @page {
+      margin: 0.5in;
+    }
+    .no-print {
+      display: none !important;
+    }
+  }
+</style>
 
-<p>We form compound propositions using logical connectives.</p>
+<div class="no-print" style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button class="back-btn" onclick="history.back()">← Back</button>
+  <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
+</div>
 
-<h3 id="21-conjunction-and-land">2.1 Conjunction (AND: $\land$)</h3>
-<p>The conjunction $P \land Q$ is true <strong>only when both</strong> $P$ and $Q$ are true.</p>
+<p>You might have seen MEMES like: <img src="/assets/images/useless_math_meme.jpg" alt="Math Meme" /></p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">$P$</th>
-      <th style="text-align: center">$Q$</th>
-      <th style="text-align: center">$P \land Q$</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">$T$</td>
-      <td style="text-align: center">$T$</td>
-      <td style="text-align: center"><strong>$T$</strong></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">$T$</td>
-      <td style="text-align: center">$F$</td>
-      <td style="text-align: center"><strong>$F$</strong></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">$F$</td>
-      <td style="text-align: center">$T$</td>
-      <td style="text-align: center"><strong>$F$</strong></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">$F$</td>
-      <td style="text-align: center">$F$</td>
-      <td style="text-align: center"><strong>$F$</strong></td>
-    </tr>
-  </tbody>
-</table>
+<p>But is it really the case?</p>
 
-<h3 id="22-material-implication-if-then-rightarrow">2.2 Material Implication (IF… THEN: $\rightarrow$)</h3>
-<p>The conditional statement $P \rightarrow Q$ asserts that $P$ implies $Q$. It is <strong>false only when</strong> the premise $P$ is true and the conclusion $Q$ is false.</p>
+<p>See, you may not use the exact same problems in your daily life, but it teaches you how to use a that particular tool. It controls the world. We use it to put man in the moon. Yet, it is considered useless by most of the people.</p>
 
-\[\text{Premise } (P) \implies \text{Conclusion } (Q)\]
+<p>The graduate mathematics is very different then higher secondary schools mathematics, at least in India. There’s a lot of rigour in graduate texts. By rigor, I mean doing the same maths with great precision. In senior secondary school, continuity is often taught intuitively: “a function is continuous if you can draw its graph in a single, free-flowing pen stroke without lifting your paper.”At the graduate level, however, math demands absolute precision. Intuitive rules are replaced with formal, rigorous definitions (like the $\epsilon$-$\delta$ criterion) which we will study later in limits and continuity.We need this level of rigour because human visual intuition breaks down when dealing with complex functions. For example, $x \cdot \sin\left(\frac{1}{x}\right)$ cannot be hand-drawn. Also, computers cannot read or draw such images on their own. To make them draw such graphs, we need to feed exact definitions to them.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">$P$</th>
-      <th style="text-align: center">$Q$</th>
-      <th style="text-align: center">$P \rightarrow Q$</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">$T$</td>
-      <td style="text-align: center">$T$</td>
-      <td style="text-align: center"><strong>$T$</strong></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">$T$</td>
-      <td style="text-align: center">$F$</td>
-      <td style="text-align: center"><strong>$F$</strong></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">$F$</td>
-      <td style="text-align: center">$T$</td>
-      <td style="text-align: center"><strong>$T$</strong></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">$F$</td>
-      <td style="text-align: center">$F$</td>
-      <td style="text-align: center"><strong>$T$</strong></td>
-    </tr>
-  </tbody>
-</table>
+<p>Imagine senior secondary as knowing how to use Python libraries, while in graduation, you are actually building them.</p>
 
-<hr />
+<p>When you know where a particular formula or theorem comes from, the result becomes very interesting.</p>
 
-<h2 id="3-important-equivalences">3. Important Equivalences</h2>
+<p>For example, what does the idiom “Chhattis ka aakda” mean, and how do you think it originated?</p>
 
-<p>Two statements are <strong>logically equivalent</strong> ($\equiv$) if they share identical truth values across all possible scenarios.</p>
+<p>Let me ask a simple question. Take a solid ball in 3D space. Is it possible to cut it into 5 pieces, rotate those pieces around, reassemble them without stretching anything, and end up with two identical solid balls of the exact same size as the original? The intuition would say - No. That is not possible. Cause the volume then doubles.</p>
 
-<h3 id="de-morgans-laws">De Morgan’s Laws</h3>
+<p>However, <a href="https://en.wikipedia.org/wiki/Banach%E2%80%93Tarski_paradox">Banach–Tarski paradox</a> says, we can.</p>
+
+<p>And No. I have got no idea about how the proof is done. These were just to stimulate the curiosity in the mind that intuition is not always correct and hence we need to define things precisely.</p>
+
+<p>For example, How many months have 28 days? Some would say February. But that is wrong, All 12 months have 28 days.
+Precision would mean, How many months have only 28 days. And that again cannot be February, cause we don’t know if we are talking about leap or not a leap year.</p>
+
+<p>Now, the above texts were to generate a bit of curiosity in the mind. I hope math sounds interesting now.</p>
+
+<p>With that, let me tell you how to approach math. You cannot just read it like a novel. You can skip things which are not useful. You can move backward and forward between texts. Every author has written books on the basis of their understanding; the same doesn’t apply to you.</p>
+
+<p>But you will need to practice and understand how things are working. The more you practice, the better you get. By practicing, I don’t mean by-hearting.</p>
+
+<p>The above paragraph were partly written by me, and some ideas were borrowed from <a href="https://blngcc.wordpress.com/wp-content/uploads/2008/11/2-kevin-houston-how-to-think-like-a-mathematician.pdf">How to think like a Mathematician-2009</a></p>
+
+<p>With that, Let us begin with our topic: <strong>Logic</strong></p>
+
+<p>It is advisable to give a read to chapter 0 of <a href="https://www.amazon.in/Mathematical-Proofs-Transition-Advanced-Mathematics/dp/0321797094">Mathematical Proofs: A Transition to Advanced Mathematics - Chartrand et al</a>.</p>
+
+<h2 id="logic">Logic</h2>
+
+<h3 id="statements">Statements</h3>
+
+<p>A sentence which can be either <em>true</em> or <em>false</em> but not <em>both</em> is a statement. For example,</p>
+
 <ol>
-  <li>$\neg (P \land Q) \equiv \neg P \lor \neg Q$</li>
-  <li>$\neg (P \lor Q) \equiv \neg P \land \neg Q$</li>
+  <li>2 is an even number. This statement is true.</li>
+  <li>6 is a prime number. This statement is false.</li>
 </ol>
 
-<h3 id="contraposition">Contraposition</h3>
-<p>A conditional statement is logically equivalent to its <strong>contrapositive</strong>:</p>
+<p>Now, sometimes a sentence can be true or false, but we cannot immediately declare which. That does not mean we cannot call it a statement — it just means we are not yet able to determine its truth value.</p>
 
-\[(P \rightarrow Q) \equiv (\neg Q \rightarrow \neg P)\]
+<p>Since statements have truth values, we can build a truth table.</p>
+
+<p>A statement A can either be True or False.</p>
+
+<p><strong>One statement (A):</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Two statements (A, B):</strong> each can be True or False, so there are four possible combinations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">A</th>
+      <th style="text-align: center">B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Three statements (A, B, C):</strong> each can be True or False, so there are eight possible combinations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>A</strong></th>
+      <th style="text-align: center">B</th>
+      <th style="text-align: center">C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now we can see a pattern: if there are $n$ statements, there are $2^n$ possible combinations of truth values.</p>
+
+<h3 id="negations">Negations</h3>
+
+<p>Just like there are operations between two numbers, we have operations between two or more statements.</p>
+
+<p>For example, we see $-2$ as the complete opposite of $2$.</p>
+
+<p>Similarly, the negation of a statement $P$ is <strong>not $P$</strong>, denoted by $\neg P$. For example, if $P$: “2 is a whole number,” then $\neg P$: “2 is not a whole number.”</p>
+
+<p>So the truth table for this new statement is as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">$\neg P$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="conjunction">Conjunction</h3>
+
+<p>Now, one more method to produce a new statement is by joining two statements together.</p>
+
+<p>For example:
+A: 2 is a whole number
+B: 5 is an odd number</p>
+
+<p>The new statement becomes $Q = A \land B$: “2 is a whole number and 5 is an odd number.” This operation is called <strong>conjunction</strong>, and the symbol $\land$ means <strong>and</strong>.</p>
+
+<p>The truth table for conjunction is as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">A</th>
+      <th style="text-align: center">B</th>
+      <th style="text-align: center">$A \land B$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Why we need conjunction:</strong> In everyday language, we often combine two facts into one sentence using “and.” Conjunction lets us capture this formally — the combined statement $A \land B$ is true only when <em>both</em> individual statements are true. If either one is false, the combined statement is false. This matches how we naturally think about “and” — saying “it is raining and it is cold” is only true if both parts actually hold.</p>
+
+<h3 id="disjunction">Disjunction</h3>
+
+<p>Similarly, we can join two statements using <strong>disjunction</strong>, denoted by the symbol $\lor$, which means <strong>or</strong>.</p>
+
+<p>Using the same statements:
+A: 2 is a whole number
+B: 5 is an odd number</p>
+
+<p>The new statement becomes $Q = A \lor B$: “2 is a whole number or 5 is an odd number.”</p>
+
+<p>The truth table for disjunction is as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">A</th>
+      <th style="text-align: center">B</th>
+      <th style="text-align: center">$A \lor B$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Why we need disjunction:</strong> In everyday language, we often say two things are connected by “or” — meaning at least one of them holds. Disjunction captures this formally — the combined statement $A \lor B$ is true if <em>at least one</em> of the individual statements is true. It is false only when both are false. This matches how we think about “or” in most everyday situations — saying “it is raining or it is cold” is true as long as at least one of those is happening.</p>
+
+<h3 id="implications">Implications</h3>
+
+<p>Another way to join two statements is through <strong>implication</strong>, denoted by the symbol $\rightarrow$, which means <strong>if…then</strong>.</p>
+
+<p>Using the same statements:
+A: 2 is a whole number
+B: 5 is an odd number</p>
+
+<p>The new statement becomes $Q = A \rightarrow B$: “If 2 is a whole number, then 5 is an odd number.”</p>
+
+<p>The truth table for implication is as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">A</th>
+      <th style="text-align: center">B</th>
+      <th style="text-align: center">$A \rightarrow B$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Why we need implication:</strong> In everyday language, we often say things like “if this happens, then that happens.” Implication captures this formally — the statement $A \rightarrow B$ is false only in the case where $A$ is true but $B$ turns out false, since that is the one case where the “promise” is broken. In every other case, the implication is considered true. This can feel a bit strange at first — especially that $A \rightarrow B$ is true whenever $A$ is false, regardless of $B$ — but the idea is that if the starting condition never holds, the implication is not violated, so we treat it as true. We call such a case <strong>vacuously true</strong>.</p>
+
+<p>$P \Rightarrow Q$ can also be stated as:</p>
+
+<ul>
+  <li>If $P$, then $Q$</li>
+  <li>$Q$ if $P$</li>
+  <li>$P$ implies $Q$</li>
+  <li>$P$ only if $Q$</li>
+  <li>$P$ is sufficient for $Q$</li>
+  <li>$Q$ is necessary for $P$</li>
+</ul>
+
+<p>Let’s break this down with a simple example. Let:</p>
+
+<p>P: It is raining
+Q: The ground is wet</p>
+
+<p><strong>“If P, then Q,” “Q if P,” and “P implies Q”</strong> clearly say the same thing: if it is raining, the ground is wet. That part feels obvious.</p>
+
+<p>The tricky part is seeing that <strong>“P only if Q,” “P is sufficient for Q,”</strong> and <strong>“Q is necessary for P”</strong> are <em>also</em> saying the same thing.</p>
+
+<p><strong>P only if Q:</strong> “It is raining only if the ground is wet.” This means raining can only happen when the ground is already wet — so if it is raining, the ground <em>must</em> be wet. If the ground were somehow not wet, it could not be raining. That is exactly the same condition as “if P, then Q.”</p>
+
+<p><strong>Q is necessary for P:</strong> “The ground being wet is necessary for it to be raining.” Same idea — you cannot have rain without a wet ground. Wet ground is a <em>requirement</em> for rain to be true. Again, this just says: if it is raining, the ground must be wet.</p>
+
+<p><strong>P is sufficient for Q:</strong> “Raining is sufficient for the ground to be wet.” This means rain alone is enough to guarantee wet ground — you do not need anything else. If it is raining, that fact by itself is enough to conclude the ground is wet. This is just “if P, then Q” phrased from the other direction — instead of stating the requirement (Q), it states that P is <em>enough</em> to produce it.</p>
+
+<p>So all six phrasings are really the same rule — “if it is raining, the ground is wet” — just said in different everyday ways.</p>
+
+<h3 id="bi-conditionals">Bi-Conditionals</h3>
+
+<p>The last basic operation is <strong>biconditional</strong>, denoted by the symbol $\leftrightarrow$, which means <strong>if and only if</strong>.</p>
+
+<p>Consider the following statements:
+A: A number $n$ is even
+B: $n$ is divisible by 2</p>
+
+<p>The new statement becomes $Q = A \leftrightarrow B$: “A number $n$ is even if and only if $n$ is divisible by 2.”</p>
+
+<p>The truth table for biconditional is as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">A</th>
+      <th style="text-align: center">B</th>
+      <th style="text-align: center">$A \leftrightarrow B$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Why we need biconditional:</strong> Sometimes we want to say two statements always hold together — either both are true, or both are false. Biconditional captures exactly this — $A \leftrightarrow B$ is true whenever $A$ and $B$ have the <em>same</em> truth value, and false whenever they differ. In our example, whenever $n$ is even, it is also divisible by 2, and whenever it is not even, it is also not divisible by 2 — the two statements always agree, which is exactly what makes this a genuine “if and only if” relationship.</p>
+
+<p>The biconditional $P \leftrightarrow Q$ can be stated in a few equivalent ways:</p>
+
+<ul>
+  <li>$P$ is equivalent to $Q$</li>
+  <li>$P$ if and only if $Q$</li>
+  <li>$P$ is necessary and sufficient for $Q$</li>
+</ul>
+
+<p>For statements $P$ and $Q$, the biconditional “$P$ if and only if $Q$” is true only when $P$ and $Q$ have the same truth value.</p>
+
+<h3 id="tautology-and-contradiction">Tautology and Contradiction</h3>
+
+<p>A <strong>tautology</strong> is a statement that is always true, no matter what truth values its parts have. For example, “$P \lor \neg P$” (P or not P) is always true — either P is true, or it isn’t. There’s no case where this fails.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">$\neg P$</th>
+      <th style="text-align: center">$P \lor \neg P$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A <strong>contradiction</strong> is the opposite — a statement that is always false, no matter what. For example, “$P \land \neg P$” (P and not P) can never be true — a statement and its negation cannot both hold at the same time.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">$\neg P$</th>
+      <th style="text-align: center">$P \land \neg P$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="syllogism-and-modus-ponens">Syllogism and Modus Ponens</h3>
+
+<p>A <strong>syllogism</strong> is a form of reasoning where we draw a conclusion from two given statements (called premises). For example:</p>
+
+<ul>
+  <li>All men are mortal.</li>
+  <li>Socrates is a man.</li>
+  <li>Therefore, Socrates is mortal.</li>
+</ul>
+
+<p><strong>Modus ponens</strong> is one specific, very common pattern of valid reasoning. It says: if we know “if P, then Q” is true, and we also know P is true, then we can conclude Q is true.</p>
+
+<p>Example:</p>
+
+<ul>
+  <li>If it rains, the ground gets wet. ($P \rightarrow Q$)</li>
+  <li>It is raining. ($P$)</li>
+  <li>Therefore, the ground is wet. ($Q$)</li>
+</ul>
+
+<p>This pattern is always valid — whenever both premises are true, the conclusion must be true too.</p>
+
+<hr />
+
+<h3 id="logical-equivalence">Logical Equivalence</h3>
+
+<p>Two statements are <strong>logically equivalent</strong> if they always have the same truth value, no matter what truth values their individual parts take. We showed something similar earlier — “P only if Q,” “P is sufficient for Q,” and “Q is necessary for P” were all logically equivalent to “if P, then Q,” because they matched in every possible case.</p>
+
+<p>To check if two statements are logically equivalent, we build a truth table for both and compare — if the final columns match in every row, the statements are equivalent. For example, $P \rightarrow Q$ and $\neg P \lor Q$ are logically equivalent:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">Q</th>
+      <th style="text-align: center">$P \rightarrow Q$</th>
+      <th style="text-align: center">$\neg P$</th>
+      <th style="text-align: center">$\neg P \lor Q$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Since the last two columns match in every row, we say $P \rightarrow Q \equiv \neg P \lor Q$.</p>
+
+<h2 id="29-some-fundamental-properties-of-logical-equivalence">2.9 Some Fundamental Properties of Logical Equivalence</h2>
+
+<p>It’s probably not surprising that a statement $P$ and its double negation $\sim(\sim P)$ mean the same thing. Let’s check this with a truth table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">$\sim P$</th>
+      <th style="text-align: center">$\sim(\sim P)$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The first and last columns match, so $P \equiv \sim(\sim P)$.</p>
+
+<p>We already saw earlier that $P \land Q$ and $Q \land P$ are logically equivalent — order doesn’t matter for “and.” There are a few more of these basic equivalences that come up all the time, so it’s worth knowing them by name.</p>
+
+<h3 id="some-fundamental-logical-equivalences">Some Fundamental Logical Equivalences</h3>
+
+<p>For statements $P$, $Q$, and $R$:</p>
+
+<p><strong>1. Commutative Laws</strong> : order doesn’t matter
+(a) $P \lor Q \equiv Q \lor P$
+(b) $P \land Q \equiv Q \land P$</p>
+
+<p><strong>2. Associative Laws</strong> : grouping doesn’t matter
+(a) $P \lor (Q \lor R) \equiv (P \lor Q) \lor R$
+(b) $P \land (Q \land R) \equiv (P \land Q) \land R$</p>
+
+<p><strong>3. Distributive Laws</strong> : you can “distribute” one operation over the other, just like multiplication distributes over addition in regular algebra
+(a) $P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)$
+(b) $P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)$</p>
+
+<p><strong>4. De Morgan’s Laws</strong> : negating an “and/or” statement flips the operation and pushes the negation inside
+(a) $\sim(P \lor Q) \equiv (\sim P) \land (\sim Q)$
+(b) $\sim(P \land Q) \equiv (\sim P) \lor (\sim Q)$</p>
+
+<p>Each of these can be checked the same way we’ve been checking equivalences, build a truth table for both sides and confirm the columns match. Let’s do this for the first distributive law, $P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)$:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">Q</th>
+      <th style="text-align: center">R</th>
+      <th style="text-align: center">$Q \land R$</th>
+      <th style="text-align: center">$P \lor Q$</th>
+      <th style="text-align: center">$P \lor R$</th>
+      <th style="text-align: center">$P \lor (Q \land R)$</th>
+      <th style="text-align: center">$(P \lor Q) \land (P \lor R)$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The last two columns are identical in every row, confirming the equivalence.</p>
+
+<p><strong>5. Negation of Implication and Biconditional</strong>
+(a) $\sim(P \Rightarrow Q) \equiv P \land (\sim Q)$
+(b) $\sim(P \Leftrightarrow Q) \equiv (P \land (\sim Q)) \lor (Q \land (\sim P))$</p>
+
+<p>The first one makes sense if you think about it in words: “$P \Rightarrow Q$” is only broken when $P$ is true but $Q$ turns out false — so saying “$P \Rightarrow Q$ is false” is exactly the same as saying “$P$ is true and $Q$ is false.”</p>
+
+<p>Let’s verify (a) with a truth table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">Q</th>
+      <th style="text-align: center">$P \Rightarrow Q$</th>
+      <th style="text-align: center">$\sim(P \Rightarrow Q)$</th>
+      <th style="text-align: center">$\sim Q$</th>
+      <th style="text-align: center">$P \land (\sim Q)$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The last two columns match, so $\sim(P \Rightarrow Q) \equiv P \land (\sim Q)$.</p>
+
+<p>For (b), the idea is similar: $P \Leftrightarrow Q$ is true exactly when $P$ and $Q$ agree, so it’s false exactly when they disagree — either $P$ is true and $Q$ is false, or $Q$ is true and $P$ is false.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">P</th>
+      <th style="text-align: center">Q</th>
+      <th style="text-align: center">$P \Leftrightarrow Q$</th>
+      <th style="text-align: center">$\sim(P \Leftrightarrow Q)$</th>
+      <th style="text-align: center">$P \land (\sim Q)$</th>
+      <th style="text-align: center">$Q \land (\sim P)$</th>
+      <th style="text-align: center">$(P \land (\sim Q)) \lor (Q \land (\sim P))$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+      <td style="text-align: center">F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The last two columns match, so $\sim(P \Leftrightarrow Q) \equiv (P \land (\sim Q)) \lor (Q \land (\sim P))$.</p>
+
+<p>Once we know these basic laws hold, we can use them to prove new logical equivalences just by rewriting one side step by step into the other — without having to build a fresh truth table every time.</p>
+
+<h2 id="210-quantified-statements">2.10 Quantified Statements</h2>
+
+<p>An <strong>open sentence</strong> is a sentence that contains one or more variables, where each variable stands for some value from a set called the <strong>domain</strong> of that variable. It only becomes a true or false statement once we actually plug in a specific value for the variable.</p>
+
+<p>For example, the open sentence “$3x = 12$,” where $x$ is an integer, only becomes true when $x = 4$. For any other integer, it’s false.</p>
+
+<p>We usually write an open sentence in $x$ as $P(x)$, $Q(x)$, or $R(x)$. If $P(x)$ is an open sentence and the domain of $x$ is $S$, we say $P(x)$ is an open sentence <strong>over the domain $S$</strong>. Plugging in any specific value of $x$ from $S$ turns $P(x)$ into an actual statement (true or false).</p>
+
+<p>For example, take the open sentence
+\(P(x): (x-3)^2 \le 1\)
+over the domain $\mathbb{Z}$ (the integers). This is true exactly when $x \in {2, 3, 4}$, and false for every other integer.</p>
+
+<h3 id="example">Example</h3>
+
+<p>Let $S = {1, 2, \ldots, 7}$, and let</p>
+
+\[P(n): \frac{2n^2 + 5 + (-1)^n}{2} \text{ is prime.}\]
+
+<p>Plugging in each $n \in S$ gives a statement:</p>
+
+<ul>
+  <li>$P(1)$: 3 is prime. — <strong>True</strong></li>
+  <li>$P(2)$: 7 is prime. — <strong>True</strong></li>
+  <li>$P(3)$: 11 is prime. — <strong>True</strong></li>
+  <li>$P(4)$: 19 is prime. — <strong>True</strong></li>
+  <li>$P(5)$: 27 is prime. — <strong>False</strong></li>
+  <li>$P(6)$: 39 is prime. — <strong>False</strong></li>
+  <li>$P(7)$: 51 is prime. — <strong>False</strong></li>
+</ul>
+
+<h3 id="turning-an-open-sentence-into-a-statement-quantifiers">Turning an open sentence into a statement: quantifiers</h3>
+
+<p>Besides plugging in a specific value, there’s another way to turn an open sentence into a statement — by adding a <strong>quantifier</strong>, a phrase that tells us how many values of the domain the sentence applies to.</p>
+
+<p><strong>The universal quantifier</strong> ($\forall$) — means “for every,” “for each,” or “for all.” Adding this to an open sentence $P(x)$ over domain $S$ gives:</p>
+
+\[\forall x \in S,\ P(x)\]
+
+<p>which reads: “For every $x \in S$, $P(x)$.”</p>
+
+<p>This statement is <strong>true</strong> if $P(x)$ holds for <em>every single</em> $x$ in $S$, and <strong>false</strong> if it fails for even <em>one</em> value of $x$ in $S$.</p>
+
+<p><strong>The existential quantifier</strong> ($\exists$) — means “there exists,” “there is,” “for some,” or “for at least one.” Adding this gives:</p>
+
+\[\exists x \in S,\ P(x)\]
+
+<p>which reads: “There exists $x \in S$ such that $P(x)$.”</p>
+
+<p>This statement is <strong>true</strong> if $P(x)$ holds for <em>at least one</em> value of $x$ in $S$, and <strong>false</strong> only if it fails for <em>every</em> value of $x$ in $S$.</p>
+
+<h3 id="example-1">Example</h3>
+
+<p>Going back to the open sentence
+\(P(n): \frac{2n^2 + 5 + (-1)^n}{2} \text{ is prime.}\)
+over $S = {1, 2, \ldots, 7}$:</p>
+
+<ul>
+  <li>$\forall n \in S, P(n)$: “For every $n \in S$, … is prime.” — <strong>False</strong>, since $P(5)$ is false.</li>
+  <li>$\exists n \in S, P(n)$: “There exists $n \in S$ such that … is prime.” — <strong>True</strong>, since $P(1)$ is true.</li>
+</ul>
+
+<p>So the same open sentence can produce either a true or a false statement, just depending on which quantifier you attach.</p>
+
+<h3 id="two-variables">Two variables</h3>
+
+<p>Sometimes an open sentence has two variables, each with its own domain (the domains don’t have to match). Consider:</p>
 
 <blockquote>
-  <p><strong>Example:</strong></p>
-  <ul>
-    <li><strong>Original:</strong> “If a consumer maximizes utility, then their marginal rate of substitution equals the price ratio.”</li>
-    <li><strong>Contrapositive:</strong> “If a consumer’s marginal rate of substitution does not equal the price ratio, then they are not maximizing utility.”</li>
-  </ul>
+  <p>For every two real numbers $x$ and $y$, $x^2 + y^2 \ge 0$.</p>
 </blockquote>
+
+<p>Let $P(x, y): x^2 + y^2 \ge 0$, where both $x$ and $y$ range over $\mathbb{R}$. We can write this statement as:</p>
+
+\[\forall x \in \mathbb{R}, \forall y \in \mathbb{R}, P(x, y)\]
+
+<p>or equally well with the order of the quantifiers swapped — $\forall y \in \mathbb{R}, \forall x \in \mathbb{R}, P(x,y)$ — since two quantifiers of the <em>same</em> type can be swapped without changing the meaning. We can also just group them: $\forall x, y \in \mathbb{R}, P(x, y)$.</p>
+
+<p>Since $x^2 \ge 0$ and $y^2 \ge 0$ always, their sum $x^2 + y^2 \ge 0$ always too — so this statement is <strong>true</strong>.</p>
+
+<h3 id="negating-a-quantified-statement">Negating a quantified statement</h3>
+
+<p>To negate $\forall x \in \mathbb{R}, \forall y \in \mathbb{R}, P(x, y)$, the universal quantifiers flip into existential ones, and the negation moves inside onto $P(x,y)$:</p>
+
+\[\sim\big(\forall x \in \mathbb{R}, \forall y \in \mathbb{R}, P(x,y)\big) \equiv \exists x \in \mathbb{R}, \exists y \in \mathbb{R}, \sim P(x, y)\]
+
+<p>In words: “There exist real numbers $x$ and $y$ such that $x^2 + y^2 &lt; 0$.”</p>
+
+<p>Since we already know the original statement is true, this negation must be <strong>false</strong> — and indeed, $x^2 + y^2$ can never be negative.</p>
+
+<hr />
+
 
         
       </section>
@@ -365,6 +1219,16 @@
       
 
       
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/notes/mathematics-for-economist/problem_set_1/" class="pagination--pager" title="Problem Set - 1
+">Next</a>
+    
+  </nav>
+
     </div>
 
     
@@ -375,7 +1239,7 @@
 </div>
 
     </div>
-
+	
     
 
     <div class="page__footer">

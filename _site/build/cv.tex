@@ -1,0 +1,80 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{RGB}{40,40,40}
+\definecolor{muted}{RGB}{110,110,110}
+
+\setmainfont{Latin Modern Roman}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{-0.3em}{\color{muted}\titlerule}\vspace{0.4em}]
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\newcommand{\cvitem}[3]{%
+  \noindent\textbf{#1} \hfill {\color{muted}#2}\\
+  #3\par\vspace{0.55em}
+}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries\color{accent} Abhijeet K Mishra}\\[0.3em]
+{\color{muted} Ph.D. Candidate, Development Studies · IGIDR}\\[0.15em]  {\small \href{mailto:abhijeet.m@igidr.ac.in}{abhijeet.m@igidr.ac.in} \; $\cdot$ \; Mumbai, India \; $\cdot$ \; \href{https://abhi-da.giyhub.io}{abhi-da.giyhub.io}}
+\end{center}
+\vspace{0.6em}
+
+\section*{Research Interests}
+
+Game theory, network economics, contest theory, public goods provision, industrial organization, political economy.
+
+\section*{Education}
+
+\cvitem{M.A. in Economics}{2021 -- 2023}{%
+Centre for Economic Studies and Planning (CESP), Jawaharlal Nehru University}
+\cvitem{B.A. in Economics}{2017 -- 2020}{%
+St. Xavier's College, Ranchi University}
+
+\section*{Working Papers}
+
+\begin{itemize}[leftmargin=1.1em, itemsep=0.5em, topsep=0pt]
+  \item \textbf{Pricing, Technology, and Enforcement in Markets with Digital Piracy: A Hotelling Approach} \textit{(with Prabhat Sahu)} Target journal: \textit{International Journal of Industrial Organization}
+\end{itemize}
+
+\section*{Publications}
+
+Currently none.
+
+\section*{Conference Presentations}
+
+\begin{itemize}[leftmargin=1.1em, itemsep=0.5em, topsep=0pt]
+  \item \textbf{Competitive Altruism in Public Goods Provision} ICEPAD 2026, BITS Pilani Goa Campus.
+  \item \textbf{Pricing, Technology, and Enforcement in Markets with Digital Piracy: A Hotelling Approach} Crossroads 2026, CDS, Trivandrum.
+  \item \textbf{Pricing, Technology, and Enforcement in Markets with Digital Piracy: A Hotelling Approach} Young Scholars Conference 2025, CESP, JNU.
+\end{itemize}
+
+\section*{Teaching}
+
+Served as Teaching Assistant for the course Mathematics for Economist, Microeconomics II and Macroeconomics I
+
+\section*{Skills}
+
+\begin{itemize}[leftmargin=1.1em, itemsep=0.3em, topsep=0pt]
+  \item \textbf{Programming:} Python
+  \item \textbf{Typesetting:} LaTeX
+  \item \textbf{Software:} Stata, \textit{(if applicable)}
+  \item \textbf{Languages:} English, Hindi
+\end{itemize}
+
+\end{document}

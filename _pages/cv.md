@@ -6,7 +6,7 @@ cv_name: "Abhijeet K Mishra"
 cv_tagline: "Ph.D. Candidate, Development Studies · IGIDR"
 cv_email: "abhijeet.m@igidr.ac.in"
 cv_location: "Mumbai, India"
-cv_website: "abhi-da.giyhub.io"
+cv_website: "abhi-da.github.io"
 ---
 <style>
 .cv-year {

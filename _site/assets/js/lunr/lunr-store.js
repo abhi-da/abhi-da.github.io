@@ -1,8 +1,23 @@
 var store = [{
-        "title": "Introduction to Propositional Logic",
-        "excerpt":"📄 Save Note as PDF 1. Fundamentals &amp; Definitions A proposition is a declarative statement that is either strictly true ($T$) or false ($F$), but never both simultaneously. $P$: “The market is in general equilibrium.” $Q$: “Prices adjust instantaneously to clear supply and demand.”2. Logical Operators &amp; Truth Tables We...","categories": [],
+        "title": "Introduction to Logic",
+        "excerpt":"← Back 📄 Download as PDFYou might have seen MEMES like: But is it really the case? See, you may not use the exact same problems in your daily life, but it teaches you how to use a that particular tool. It controls the world. We use it to put...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/notes/mathematics-for-economist/logic/",
+        "teaser":null},{
+        "title": "Problem Set - 1",
+        "excerpt":"← Back 📄 Download as PDFLogic Exercises — Problem Set Exercise 1. State the negation of each of the following statements. (a) The real number $r$ is at most 2.(b) The absolute value of the real number $a$ is less than 3.(c) Two angles of the triangle are $45°$.(d) The...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/notes/mathematics-for-economist/problem_set_1/",
+        "teaser":null},{
+        "title": "Proof Techniques",
+        "excerpt":"← Back 📄 Download as PDFHow Do We Prove Something Is True? Setting the Scene Up to now, you’ve built a toolbox — statements, connectives, quantifiers, logical equivalence. Time to actually use it. From here on, we ask one question, over and over: given a mathematical statement that is true,...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/notes/mathematics-for-economist/proof_techniques/",
+        "teaser":null},{
+        "title": "Solution Set - 1",
+        "excerpt":"← Back 📄 Download as PDFLogic Exercises — Answer Set 1(a) Negation: The real number $r$ is greater than 2. 1(b) Negation: The absolute value of the real number $a$ is at least 3. 1(c) Negation: It is not the case that two angles of the triangle are $45°$ (i.e.,...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/notes/mathematics-for-economist/solution_set_1/",
         "teaser":null},{
         "title": "Kerala Chapter 1: Arrival, Architecture, and Ankle Injuries",
         "excerpt":"The tour to Kerala began when I applied to CDS Trivandrum. My paper got accepted, and finally, I had the chance to visit Kerala. I had previously asked Subhabarata to plan a trip, but it failed every time. So I grabbed this opportunity with both hands. To add to my...","categories": ["Travel"],
