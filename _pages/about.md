@@ -8,62 +8,6 @@ redirect_from:
   - /about.html
 classes: wide
 ---
-<!-- START LISTENBRAINZ BANNER -->
-<style>
-  .scrobble-banner {
-    display: flex;
-    align-items: center;
-    background: rgba(128, 128, 128, 0.08); /* Adapts perfectly to light/dark themes */
-    border-left: 4px solid #eb743b; /* ListenBrainz brand orange */
-    padding: 14px 20px;
-    border-radius: 0 6px 6px 0;
-    margin: 2em 0;
-  }
-  .scrobble-icon {
-    font-size: 2em;
-    color: #eb743b;
-    margin-right: 20px;
-  }
-  .scrobble-details {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.4;
-  }
-  .scrobble-label {
-    font-size: 0.75em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    opacity: 0.7;
-    margin-bottom: 2px;
-  }
-  .scrobble-track {
-    font-size: 1.05em;
-    font-weight: 500;
-  }
-  .scrobble-track a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .scrobble-track a:hover {
-    text-decoration: underline;
-  }
-</style>
-
-<div class="scrobble-banner">
-  <div class="scrobble-icon">
-    <!-- Uses the FontAwesome compact-disc icon -->
-    <i id="lb-icon" class="fas fa-compact-disc"></i>
-  </div>
-  <div class="scrobble-details">
-    <span class="scrobble-label" id="lb-label">Music Status</span>
-    <span class="scrobble-track" id="lb-track">Checking ListenBrainz...</span>
-  </div>
-</div>
-<!-- END LISTENBRAINZ BANNER -->
-
----
-
 Hi, I am Abhijeet! I study Economics and I am currently doing my PhD at the Indira Gandhi Institute of Development Research (IGIDR) in Mumbai. Before this, I completed my master's degree at CESP, JNU. 
 
 My research focuses on network economics—basically trying to understand how human networks form, why people connect, and why those connections sometimes break. 
@@ -84,57 +28,174 @@ I also love exploring random hobbies in my free time:
 
 ---
 
+<!-- START LIVE ACTIVITY DASHBOARD -->
+<style>
+  .activity-dashboard {
+    background: rgba(128, 128, 128, 0.05);
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 2em 0;
+  }
+  .dashboard-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    padding-bottom: 10px;
+  }
+  .pulse-dot {
+    color: #4CAF50;
+    animation: pulse 2s infinite;
+    margin-right: 8px;
+  }
+  .activity-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .activity-item:not(:last-child) {
+    border-bottom: 1px dashed rgba(128, 128, 128, 0.15);
+  }
+  .activity-icon {
+    font-size: 1.5em;
+    width: 40px;
+    text-align: center;
+    margin-right: 15px;
+  }
+  .activity-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+  }
+  .activity-label {
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .activity-text {
+    font-size: 1.05em;
+  }
+  .activity-text a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .activity-text a:hover {
+    text-decoration: underline;
+  }
+  @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+</style>
+
+<div class="activity-dashboard">
+  <h3 class="dashboard-title"><i class="fas fa-circle pulse-dot"></i> Live Activity</h3>
+  
+  <!-- ListenBrainz Item -->
+  <div class="activity-item">
+    <div class="activity-icon" style="color: #eb743b;"><i id="lb-icon" class="fas fa-music"></i></div>
+    <div class="activity-details">
+      <span class="activity-label" id="lb-label">Music</span>
+      <span class="activity-text" id="lb-track">Checking status...</span>
+    </div>
+  </div>
+
+  <!-- Trakt Item -->
+  <div class="activity-item">
+    <div class="activity-icon" style="color: #ed1c24;"><i id="trakt-icon" class="fas fa-tv"></i></div>
+    <div class="activity-details">
+      <span class="activity-label" id="trakt-label">Watch</span>
+      <span class="activity-text" id="trakt-title">Checking status...</span>
+    </div>
+  </div>
+</div>
+<!-- END LIVE ACTIVITY DASHBOARD -->
 
 > "We're born free. All of us. Free. Some don't believe it, some try to take it away. To hell with them! Water like fire, mountains of ice... Lay your eyes on that, and you'll know what freedom is, that it's worth fighting for! Fight to live, risk it all for even a glimmer of real freedom!... Fight. Fight. Fight. FIGHT! FIGHT!!!"  
 > — **Eren Yeager, Attack on Titan**
 
 <script>
-  // Insert your ListenBrainz username here
+  // --- CREDENTIALS ---
   const lbUsername = "thisiseren"; 
-  
+  const traktUser = "v08503149";
+  const traktClientId = "KFHSt5fLLdqTnScBJ4T2udExu0UpaX_syhFJtSAnkkU"; 
+
+  // --- LISTENBRAINZ LOGIC ---
   const lbLabel = document.getElementById("lb-label");
   const lbTrack = document.getElementById("lb-track");
   const lbIcon = document.getElementById("lb-icon");
 
-  const playingUrl = `https://api.listenbrainz.org/1/user/${lbUsername}/playing-now`;
-  const recentUrl = `https://api.listenbrainz.org/1/user/${lbUsername}/listens?count=1`;
-
-  // Helper function to update the DOM
-  function updateBanner(label, trackName, artistName, isPlaying) {
+  function updateLb(label, trackName, artistName, isPlaying) {
     lbLabel.innerText = label;
     lbTrack.innerHTML = `<a href="https://listenbrainz.org/user/${lbUsername}/" target="_blank"><strong>${trackName}</strong> by ${artistName}</a>`;
-    
-    // Add a spinning animation to the record icon if music is live
     if (isPlaying) {
-      lbIcon.classList.add("fa-spin");
+      lbIcon.classList.remove("fa-music");
+      lbIcon.classList.add("fa-compact-disc", "fa-spin");
       lbIcon.style.animationDuration = "3s";
-    } else {
-      lbIcon.classList.remove("fa-spin");
     }
   }
 
-  fetch(playingUrl)
+  fetch(`https://api.listenbrainz.org/1/user/${lbUsername}/playing-now`)
     .then(res => res.json())
     .then(data => {
-      // 1. Check if playing right now
       if (data.payload && data.payload.listens && data.payload.listens.length > 0) {
         const track = data.payload.listens[0].track_metadata;
-        updateBanner("Now Playing", track.track_name, track.artist_name, true);
+        updateLb("Listening Now", track.track_name, track.artist_name, true);
       } else {
-        // 2. Fallback to last played
-        fetch(recentUrl)
+        fetch(`https://api.listenbrainz.org/1/user/${lbUsername}/listens?count=1`)
           .then(res => res.json())
-          .then(recentData => {
-            if (recentData.payload && recentData.payload.listens && recentData.payload.listens.length > 0) {
-              const track = recentData.payload.listens[0].track_metadata;
-              updateBanner("Recently Played", track.track_name, track.artist_name, false);
+          .then(recent => {
+            if (recent.payload && recent.payload.listens.length > 0) {
+              const track = recent.payload.listens[0].track_metadata;
+              updateLb("Recently Played", track.track_name, track.artist_name, false);
             } else {
-              lbTrack.innerText = "Offline";
+              lbTrack.innerText = "Nothing logged yet.";
             }
           });
       }
-    })
-    .catch(() => {
-      lbTrack.innerText = "Unable to load data.";
-    });
+    }).catch(() => lbTrack.innerText = "Offline");
+
+  // --- TRAKT.TV LOGIC ---
+  const tLabel = document.getElementById("trakt-label");
+  const tTitle = document.getElementById("trakt-title");
+  const tIcon = document.getElementById("trakt-icon");
+
+  const traktHeaders = {
+    "Content-Type": "application/json",
+    "trakt-api-version": "2",
+    "trakt-api-key": traktClientId
+  };
+
+  function updateTrakt(label, data, isPlaying) {
+    tLabel.innerText = label;
+    let text = "";
+    if (data.type === "movie") {
+      text = `<strong>${data.movie.title}</strong> (${data.movie.year})`;
+    } else if (data.type === "episode") {
+      const s = data.episode.season.toString().padStart(2, '0');
+      const e = data.episode.number.toString().padStart(2, '0');
+      text = `<strong>${data.show.title}</strong> — S${s}E${e}`;
+    }
+    tTitle.innerHTML = `<a href="https://trakt.tv/users/${traktUser}" target="_blank">${text}</a>`;
+    
+    if (isPlaying) {
+      tIcon.style.animation = "pulse 2s infinite";
+    }
+  }
+
+  fetch(`https://api.trakt.tv/users/${traktUser}/watching`, { headers: traktHeaders })
+    .then(res => {
+      if (res.status === 204) {
+        return fetch(`https://api.trakt.tv/users/${traktUser}/history?limit=1`, { headers: traktHeaders })
+          .then(r => r.json())
+          .then(history => {
+            if (history.length > 0) updateTrakt("Recently Watched", history[0], false);
+            else tTitle.innerText = "Nothing logged recently.";
+          });
+      } else if (res.ok) {
+        return res.json().then(now => updateTrakt("Currently Watching", now, true));
+      }
+    }).catch(() => tTitle.innerText = "Offline");
 </script>
