@@ -127,8 +127,11 @@ author:
     - label: "ListenBrainz"
       icon: "fas fa-fw fa-music"
       url: "https://listenbrainz.org/user/thisiseren"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=5b_2BM8AAAAJ&hl=en&oi=ao"
   linkedin         : "abhijeet-mishra-649bb1134" 
-  googlescholar    : "https://scholar.google.com/citations?user=5b_2BM8AAAAJ&hl=en&oi=ao"
+  googlescholar    : 
   pinterest        :
   soundcloud       :
   stackoverflow    : 
