@@ -7,7 +7,7 @@ toc: true
 wide: true
 ---
 <style>
-  /* Base styles for both */
+  /* Override theme container limits for screen view */
   body, 
   main, 
   article, 
@@ -19,11 +19,13 @@ wide: true
     width: 100% !important;
     margin: 0 auto !important; /* Centers the content */
   }
-
-table {
+  /* Make tables stretch cleanly across the wider space */
+  table {
     width: 100% !important;
     display: table !important; /* Fixes themes that force horizontal table scrolling */
   }
+
+  /* Base styles for both */
   .back-btn {
     padding: 8px 16px;
     font-size: 14px;
@@ -40,7 +42,6 @@ table {
     color: #555;
     border-color: #ccc;
   }
-
   .back-btn:first-child:hover {
     background-color: #f0f0f0;
     color: #000;
@@ -51,24 +52,22 @@ table {
     background-color: #2563eb; /* Clean blue */
     color: #ffffff;
   }
-
   .back-btn:last-child:hover {
     background-color: #1d4ed8;
   }
 
-  /* Hide buttons during PDF print export */
+  /* Hide the buttons themselves when printing/saving as PDF */
   @media print {
-    .back-btn, .nav-buttons, div:has(.back-btn) {
+    .no-print {
       display: none !important;
     }
   }
 </style>
 
-<div style="display: flex; gap: 10px; margin-bottom: 20px;">
+<div class="no-print" style="display: flex; gap: 10px; margin-bottom: 20px;">
   <button class="back-btn" onclick="history.back()">← Back</button>
   <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
 </div>
-
 
 You might have seen MEMES like: ![Math Meme]({{ '/assets/images/useless_math_meme.jpg' | relative_url }})
 
@@ -336,3 +335,168 @@ To check if two statements are logically equivalent, we build a truth table for 
 |  F  |  F  |         T         |    T     |        T        |
 
 Since the last two columns match in every row, we say $P \rightarrow Q \equiv \neg P \lor Q$.
+
+## 2.9 Some Fundamental Properties of Logical Equivalence
+
+It's probably not surprising that a statement $P$ and its double negation $\sim(\sim P)$ mean the same thing. Let's check this with a truth table.
+
+|  P  | $\sim P$ | $\sim(\sim P)$ |
+| :-: | :------: | :------------: |
+|  T  |    F     |       T        |
+|  F  |    T     |       F        |
+
+The first and last columns match, so $P \equiv \sim(\sim P)$.
+
+We already saw earlier that $P \land Q$ and $Q \land P$ are logically equivalent — order doesn't matter for "and." There are a few more of these basic equivalences that come up all the time, so it's worth knowing them by name.
+
+### Some Fundamental Logical Equivalences
+
+For statements $P$, $Q$, and $R$:
+
+**1. Commutative Laws** : order doesn't matter
+(a) $P \lor Q \equiv Q \lor P$
+(b) $P \land Q \equiv Q \land P$
+
+**2. Associative Laws** : grouping doesn't matter
+(a) $P \lor (Q \lor R) \equiv (P \lor Q) \lor R$
+(b) $P \land (Q \land R) \equiv (P \land Q) \land R$
+
+**3. Distributive Laws** : you can "distribute" one operation over the other, just like multiplication distributes over addition in regular algebra
+(a) $P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)$
+(b) $P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)$
+
+**4. De Morgan's Laws** : negating an "and/or" statement flips the operation and pushes the negation inside
+(a) $\sim(P \lor Q) \equiv (\sim P) \land (\sim Q)$
+(b) $\sim(P \land Q) \equiv (\sim P) \lor (\sim Q)$
+
+Each of these can be checked the same way we've been checking equivalences, build a truth table for both sides and confirm the columns match. Let's do this for the first distributive law, $P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)$:
+
+|  P  |  Q  |  R  | $Q \land R$ | $P \lor Q$ | $P \lor R$ | $P \lor (Q \land R)$ | $(P \lor Q) \land (P \lor R)$ |
+| :-: | :-: | :-: | :---------: | :--------: | :--------: | :------------------: | :---------------------------: |
+|  T  |  T  |  T  |      T      |     T      |     T      |          T           |               T               |
+|  T  |  T  |  F  |      F      |     T      |     T      |          T           |               T               |
+|  T  |  F  |  T  |      F      |     T      |     T      |          T           |               T               |
+|  T  |  F  |  F  |      F      |     T      |     T      |          T           |               T               |
+|  F  |  T  |  T  |      T      |     T      |     T      |          T           |               T               |
+|  F  |  T  |  F  |      F      |     T      |     F      |          F           |               F               |
+|  F  |  F  |  T  |      F      |     F      |     T      |          F           |               F               |
+|  F  |  F  |  F  |      F      |     F      |     F      |          F           |               F               |
+
+The last two columns are identical in every row, confirming the equivalence.
+
+**5. Negation of Implication and Biconditional**
+(a) $\sim(P \Rightarrow Q) \equiv P \land (\sim Q)$
+(b) $\sim(P \Leftrightarrow Q) \equiv (P \land (\sim Q)) \lor (Q \land (\sim P))$
+
+The first one makes sense if you think about it in words: "$P \Rightarrow Q$" is only broken when $P$ is true but $Q$ turns out false — so saying "$P \Rightarrow Q$ is false" is exactly the same as saying "$P$ is true and $Q$ is false."
+
+Let's verify (a) with a truth table:
+
+|  P  |  Q  | $P \Rightarrow Q$ | $\sim(P \Rightarrow Q)$ | $\sim Q$ | $P \land (\sim Q)$ |
+| :-: | :-: | :---------------: | :---------------------: | :------: | :----------------: |
+|  T  |  T  |         T         |            F            |    F     |         F          |
+|  T  |  F  |         F         |            T            |    T     |         T          |
+|  F  |  T  |         T         |            F            |    F     |         F          |
+|  F  |  F  |         T         |            F            |    T     |         F          |
+
+The last two columns match, so $\sim(P \Rightarrow Q) \equiv P \land (\sim Q)$.
+
+For (b), the idea is similar: $P \Leftrightarrow Q$ is true exactly when $P$ and $Q$ agree, so it's false exactly when they disagree — either $P$ is true and $Q$ is false, or $Q$ is true and $P$ is false.
+
+|  P  |  Q  | $P \Leftrightarrow Q$ | $\sim(P \Leftrightarrow Q)$ | $P \land (\sim Q)$ | $Q \land (\sim P)$ | $(P \land (\sim Q)) \lor (Q \land (\sim P))$ |
+| :-: | :-: | :-------------------: | :-------------------------: | :----------------: | :----------------: | :------------------------------------------: |
+|  T  |  T  |           T           |              F              |         F          |         F          |                      F                       |
+|  T  |  F  |           F           |              T              |         T          |         F          |                      T                       |
+|  F  |  T  |           F           |              T              |         F          |         T          |                      T                       |
+|  F  |  F  |           T           |              F              |         F          |         F          |                      F                       |
+
+The last two columns match, so $\sim(P \Leftrightarrow Q) \equiv (P \land (\sim Q)) \lor (Q \land (\sim P))$.
+
+Once we know these basic laws hold, we can use them to prove new logical equivalences just by rewriting one side step by step into the other — without having to build a fresh truth table every time.
+
+## 2.10 Quantified Statements
+
+An **open sentence** is a sentence that contains one or more variables, where each variable stands for some value from a set called the **domain** of that variable. It only becomes a true or false statement once we actually plug in a specific value for the variable.
+
+For example, the open sentence "$3x = 12$," where $x$ is an integer, only becomes true when $x = 4$. For any other integer, it's false.
+
+We usually write an open sentence in $x$ as $P(x)$, $Q(x)$, or $R(x)$. If $P(x)$ is an open sentence and the domain of $x$ is $S$, we say $P(x)$ is an open sentence **over the domain $S$**. Plugging in any specific value of $x$ from $S$ turns $P(x)$ into an actual statement (true or false).
+
+For example, take the open sentence
+$$P(x): (x-3)^2 \le 1$$
+over the domain $\mathbb{Z}$ (the integers). This is true exactly when $x \in \{2, 3, 4\}$, and false for every other integer.
+
+### Example
+
+Let $S = \{1, 2, \ldots, 7\}$, and let
+
+$$P(n): \frac{2n^2 + 5 + (-1)^n}{2} \text{ is prime.}$$
+
+Plugging in each $n \in S$ gives a statement:
+
+- $P(1)$: 3 is prime. — **True**
+- $P(2)$: 7 is prime. — **True**
+- $P(3)$: 11 is prime. — **True**
+- $P(4)$: 19 is prime. — **True**
+- $P(5)$: 27 is prime. — **False**
+- $P(6)$: 39 is prime. — **False**
+- $P(7)$: 51 is prime. — **False**
+
+### Turning an open sentence into a statement: quantifiers
+
+Besides plugging in a specific value, there's another way to turn an open sentence into a statement — by adding a **quantifier**, a phrase that tells us how many values of the domain the sentence applies to.
+
+**The universal quantifier** ($\forall$) — means "for every," "for each," or "for all." Adding this to an open sentence $P(x)$ over domain $S$ gives:
+
+$$\forall x \in S,\ P(x)$$
+
+which reads: "For every $x \in S$, $P(x)$."
+
+This statement is **true** if $P(x)$ holds for _every single_ $x$ in $S$, and **false** if it fails for even _one_ value of $x$ in $S$.
+
+**The existential quantifier** ($\exists$) — means "there exists," "there is," "for some," or "for at least one." Adding this gives:
+
+$$\exists x \in S,\ P(x)$$
+
+which reads: "There exists $x \in S$ such that $P(x)$."
+
+This statement is **true** if $P(x)$ holds for _at least one_ value of $x$ in $S$, and **false** only if it fails for _every_ value of $x$ in $S$.
+
+### Example
+
+Going back to the open sentence
+$$P(n): \frac{2n^2 + 5 + (-1)^n}{2} \text{ is prime.}$$
+over $S = \{1, 2, \ldots, 7\}$:
+
+- $\forall n \in S, P(n)$: "For every $n \in S$, ... is prime." — **False**, since $P(5)$ is false.
+- $\exists n \in S, P(n)$: "There exists $n \in S$ such that ... is prime." — **True**, since $P(1)$ is true.
+
+So the same open sentence can produce either a true or a false statement, just depending on which quantifier you attach.
+
+### Two variables
+
+Sometimes an open sentence has two variables, each with its own domain (the domains don't have to match). Consider:
+
+> For every two real numbers $x$ and $y$, $x^2 + y^2 \ge 0$.
+
+Let $P(x, y): x^2 + y^2 \ge 0$, where both $x$ and $y$ range over $\mathbb{R}$. We can write this statement as:
+
+$$\forall x \in \mathbb{R}, \forall y \in \mathbb{R}, P(x, y)$$
+
+or equally well with the order of the quantifiers swapped — $\forall y \in \mathbb{R}, \forall x \in \mathbb{R}, P(x,y)$ — since two quantifiers of the _same_ type can be swapped without changing the meaning. We can also just group them: $\forall x, y \in \mathbb{R}, P(x, y)$.
+
+Since $x^2 \ge 0$ and $y^2 \ge 0$ always, their sum $x^2 + y^2 \ge 0$ always too — so this statement is **true**.
+
+### Negating a quantified statement
+
+To negate $\forall x \in \mathbb{R}, \forall y \in \mathbb{R}, P(x, y)$, the universal quantifiers flip into existential ones, and the negation moves inside onto $P(x,y)$:
+
+$$\sim\big(\forall x \in \mathbb{R}, \forall y \in \mathbb{R}, P(x,y)\big) \equiv \exists x \in \mathbb{R}, \exists y \in \mathbb{R}, \sim P(x, y)$$
+
+In words: "There exist real numbers $x$ and $y$ such that $x^2 + y^2 < 0$."
+
+Since we already know the original statement is true, this negation must be **false** — and indeed, $x^2 + y^2$ can never be negative.
+
+---
+
+
