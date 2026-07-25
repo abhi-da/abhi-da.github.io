@@ -4,6 +4,7 @@ title: "Solution Set - 1"
 date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
+wide: true
 ---
 <style>
   /* Override theme container limits for screen view */
@@ -14,17 +15,15 @@ toc: true
   .wrapper, 
   .content, 
   .post-content {
-    max-width: 100% !important; /* Changes maximum reading width to 90% of screen */
+    max-width: 100% !important;
     width: 100% !important;
-    margin: 0 auto !important; /* Centers the content */
+    margin: 0 auto !important;
   }
-  /* Make tables stretch cleanly across the wider space */
   table {
     width: 100% !important;
-    display: table !important; /* Fixes themes that force horizontal table scrolling */
+    display: table !important;
   }
 
-  /* Base styles for both */
   .back-btn {
     padding: 8px 16px;
     font-size: 14px;
@@ -35,7 +34,6 @@ toc: true
     transition: background-color 0.2s ease;
   }
 
-  /* First button (Back) - Secondary look */
   .back-btn:first-child {
     background-color: transparent;
     color: #555;
@@ -46,28 +44,28 @@ toc: true
     color: #000;
   }
 
-  /* Second button (Download PDF) - Accent/Primary look */
   .back-btn:last-child {
-    background-color: #2563eb; /* Clean blue */
+    background-color: #2563eb;
     color: #ffffff;
   }
   .back-btn:last-child:hover {
     background-color: #1d4ed8;
   }
 
-  /* Hide the buttons themselves when printing/saving as PDF */
-@media print {
-  @page {
-    margin: 0.5in; /* your own margin, replacing the browser's default print margins */
+  @media print {
+    @page {
+      margin: 0.5in;
+    }
+    .no-print {
+      display: none !important;
+    }
   }
-}
 </style>
 
 <div class="no-print" style="display: flex; gap: 10px; margin-bottom: 20px;">
   <button class="back-btn" onclick="history.back()">← Back</button>
   <button class="back-btn" onclick="window.print()">📄 Download as PDF</button>
 </div>
-
 # Logic Exercises — Answer Set
 
 **1(a)** Negation: The real number $r$ is greater than 2.
