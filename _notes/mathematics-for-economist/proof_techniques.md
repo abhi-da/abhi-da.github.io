@@ -1,9 +1,7 @@
-
-
 ---
 layout: single
 title: "Proof Techniques"
-date: 2026-07-25
+date: 2026-07-24
 subject: "Mathematics for Economists"
 toc: true
 wide: true
