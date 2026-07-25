@@ -119,7 +119,14 @@ author:
   google_plus      :
   keybase          :
   instagram        : "g_._o._d?igsh=MXRvZmF3ZmM2N2dnNw=="
-  lastfm           : "thisiseren"
+  lastfm           : #"thisiseren"
+  links:
+    - label: "MusicBrainz"
+      icon: "fas fa-fw fa-compact-disc"
+      url: "https://musicbrainz.org/user/thisiseren"
+    - label: "ListenBrainz"
+      icon: "fas fa-fw fa-music"
+      url: "https://listenbrainz.org/user/thisiseren"
   linkedin         : "abhijeet-mishra-649bb1134" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   googlescholar    : 
   pinterest        :
