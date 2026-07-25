@@ -59,11 +59,11 @@ wide: true
   }
 
   /* Hide the buttons themselves when printing/saving as PDF */
-  @media print {
-    .no-print {
-      display: none !important;
-    }
+@media print {
+  @page {
+    margin: 0.5in; /* your own margin, replacing the browser's default print margins */
   }
+}
 </style>
 
 <div class="no-print" style="display: flex; gap: 10px; margin-bottom: 20px;">
