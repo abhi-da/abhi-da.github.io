@@ -87,7 +87,7 @@ I also love exploring random hobbies in my free time:
 
 <script>
   // Insert your ListenBrainz username here
-  const lbUsername = "YOUR_USERNAME"; 
+  const lbUsername = "thisiseren"; 
   
   const lbLabel = document.getElementById("lb-label");
   const lbTrack = document.getElementById("lb-track");
