@@ -1,0 +1,68 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{RGB}{40,40,40}
+\definecolor{muted}{RGB}{110,110,110}
+
+\setmainfont{Latin Modern Roman}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{-0.3em}{\color{muted}\titlerule}\vspace{0.4em}]
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\newcommand{\cvitem}[3]{%
+  \noindent\textbf{#1} \hfill {\color{muted}#2}\\
+  #3\par\vspace{0.55em}
+}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries\color{accent} (((name)))}\\[0.3em]
+  ((* if tagline *)){\color{muted} (((tagline)))}\\[0.15em]((* endif *))
+  {\small ((* if email *))\href{mailto:(((email)))}{(((email)))}((* endif *))((* if email and location *)) \; $\cdot$ \; ((* endif *))(((location)))((* if website and (email or location) *)) \; $\cdot$ \; ((* endif *))((* if website *))\href{https://(((website)))}{(((website)))}((* endif *))}
+\end{center}
+\vspace{0.6em}
+
+((* for s in sections *))
+\section*{(((s.heading)))}
+
+((* if s.type == "education" *))
+((* for e in s.entries *))
+\cvitem{(((e.degree)))}{(((e.years)))}{%
+(((e.institution)))((* if e.advisor *))\\
+\textit{Advisor:} (((e.advisor)))((* endif *))}
+((* endfor *))
+
+((* elif s.type == "labelvalue" *))
+\begin{itemize}[leftmargin=1.1em, itemsep=0.3em, topsep=0pt]
+((* for label, value in s.pairs *))
+  \item \textbf{(((label))):} (((value)))
+((* endfor *))
+\end{itemize}
+
+((* elif s.type == "bullets" *))
+\begin{itemize}[leftmargin=1.1em, itemsep=0.5em, topsep=0pt]
+((* for item in s.bullet_items *))
+  \item (((item)))
+((* endfor *))
+\end{itemize}
+
+((* else *))
+(((s.prose)))
+
+((* endif *))
+((* endfor *))
+\end{document}
