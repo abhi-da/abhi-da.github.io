@@ -240,6 +240,8 @@ Let's break this down with a simple example. Let:
 P: It is raining
 Q: The ground is wet
 
+The statment P is called assumption and Q is called as conclusion.
+
 **"If P, then Q," "Q if P," and "P implies Q"** clearly say the same thing: if it is raining, the ground is wet. That part feels obvious.
 
 The tricky part is seeing that **"P only if Q," "P is sufficient for Q,"** and **"Q is necessary for P"** are _also_ saying the same thing.
@@ -251,6 +253,18 @@ The tricky part is seeing that **"P only if Q," "P is sufficient for Q,"** and *
 **P is sufficient for Q:** "Raining is sufficient for the ground to be wet." This means rain alone is enough to guarantee wet ground — you do not need anything else. If it is raining, that fact by itself is enough to conclude the ground is wet. This is just "if P, then Q" phrased from the other direction — instead of stating the requirement (Q), it states that P is _enough_ to produce it.
 
 So all six phrasings are really the same rule — "if it is raining, the ground is wet" — just said in different everyday ways.
+
+Now, how do we interpret them:
+
+Let us analyse the statement,*If 'you got 10 CGPA' then 'I will throw a party'* - This simply means that if ryou got 10 CGPA, then we are sure that you will get a party. However, it doesn't mean that if you don't get a party, the you will not get a party. We don't claim anything when you don't get 10 CGPA. If you don't get 10 CGPA, you may get a party, due to several other reasons, like.  In such a case, when the assumption is False and Conclusion is true, the statment is vaculously true. The only time the statment is false when you got 10 CGPA but you I don't throw a party. This is the only case when my promise is False. 
+
+*If 'you got 10 CGPA' then 'I will throw a party'* - The party could mean two things, either you got 10 CGPA or it might be due to other reasons. So '10 CGPA' as a possibility exists only you get 10 CGPA. If I am true to the promise, If I don't throw a party, that would mean that you didn't get 10 CGPA.  
+
+So, throwing a party is necessary for promise to be true. If you got a party, doesn't matter you got 10 CGPA or not the promise is fullfilled. The promise is only broken, when you don't get a party and you get a 10 CGPA. So, it should not be the case that You get 10 CGPA and you don't get a party. If Q doesn't happen, you can be sure that P didn't happen as well.
+That is implied by P only if Q.
+
+
+
 
 ### Bi-Conditionals
 
