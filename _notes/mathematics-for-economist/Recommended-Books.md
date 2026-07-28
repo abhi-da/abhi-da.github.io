@@ -1,11 +1,11 @@
 ---
 layout: single
-title: "Boolean Algebra"
+title: "Recommended Readings"
 date: 2026-07-28
 subject: "Mathematics for Economists"
 toc: true
 wide: true
-order: 4
+order: 1
 ---
 <style>
   /* Override theme container limits for screen view */
