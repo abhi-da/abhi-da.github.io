@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Systematic Method for Constructing Truth Tables for $n$ Statements"
-date: 2026-07-21
+date: 2026-07-28
 subject: "Mathematics for Economists"
 toc: true
 wide: true
