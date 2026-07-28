@@ -70,7 +70,7 @@ wide: true
 
 # Practice Problem Set 3 — Connectives, Truth Tables, and Laws of Logic
 
-All answers below were checked by direct computation before being written — every truth table and every law-based simplification is verified correct.
+
 
 ---
 
