@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Solution Set - 1"
+title: "Logic: Solution Set - 1"
 date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
@@ -122,11 +122,73 @@ _All four are vacuously true, since $P$, $Q$, $R$ are all false, making every an
 
 ---
 
-**6.** ⚠️ Source text for this problem was garbled in extraction and could not be reliably reconstructed — please confirm the exact expressions from your original source.
+**6.** 
+
+Note that the properties "even" and "odd" apply strictly to integers; if a fraction evaluates to a non-integer, the statement that it is even or odd is automatically false.
+
+
+Let $P(n)$ be "$\frac{n^2+n}{3}$ is even".
+Let $Q(n)$ be "$\frac{n^2+n}{2}$ is odd".
+
+We need to find all values of $n$ in $\{1, 2, 3\}$ where $P(n) \iff Q(n)$ is true.
+
+
+
+* **For n = 1:**
+* Evaluate $P(1)$: $\frac{1^2+1}{3} = \frac{2}{3}$. Since it is not an integer, $P(1)$ is **False**.
+* Evaluate $Q(1)$: $\frac{1^2+1}{2} = \frac{2}{2} = 1$. Since 1 is odd, $Q(1)$ is **True**.
+* **Result:** False $\iff$ True evaluates to **False**.
+
+
+* **For n = 2:**
+* Evaluate $P(2)$: $\frac{2^2+2}{3} = \frac{6}{3} = 2$. Since 2 is even, $P(2)$ is **True**.
+* Evaluate $Q(2)$: $\frac{2^2+2}{2} = \frac{6}{2} = 3$. Since 3 is odd, $Q(2)$ is **True**.
+* **Result:** True $\iff$ True evaluates to **True**.
+
+
+* **For n = 3:**
+* Evaluate $P(3)$: $\frac{3^2+3}{3} = \frac{12}{3} = 4$. Since 4 is even, $P(3)$ is **True**.
+* Evaluate $Q(3)$: $\frac{3^2+3}{2} = \frac{12}{2} = 6$. Since 6 is even (not odd), $Q(3)$ is **False**.
+* **Result:** True $\iff$ False evaluates to **False**.
+
+
+
+The statement is true only for **n = 2**.
 
 ---
 
-**7.** ⚠️ Source text for this problem was garbled in extraction and could not be reliably reconstructed — please confirm the exact expressions from your original source.
+
+**7.** 
+
+Let $A(n)$ be "$\frac{n(n-1)}{3}$ is odd".
+Let $B(n)$ be "$\frac{n(n+1)}{2}$ is even".
+
+We need to find all values of $n$ in $\{2, 3, 4\}$ where $A(n) \iff B(n)$ is true.
+
+
+* **For n = 2:**
+* Evaluate $A(2)$: $\frac{2(2-1)}{3} = \frac{2}{3}$. Since it is not an integer, $A(2)$ is **False**.
+* Evaluate $B(2)$: $\frac{2(2+1)}{2} = \frac{6}{2} = 3$. Since 3 is odd (not even), $B(2)$ is **False**.
+* **Result:** False $\iff$ False evaluates to **True**.
+
+
+* **For n = 3:**
+* Evaluate $A(3)$: $\frac{3(3-1)}{3} = \frac{6}{3} = 2$. Since 2 is even (not odd), $A(3)$ is **False**.
+* Evaluate $B(3)$: $\frac{3(3+1)}{2} = \frac{12}{2} = 6$. Since 6 is even, $B(3)$ is **True**.
+* **Result:** False $\iff$ True evaluates to **False**.
+
+
+* **For n = 4:**
+* Evaluate $A(4)$: $\frac{4(4-1)}{3} = \frac{12}{3} = 4$. Since 4 is even (not odd), $A(4)$ is **False**.
+* Evaluate $B(4)$: $\frac{4(4+1)}{2} = \frac{20}{2} = 10$. Since 10 is even, $B(4)$ is **True**.
+* **Result:** False $\iff$ True evaluates to **False**.
+
+
+
+
+The statement is true only for **n = 2**.
+
+
 
 ---
 
@@ -214,9 +276,9 @@ The last two columns match in every row → **logically equivalent**. ✓
 
 ---
 
-**13.** We can conclude only that there exists **at least one** assignment of truth values to $P$, $Q$, $R$ for which $S$ and $T$ differ — i.e., at least one row of the truth table where one is True and the other is False.
+**13.** We can conclude only that there exists **at least one** assignment of truth values to $P$, $Q$, $R$ for which $S$ and $T$ differ: i.e., at least one row of the truth table where one is True and the other is False.
 
-This does **not** mean $S$ and $T$ disagree on every assignment — they may still agree on some rows. "Not logically equivalent" only rules out agreement on _all_ rows.
+This does **not** mean $S$ and $T$ disagree on every assignment,  they may still agree on some rows. "Not logically equivalent" only rules out agreement on _all_ rows.
 
 ---
 

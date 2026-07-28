@@ -126,7 +126,7 @@ Write each of the following statements in words and indicate whether the stateme
 
 > A necessary and sufficient condition for $\dfrac{n^2+n}{3}$ to be even is that $\dfrac{n^2+n}{2}$ is odd.
 
-_(Note: source text for this problem was partially garbled during extraction — please confirm the exact expressions if this doesn't match your source.)_
+
 
 ---
 
@@ -134,7 +134,7 @@ _(Note: source text for this problem was partially garbled during extraction —
 
 > The integer $\dfrac{n(n-1)}{3}$ is odd if and only if $\dfrac{n(n+1)}{2}$ is even.
 
-_(Note: source text for this problem was partially garbled during extraction — please confirm the exact expressions if this doesn't match your source.)_
+
 
 ---
 

@@ -68,13 +68,13 @@ wide: true
 </div>
 
 
-# Practice Problem Set 3 — Connectives, Truth Tables, and Laws of Logic
+# Problem Set 3
 
 
 
 ---
 
-## Part A: Truth Table Questions (10)
+## Part A: Truth Table Questions 
 
 For each statement, construct the truth table and determine whether the statement is a **tautology**, a **contradiction**, or **neither** (a contingency).
 
@@ -100,7 +100,7 @@ For each statement, construct the truth table and determine whether the statemen
 
 ---
 
-## Part B: Laws of Logic Questions (15)
+## Part B: Laws of Logic Questions 
 
 Simplify each expression as far as possible, naming the law used at each step (Commutative, Associative, Distributive, De Morgan's, Absorption, Identity, Negation, Idempotent, Exportation, or Double Negation).
 
@@ -240,7 +240,7 @@ Simplify each expression as far as possible, naming the law used at each step (C
 | F | T | T | F | **F** |
 | F | F | T | T | **T** |
 
-**Neither** — contingency. Worth noticing: whenever this is true ($P{=}F,Q{=}F$), $\neg P$ is also true — this is the pattern behind **modus tollens** (from $P\Rightarrow Q$ and $\neg Q$, conclude $\neg P$).
+**Neither** — contingency. 
 
 ---
 
@@ -287,7 +287,7 @@ Simplify each expression as far as possible, naming the law used at each step (C
 | F | F | T | **T** |
 | F | F | F | **T** |
 
-**Neither** — contingency (false only when $P{=}T,Q{=}T,R{=}F$). Note this is logically the same as $\neg(P\land Q)\lor R$ from A3, by De Morgan's Law — compare the two final columns.
+**Neither** — contingency (false only when $P{=}T,Q{=}T,R{=}F$). 
 
 ---
 
@@ -376,7 +376,7 @@ $$\begin{aligned}
 &\equiv F \lor (P\land\neg Q) \lor (\neg P\land Q) \lor F &&\text{(Negation Law)}\\
 &\equiv (P\land\neg Q)\lor(\neg P\land Q) &&\text{(Identity Law)}
 \end{aligned}$$
-*(This is the "exclusive or" of $P$ and $Q$ — true exactly when they differ, matching A5/A6 above.)*
+
 
 ---
 
@@ -390,7 +390,7 @@ P \lor (\neg P \land Q) &\equiv (P \lor \neg P) \land (P \lor Q) &&\text{(Distri
 ---
 
 **A23.** $\neg(P \leftrightarrow Q) \equiv \mathbf{(P \land \neg Q) \lor (\neg P \land Q)}$
-*(Directly from A20: negate $(P\land Q)\lor(\neg P\land\neg Q)$ using De Morgan's twice — the disjunction of two conjunctions is exactly the exclusive-or form seen in A21.)*
+
 
 ---
 
@@ -412,7 +412,7 @@ $$\begin{aligned}
 
 ---
 
-## Quick Reference: Laws Used Above
+## Reference: Laws Used Above
 
 | Law | Statement |
 |---|---|
