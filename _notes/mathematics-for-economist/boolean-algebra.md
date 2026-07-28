@@ -135,9 +135,9 @@ Union, in set language, is exactly "or" in logic — an element is in $A \cup B$
 
 ---
 
-### Deriving the SOP
+## Deriving the SOP
 
-#### Minterm and Maxterm
+## Minterm and Maxterm
 
 **Minterm.** For a set of $n$ variables, a **minterm** is an AND-term that includes *every* variable exactly once — either the variable itself or its negation, never both, never left out. Because every variable is forced to take a specific True/False value in a minterm, each minterm corresponds to exactly **one row** of the truth table, and is **True for that one row only, and False everywhere else**.
 
@@ -169,7 +169,7 @@ Check row 4's maxterm, $A \lor B$: it's False only when $A{=}F$ and $B{=}F$ — 
 
 ---
 
-#### Why the Conventions Are Opposite
+## Why the Conventions Are Opposite
 
 This is the part that's easy to mix up, so here's the reasoning behind it, not just the rule.
 
@@ -210,7 +210,7 @@ We can confirm the sam eusing truth table.
 
 ---
 
-## 4. Proving Tautologies
+## 4. Proving Tautologies and Contradictions
 
 A statement is a **tautology** if it is always TRUE, that is, in the truth-table world, the final column is *all T's, no exceptions*. In the Boolean Algebra world, a tautology means the expression algebraically **simplifies to 1** (since 1 ≡ True), no matter what A, B, C stand for.
 
