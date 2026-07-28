@@ -119,4 +119,4 @@ Alternatively, you can pick up any standard economics mathematics textbook, such
 
 > **Note:** I strongly recommend reading *How to Think Like a Mathematician* first. It will give you a better idea of how to select textbooks and navigate between topics effectively.
 
-You can also find a broader curated list here: [Awesome Math Series](https://github.com/ros
+You can also find a broader curated list here: [Awesome Math Series](https://github.com/rossant/awesome-math)
