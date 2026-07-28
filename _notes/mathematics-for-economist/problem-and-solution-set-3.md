@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Problem Set 2"
+title: "Logic: Problem and Solution Set 2"
 date: 2026-07-27
 subject: "Mathematics for Economists"
 toc: true
@@ -69,7 +69,7 @@ order: 6
 </div>
 
 
-# Problem Set 3
+# Problem Set 2
 
 
 

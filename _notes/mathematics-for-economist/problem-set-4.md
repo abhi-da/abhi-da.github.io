@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Logic: Problem Set 4"
+title: "Logic: Problem and Solution Set 3"
 date: 2026-07-28
 subject: "Mathematics for Economists"
 toc: true
@@ -69,7 +69,7 @@ order: 7
 </div>
 ---
 
-# Problem Set 4 — Logic, Truth Tables, and Symbolization
+# Problem Set 3 — Logic, Truth Tables, and Symbolization
 
 ---
 

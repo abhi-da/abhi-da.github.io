@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Problem Set - 1"
+title: "Logic: Problem Set - 1"
 date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
