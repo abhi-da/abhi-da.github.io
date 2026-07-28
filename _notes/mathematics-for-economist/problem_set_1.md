@@ -5,6 +5,7 @@ date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
 wide: true
+order: 4
 ---
 <style>
   /* Override theme container limits for screen view */

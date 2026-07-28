@@ -1,10 +1,11 @@
 ---
 layout: single
-title: "Problem Set 3"
+title: "Problem Set 2"
 date: 2026-07-27
 subject: "Mathematics for Economists"
 toc: true
 wide: true
+order: 6
 ---
 <style>
   /* Override theme container limits for screen view */

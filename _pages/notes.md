@@ -11,7 +11,8 @@ classes: wide
   <h2>{{ group.name }}</h2>
 
   <ul>
-  {% for post in group.items %}
+  {% assign sorted_items = group.items | sort: "order" %}
+  {% for post in sorted_items %}
     <li>
       <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a>
       {% if post.date %}
