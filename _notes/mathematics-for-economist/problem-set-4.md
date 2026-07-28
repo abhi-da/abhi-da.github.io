@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "Introduction to Logic"
-date: 2026-07-21
+title: "Logic: Problem Set 4"
+date: 2026-07-28
 subject: "Mathematics for Economists"
 toc: true
 wide: true

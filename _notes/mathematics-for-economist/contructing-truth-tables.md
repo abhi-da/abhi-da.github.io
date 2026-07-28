@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Introduction to Logic"
+title: "Systematic Method for Constructing Truth Tables for $n$ Statements"
 date: 2026-07-21
 subject: "Mathematics for Economists"
 toc: true
