@@ -416,11 +416,19 @@ $$(p\to r)\land(q\to r) \equiv (\neg p\lor r)\land(\neg q \lor r) \equiv (\neg p
 
 **9.**
 
-$$\neg(p\leftrightarrow q) \equiv (p\land\neg q)\lor(q\land\neg p)$$
 
-$$p \leftrightarrow \neg q \equiv (\neg p \lor \neg q)\land(p\lor q) \equiv (p\land\neg q)\lor(\neg p \land q)$$
 
-Both sides equal — **Equivalent**
+**Step 1:** Let's breakdown $p \leftrightarrow q$.
+
+$$\begin{aligned} p \leftrightarrow q &\equiv (p \rightarrow q) \wedge (q \rightarrow p) \\ &\equiv (\sim p \vee q)(\sim q \vee p) \\ &\equiv (\bar{p} + q)(\bar{q} + p) \\ &\equiv (\bar{p} + q)\bar{q} + (\bar{p} + q)p \\ &\equiv \bar{p}\bar{q} + q\bar{q} + \bar{p}p + pq \\ &\equiv \bar{p}\bar{q} + F + F + pq \quad &&[q\bar{q}: \text{A contradiction}] \\ &\equiv \bar{p}\bar{q} + pq \quad &&[F + A \equiv A] \end{aligned}$$
+
+**Now, applying the negation:**
+
+$$\begin{aligned} \sim(p \leftrightarrow q) &\equiv \overline{(\bar{p}\bar{q} + pq)} \\ &\equiv (p + q)(\bar{p} + \bar{q}) \end{aligned}$$
+
+Let $\bar{q} \equiv s$, $q \equiv \bar{s}$:
+
+$$\begin{aligned} (p + \bar{s})(\bar{p} + s) &\equiv (s \rightarrow p)(p \rightarrow s) \quad &&[A \rightarrow B \equiv \bar{A} + B] \\ &\equiv p \leftrightarrow s \\ &\equiv p \leftrightarrow \sim q \quad &&[s \equiv \sim q] \end{aligned}$$
 
 
 **10.**
