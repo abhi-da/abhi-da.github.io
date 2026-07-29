@@ -72,7 +72,7 @@ order: 9
 # Logic & Boolean Algebra Practice Set
 
 
-## Section A: Logical Equivalence (20 Questions)
+## Section A: Logical Equivalence (17 Questions)
 
 *Use laws such as Distributive, De Morgan's, Absorption, Idempotent, Commutative, Associative, etc.*
 
