@@ -474,67 +474,218 @@ $$(q\land\neg p)\to q \equiv \neg(q\land\neg p)\lor q \equiv (\neg q\lor p)\lor 
 
 ## Section B: Boolean Algebra Simplifications
 
+## Section B: Boolean Algebra Simplifications — Full Steps
 
-| # | Expression | Simplified Result |
+Each problem below shows the complete law-by-law derivation from the original expression down to the simplified result.
 
-|---|---|---|
+---
 
-| 1 | $A + AB$ | $A$ |
+**1. A + AB = A**
 
-| 2 | $A(A+B)$ | $A$ |
+Step 1 — Absorption Law (X + XY ≡ X, directly):
 
-| 3 | $A + A'B$ | $A + B$ |
+= A
 
-| 4 | $A(A'+B)$ | $AB$ |
+---
 
-| 5 | $(A+B)(A+B')$ | $A$ |
+**2. A(A+B) = A**
 
-| 6 | $AB + AB' + A'B$ | $A + B$ |
+Step 1 — Absorption Law (dual form, X(X+Y) ≡ X, directly):
 
-| 7 | $(A+B)' + A'B$ | $A'$ |
+= A
 
-| 8 | $AB + A'C + BC$ | $AB + A'C$ |
+---
 
-| 9 | $(A+B)(A+C)(B+C)$ | $AB + AC + BC$ |
+**3. A + A'B = A + B**
 
-| 10 | $A'B'C + A'BC + AB'C$ | $A'C + B'C$ |
+Step 1 — Distributive Law (factor by treating A + A'B as (A+A')(A+B)):
 
+A + A'B = (A + A')(A + B)
 
-**Key steps for tricky ones:**
+Step 2 — Complement Law (A + A' = 1):
 
-- **#7:** $(A+B)' + A'B = A'B' + A'B = A'(B'+B) = A'$
+= 1 · (A + B)
 
-- **#8:** $BC$ is the *consensus term* of $AB$ and $A'C$ — it's redundant and drops out.
+Step 3 — Identity Law (1 · X = X):
 
-- **#10:** $A'C(B'+B) + AB'C = A'C + AB'C = C(A' + AB') = C(A'+B')$
+= A + B
+
+---
+
+**4. A(A'+B) = AB**
+
+Step 1 — Distributive Law (expand):
+
+A(A'+B) = AA' + AB
+
+Step 2 — Complement Law (AA' = 0):
+
+= 0 + AB
+
+Step 3 — Identity Law (0 + X = X):
+
+= AB
+
+---
+
+**5. (A+B)(A+B') = A**
+
+Step 1 — Distributive Law (reverse form, (X+Y)(X+Z) ≡ X + YZ, here X=A, Y=B, Z=B'):
+
+= A + BB'
+
+Step 2 — Complement Law (BB' = 0):
+
+= A + 0
+
+Step 3 — Identity Law (A + 0 = A):
+
+= A
+
+---
+
+**6. AB + AB' + A'B = A + B**
+
+Step 1 — Distributive Law (factor A out of the first two terms):
+
+AB + AB' = A(B + B')
+
+Step 2 — Complement Law (B + B' = 1):
+
+= A · 1
+
+Step 3 — Identity Law (A · 1 = A):
+
+So far: AB + AB' + A'B = A + A'B
+
+Step 4 — Distributive Law (same trick as Problem 3: A + A'B = (A+A')(A+B)):
+
+= (A + A')(A + B)
+
+Step 5 — Complement Law (A + A' = 1):
+
+= 1 · (A + B)
+
+Step 6 — Identity Law:
+
+= A + B
+
+---
+
+**7. (A+B)' + A'B = A'**
+
+Step 1 — De Morgan's Law ((A+B)' = A'B'):
+
+= A'B' + A'B
+
+Step 2 — Distributive Law (factor out A'):
+
+= A'(B' + B)
+
+Step 3 — Complement Law (B' + B = 1):
+
+= A' · 1
+
+Step 4 — Identity Law (A' · 1 = A'):
+
+= A'
+
+---
+
+**8. AB + A'C + BC = AB + A'C** (Consensus Theorem)
+
+Step 1 — Complement Law (introduce (A+A'), which equals 1, and multiply the redundant term BC by it — changes nothing since X·1 = X):
+
+BC = BC(A + A') = ABC + A'BC
+
+So now: AB + A'C + BC = AB + A'C + ABC + A'BC
+
+Step 2 — Commutative/Associative Law (group ABC with AB, and A'BC with A'C):
+
+= (AB + ABC) + (A'C + A'BC)
+
+Step 3 — Absorption Law (X + XY ≡ X, applied to each group):
+
+AB + ABC = AB
+A'C + A'BC = A'C
+
+Step 4 — Combine:
+
+= AB + A'C
+
+---
+
+**9. (A+B)(A+C)(B+C) = AB + AC + BC** (Dual Consensus Theorem)
+
+Step 1 — Distributive Law (reverse form on the first two brackets, (X+Y)(X+Z) ≡ X+YZ, here X=A, Y=B, Z=C):
+
+(A+B)(A+C) = A + BC
+
+So now: (A+BC)(B+C)
+
+Step 2 — Distributive Law (FOIL-expand this product):
+
+= AB + AC + BCB + BCC
+
+Step 3 — Idempotent Law (BCB = B·B·C = BC, since B·B=B; and BCC = B·C·C = BC, since C·C=C):
+
+= AB + AC + BC + BC
+
+Step 4 — Idempotent Law again (BC + BC = BC):
+
+= AB + AC + BC
+
+---
+
+**10. A'B'C + A'BC + AB'C = A'C + B'C**
+
+Step 1 — Distributive Law (factor A'C out of the first two terms):
+
+A'B'C + A'BC = A'C(B' + B)
+
+Step 2 — Complement Law (B' + B = 1):
+
+= A'C · 1
+
+Step 3 — Identity Law:
+
+= A'C
+
+So now: A'B'C + A'BC + AB'C = A'C + AB'C
+
+Step 4 — Distributive Law (factor C out of both remaining terms):
+
+A'C + AB'C = C(A' + AB')
+
+Step 5 — Distributive Law (same trick as Problem 3, applied with A' in place of A, B' in place of B: A' + AB' = A' + B'):
+
+A' + AB' = (A' + A)(A' + B') = 1 · (A' + B') = A' + B'
+*(Complement Law then Identity Law inside this sub-step)*
+
+Step 6 — Substitute back:
+
+= C(A' + B')
+
+Step 7 — Distributive Law (expand):
+
+= A'C + B'C
+
+---
+
+## Recurring Pattern Worth Noticing
+
+Problems 3, 6, 7, and 10 **all** lean on the same core trick:
+
+**X + X'Y ≡ X + Y**
+
+derived every time via: Distributive (factor as (X+X')(X+Y)) → Complement (X+X'=1) → Identity (1·Z=Z).
+
+Once you recognise this shape on sight, you can skip straight to the answer instead of re-deriving it each time — this is exactly the kind of shortcut worth memorising as a "named" identity alongside the standard laws.
+
+*(End of Full Steps — Section B)*
 
 
 ---
 
 
-## Section C: Truth Table → Statement
 
-
-**1.** Output: T, F, F, T → **$p \leftrightarrow q$**
-
-(True exactly when $p$ and $q$ match)
-
-
-**2.** Output: T, T, F, T → **$q \to p$**
-
-(False only when $p=F, q=T$)
-
-
-**3.** Output: F, T, T, F → **$p \oplus q$** (i.e. $\neg(p\leftrightarrow q)$, or $(p\land\neg q)\lor(\neg p\land q)$)
-
-(True exactly when $p,q$ differ — exclusive OR)
-
-
-**4.** Output: F, F, F, T → **$\neg p \land \neg q$** (equivalently $\neg(p\lor q)$, the NOR)
-
-(True only when both are false)
-
-
-**5.** Output: T,T,T,F,T,F,F,F (for TTT, TTF, TFT, TFF, FTT, FTF, FFT, FFF) → **$(p\land q)\lor(p\land r)\lor(q\land r)$**
-
-(This is the **majority function** — true when at least two of $p, q, r$ are true. Verify e.g. at $TFF$: only $p$ true → majority false ✓; at $FTT$: $q,r$ true → majority true ✓.)
