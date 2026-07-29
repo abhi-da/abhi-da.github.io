@@ -150,95 +150,75 @@ order: 9
 
 ## Section C: Truth Table → Statement (5 Questions)
 
-For each truth table, determine a logical statement (using $p, q$, and connectives $\land, \lor, \neg, \to, \leftrightarrow$) that produces the given output column.
+For each truth table, determine a logical statement (using p, q, and connectives ∧, ∨, ¬, →, ↔) that produces the given output column.
 
+---
 
 **1.**
 
-
 | p | q | Output |
-
 |---|---|--------|
-
 | T | T | T |
-
 | T | F | F |
-
 | F | T | F |
-
 | F | F | T |
 
+
+
+---
 
 **2.**
 
-
 | p | q | Output |
-
 |---|---|--------|
-
 | T | T | T |
-
 | T | F | T |
-
 | F | T | F |
-
 | F | F | T |
 
+
+
+---
 
 **3.**
 
-
 | p | q | Output |
-
 |---|---|--------|
-
 | T | T | F |
-
 | T | F | T |
-
 | F | T | T |
-
 | F | F | F |
 
 
+
+---
+
 **4.**
 
-
 | p | q | Output |
-
 |---|---|--------|
-
 | T | T | F |
-
 | T | F | F |
-
 | F | T | F |
-
 | F | F | T |
 
 
+
+---
+
 **5.**
 
-
 | p | q | r | Output |
-
 |---|---|---|--------|
-
 | T | T | T | T |
-
 | T | T | F | T |
-
 | T | F | T | T |
-
 | T | F | F | F |
-
 | F | T | T | T |
-
 | F | T | F | F |
-
 | F | F | T | F |
-
 | F | F | F | F |
+
 
 
 
