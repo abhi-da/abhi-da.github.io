@@ -69,16 +69,14 @@ order: 8
 </div>
 ---
 
-# Reference Sheet: All Laws Used in Boolean Algebra & Logical Equivalence
-### Abhijeet | Logic — Boolean Algebra | July 28, 2026
+# Reference Sheet: All Laws Used in Logical Equivalence
+
 
 ---
 
-## Why This Sheet Exists
 
-Across all the tautology, contradiction, and equivalence problems we've solved so far, you'll notice the *same* handful of laws showing up again and again, just combined differently. This sheet collects every law used, in **both notations** side by side — Boolean form (+, ·, overline) and standard Logic form (∧, ∨, ¬) — so you have one single place to refer back to instead of hunting through each problem set.
 
-Keep this page open while solving; almost every proof you do will only ever need these laws.
+Across all the tautology, contradiction, and equivalence problems we've solved so far, you'll notice the *same* handful of laws showing up again and again, just combined differently. This sheet collects every law used, in **both notations** side by side — Boolean form (+, ·, overline) and standard Logic form (∧, ∨, ¬).
 
 ---
 
