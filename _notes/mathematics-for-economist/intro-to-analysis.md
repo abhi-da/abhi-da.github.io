@@ -347,10 +347,7 @@ always find a smaller rational that's still an upper bound (squeezing closer to
 $\sqrt{2}$ without ever reaching it) — so condition (ii) can never be satisfied by any
 element of $\mathbb{Q}$.
  
-This is exactly the self-check set from Section 6 — go back and see that it was
-secretly asking you to notice this gap. It shows that **$\sup E$ existing depends on
-which ordered set you're working in.** $\mathbb{Q}$ has "holes"; as you'll see soon,
-$\mathbb{R}$ is built precisely to plug them (this is the least-upper-bound property).
+
  
 ### Example — infimum with a counterexample
  
@@ -373,9 +370,9 @@ Let $E = \{1, 1/2, 1/3, 1/4, \dots\} = \{1/n : n \in \mathbb{N}\} \subset \mathb
 - $\sup E = 1$ here, and this time $1 \in E$ — supremum *can* belong to the set; it
   just doesn't have to.
 ---
-## 8. Definition 1.10 — The Least-Upper-Bound Property
+## 8. Definition  — The Least-Upper-Bound Property
  
-Now we can finally name the property that was lurking behind the $x^2 < 2$ example.
+Now we can finally name the property that was  behind the $x^2 < 2$ example.
  
 > **Definition.** An ordered set $S$ is said to have the **least-upper-bound
 > property** if the following is true: if $E \subset S$, $E$ is not empty, and $E$ is
@@ -392,7 +389,7 @@ from having this property.
  
 ### Counterexample — $\mathbb{Q}$ does NOT have the least-upper-bound property
  
-We already did the hard work for this one in Section 7. Take
+ Take
 $$E = \{x \in \mathbb{Q} : x > 0 \text{ and } x^2 < 2\} \subset \mathbb{Q}.$$
  
 - $E$ is not empty ($1 \in E$).
