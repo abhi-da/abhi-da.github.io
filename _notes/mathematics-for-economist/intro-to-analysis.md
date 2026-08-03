@@ -205,8 +205,8 @@ the definition never required $\beta \in E$.
 
 ## 4. Lower Bound, Bounded Below
 
-The book leaves this one for you to write out ("defined the same way, with $\ge$ in
-place of $\le$"), so here it is stated in full:
+Defined the same way, with $\ge$ in
+place of $\le$:
 
 > **Definition.** Suppose $S$ is an ordered set, and $E \subset S$. If there exists an
 > $\alpha \in S$ such that
