@@ -90,7 +90,7 @@ abstractly, so it can apply to sets that don't look like numbers at all
 
 
 
-## 1. Definition 1.5 — Order
+## 1. Definition — Order
 
 > **Definition.** Let $S$ be a set. An **order** on $S$ is a relation, denoted by $<$,
 > with the following two properties:
