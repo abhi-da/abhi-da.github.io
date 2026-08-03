@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Intro to Analysis"
-date: 2026-07-28
+date: 2026-08-03
 subject: "Mathematics for Economists"
 toc: true
 wide: true
