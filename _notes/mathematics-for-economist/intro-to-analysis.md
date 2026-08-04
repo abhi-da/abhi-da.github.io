@@ -668,12 +668,12 @@ facts hold:
 
 | Property | Statement | Plain-language meaning |
 |---|---|---|
-| (a) | $$|\mathbf{x}| \ge 0$$ | length is never negative |
-| (b) | $$|\mathbf{x}| = 0 \iff \mathbf{x} = \mathbf{0}$$ | only the origin has zero length |
-| (c) | $$|\alpha \mathbf{x}| = |\alpha||\mathbf{x}|$$ | scaling a vector by $$\alpha$$ scales its length by $|\alpha|$ |
-| (d) | $$|\mathbf{x} \cdot \mathbf{y}| \le |\mathbf{x}||\mathbf{y}|$$ | the Cauchy–Schwarz inequality |
-| (e) | $$|\mathbf{x} + \mathbf{y}| \le |\mathbf{x}| + |\mathbf{y}|$$ | the triangle inequality — going "directly" is never longer than going via a detour |
-| (f) | $$|\mathbf{x} - \mathbf{z}| \le |\mathbf{x} - \mathbf{y}| + |\mathbf{y} - \mathbf{z}|$$ | triangle inequality again, phrased as distances between three points |
+| (a) | $|\mathbf{x}| \ge 0$ | length is never negative |
+| (b) | $|\mathbf{x}| = 0 \iff \mathbf{x} = \mathbf{0}$ | only the origin has zero length |
+| (c) | $|\alpha \mathbf{x}| = |\alpha||\mathbf{x}|$ | scaling a vector by $$\alpha$$ scales its length by $|\alpha|$ |
+| (d) | $|\mathbf{x} \cdot \mathbf{y}| \le |\mathbf{x}||\mathbf{y}|$ | the Cauchy–Schwarz inequality |
+| (e) | $|\mathbf{x} + \mathbf{y}| \le |\mathbf{x}| + |\mathbf{y}|$ | the triangle inequality — going "directly" is never longer than going via a detour |
+| (f) | $|\mathbf{x} - \mathbf{z}| \le |\mathbf{x} - \mathbf{y}| + |\mathbf{y} - \mathbf{z}|$ | triangle inequality again, phrased as distances between three points |
 
 These are exactly the properties that make $$|\mathbf{x} - \mathbf{y}|$$ behave like a
 sensible notion of "distance" between two points — this is what eventually lets you
