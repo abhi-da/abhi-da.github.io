@@ -86,8 +86,6 @@ abstractly, so it can apply to sets that don't look like numbers at all
 
 
 
-.
-
 
 
 ## 1. Definition — Order
@@ -148,7 +146,7 @@ This is an order as long as your preferences satisfy the same two conditions:
 
 If your preferences genuinely behave this way, they define an order on $S$ — you can now line up every flavor from least to most preferred, just like $\mathbb{Q}$ can be lined up using $<$.
 
-Let $$S = \{\text{Vanilla, Chocolate, Mango, Strawberry, Butterscotch, Pistachio, Coffee, Mint}\}$$
+Let $S = \{\text{Vanilla, Chocolate, Mango, Strawberry, Butterscotch, Pistachio, Coffee, Mint}\}$
 
 Suppose your personal preferences rank them like this, from least to most liked:
 
@@ -158,7 +156,7 @@ $$\text{Mint} < \text{Coffee} < \text{Pistachio} < \text{Butterscotch} < \text{S
 
 Let's check this really is an order on $S$:
 
-- **Trichotomy:** Take any two flavors, say Mango and Pistachio. Exactly one of these is true: you like Mango less than Pistachio, you like them equally, or you like Pistachio less than Mango. According to the ranking above, Pistachio $<$ Mango — and that's the *only* one of the three that holds. This works for every pair in the list.
+- **Trichotomy(Completeness):** Take any two flavors, say Mango and Pistachio. Exactly one of these is true: you like Mango less than Pistachio, you like them equally, or you like Pistachio less than Mango. According to the ranking above, Pistachio $<$ Mango — and that's the *only* one of the three that holds. This works for every pair in the list.
 
 - **Transitivity:** Say Pistachio $<$ Strawberry and Strawberry $<$ Mango. Transitivity says this forces Pistachio $<$ Mango — and indeed, that's consistent with the ranking above. As long as your taste doesn't loop back on itself (liking Mint more than Chocolate somewhere down the line, say), transitivity holds for the whole set.
 
@@ -451,7 +449,7 @@ Here is every line of the proof, with the definition it's using made explicit.
  
 **"Since $B$ is bounded below, $L$ is not empty."**
  
-$B$ bounded below means (Def 1.7) there exists **at least one** $\alpha_0 \in S$ with
+$B$ bounded below means (By DEfinition) there exists **at least one** $\alpha_0 \in S$ with
 $x \ge \alpha_0$ for every $x \in B$. That $\alpha_0$ is, by definition, a lower bound
 of $B$ — so $\alpha_0 \in L$. One element is enough to make $L$ nonempty.
  
