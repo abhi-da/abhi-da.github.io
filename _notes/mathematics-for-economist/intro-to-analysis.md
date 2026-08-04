@@ -986,7 +986,7 @@ fails both conditions, and $\mathbb{Z}$ is not dense.
 
 ---
 
-## 3. Theorem 2.19 — Every Neighborhood Is an Open Set
+## 3. Theorem  — Every Neighborhood Is an Open Set
 
 > **Theorem.** Consider a neighborhood $E = N_r(p)$, and let $q$ be any point of $E$.
 > Then there's a positive real number $h$ such that $d(p,q) = r - h$.
