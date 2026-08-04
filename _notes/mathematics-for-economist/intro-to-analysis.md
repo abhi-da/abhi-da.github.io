@@ -794,44 +794,43 @@ on it.
 
 ### Example 1 — the usual metric on $\mathbb{R}$
 
-$d(x,y) = |x - y|$.
+$$d(x,y) = |x - y|$$.
 
-- (a) $|x-y| > 0$ whenever $x \ne y$, and $|x-x|=0$. ✓
-- (b) $|x-y| = |y-x|$. ✓
-- (c) $|x-y| \le |x-r| + |r-y|$ — this is just the ordinary triangle inequality for
+- (a) $$|x-y| > 0$ whenever $x \ne y$, and $|x-x|=0$$. ✓
+- (b) $$|x-y| = |y-x|$$. ✓
+- (c) $$|x-y| \le |x-r| + |r-y|$$ — this is just the ordinary triangle inequality for
   absolute value. ✓
 
 ### Example 2 — Euclidean distance on $\mathbb{R}^k$
 
-$d(\mathbf{x}, \mathbf{y}) = |\mathbf{x} - \mathbf{y}|$ (the norm from Section on
-Euclidean spaces). All three properties hold — this is exactly Theorem 1.37(a),(b),(f)
-from earlier.
+$$d(\mathbf{x}, \mathbf{y}) = |\mathbf{x} - \mathbf{y}|$$ (the norm from Section on
+Euclidean spaces). All three properties hold — 
 
 ### Example 3 — the discrete metric (a metric with no numbers in sight)
 
-Let $X$ be **any** set at all (say, $X = \{\text{cat, dog, tree}\}$), and define
+Let $$X$$ be **any** set at all (say, $$X = \{\text{cat, dog, tree}\}$$), and define
 $$d(p,q) = \begin{cases} 0 & p = q \\ 1 & p \ne q \end{cases}$$
 
 Check the axioms:
-- (a) $d(p,q) = 1 > 0$ whenever $p \ne q$; $d(p,p) = 0$. ✓
+- (a) $$d(p,q) = 1 > 0$ whenever $p \ne q$; $d(p,p) = 0$$. ✓
 - (b) Symmetric by construction. ✓
-- (c) Triangle inequality: if $p = q$, LHS is $0$, automatically $\le$ anything
-  nonnegative. If $p \ne q$, LHS is $1$; on the right, at least one of $d(p,r),
-  d(r,q)$ must be $1$ (since $r$ can't equal both $p$ and $q$ unless $p=q$), so RHS
-  $\ge 1$. ✓
+- (c) Triangle inequality: if $$p = q$$, LHS is $$0$$, automatically $$\le$$ anything
+  nonnegative. If $$p \ne q$$, LHS is $$1$$; on the right, at least one of $$d(p,r),
+  d(r,q)$$ must be $$1$$ (since $$r$$ can't equal both $$p$$ and $$q$$ unless $$p=q$$), so RHS
+  $$\ge 1$$. ✓
 
 This shows metrics don't need to come from "distance" in the usual geometric
 sense at all — any set can be turned into a metric space this way. It's a useful
- example precisely *because* it's so unlike $\mathbb{R}^k$.
+ example precisely *because* it's so unlike $$\mathbb{R}^k$$.
 
 ### Counterexample — a function that fails to be a metric
 
-Try $d(x,y) = (x-y)^2$ on $\mathbb{R}$.
+Try $$d(x,y) = (x-y)^2$$ on $$\mathbb{R}$$.
 
 - (a) and (b) hold fine.
-- (c) **fails.** Take $x = 0$, $r = 1$, $y = 2$:
+- (c) **fails.** Take $$x = 0$$, $$r = 1$$, $$y = 2$$:
 $$d(x,y) = (0-2)^2 = 4, \qquad d(x,r) + d(r,y) = (0-1)^2 + (1-2)^2 = 1 + 1 = 2.$$
-Since $4 > 2$, the triangle inequality is violated: $d(x,y) \not\le d(x,r) + d(r,y)$.
+Since $$4 > 2$$, the triangle inequality is violated: $$d(x,y) \not\le d(x,r) + d(r,y)$$.
 So squared difference is **not** a metric — a good reminder that not every
 nonnegative, symmetric function of two points is automatically a legitimate
 distance function.
@@ -842,35 +841,35 @@ distance function.
 
 From here on, fix a metric space $X$; all points and sets below live in $X$. Unless
 stated otherwise, the examples use $X = \mathbb{R}$ with the usual metric
-$d(x,y) = |x-y|$.
+$$d(x,y) = |x-y|$$.
 
 ### (a) Neighborhood
 
-> $N_r(p) = \{q : d(p,q) < r\}$ for some $r > 0$, called the neighborhood of $p$ with
-> radius $r$.
+> $$N_r(p) = \{q : d(p,q) < r\}$ for some $$r > 0$$, called the neighborhood of $p$ with
+> radius $$r$$.
 
-**Example.** In $\mathbb{R}$, $N_{0.5}(3) = \{q : |q - 3| < 0.5\} = (2.5,\ 3.5)$ — an
-open interval centered at $3$.
+**Example.** In $$\mathbb{R}$$, $$N_{0.5}(3) = \{q : |q - 3| < 0.5\} = (2.5,\ 3.5)$$ — an
+open interval centered at $$3$$.
 
-**Counterexample:** is $[2.5, 3.5]$ (the *closed* interval) a neighborhood
-of $3$ under this definition? **No** , the definition uses strict inequality $d(p,q)
-< r$, so a neighborhood is always an *open* ball; a closed interval, taken as a whole
-object, doesn't match the definition of $N_r(p)$ for any $r$.
+**Counterexample:** is $$[2.5, 3.5]$$ (the *closed* interval) a neighborhood
+of $$3$$ under this definition? **No** , the definition uses strict inequality $$d(p,q)
+< r$$, so a neighborhood is always an *open* ball; a closed interval, taken as a whole
+object, doesn't match the definition of $$N_r(p)$ for any $$r$$.
 
 ### (b) Limit point
 
-> $p$ is a limit point of $E$ if **every** neighborhood of $p$ contains some point
-> $q \ne p$ with $q \in E$.
+> $$p$$ is a limit point of $$E$$ if **every** neighborhood of $$p$$ contains some point
+> $$q \ne p$$ with $$q \in E$$.
 
-**Example.** Let $E = (0,1) \subset \mathbb{R}$. The point $0$ is a limit point of
-$E$: take any neighborhood $N_r(0) = (-r, r)$; no matter how small $r>0$ is, it
-contains points of $E$ like $\min(r,1)/2$. Note $0 \notin E$ , a limit point need not
-belong to the set at all. Every point of $(0,1)$ is also a limit point of $E$ (and so
-is $1$).
+**Example.** Let $$E = (0,1) \subset \mathbb{R}$$. The point $0$ is a limit point of
+$E$: take any neighborhood $$N_r(0) = (-r, r)$$; no matter how small $$r>0$$ is, it
+contains points of $E$ like $$\min(r,1)/2$$. Note $$0 \notin E$$ , a limit point need not
+belong to the set at all. Every point of $$(0,1)$$ is also a limit point of $$E$$ (and so
+is $$1$$).
 
-**Counterexample.** Let $E = \{1, 2, 3\} \subset \mathbb{R}$. Is $1$ a limit point of
-$E$? Take $r = 0.5$: $N_{0.5}(1) = (0.5, 1.5)$ contains **no** point of $E$ other than
-$1$ itself (and $1$ doesn't count, the definition requires $q \ne p$). So $1$ is
+**Counterexample.** Let $$E = \{1, 2, 3\} \subset \mathbb{R}$$. Is $$1$$ a limit point of
+$$E$$? Take $$r = 0.5$$: $$N_{0.5}(1) = (0.5, 1.5)$$ contains **no** point of $$E$$ other than
+$$1$$ itself (and $$1$$ doesn't count, the definition requires $$q \ne p$$). So $1$ is
 **not** a limit point of $E$. The same argument works for $2$ and $3$. In fact $E$ has
 **no** limit points at all.
 
