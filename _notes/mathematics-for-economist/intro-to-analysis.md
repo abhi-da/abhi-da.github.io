@@ -646,7 +646,7 @@ distance formula you already know: $|\mathbf{x}| = \sqrt{x_1^2 + x_2^2}$.
 $$|\mathbf{x}| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5.$$
 
 Nothing new here if $k \le 3$ — it's just "length" the way you've always understood
-it. The point of Definition 1.36 is that this same formula keeps making sense for
+it. The point of Definition is that this same formula keeps making sense for
 every $k$, letting you talk about "length" and "distance" in spaces you can't
 visualize.
 
@@ -660,11 +660,8 @@ $\mathbb{R}^k$ by itself is just a set of tuples. Once you equip it with:
 - the **inner product** $\mathbf{x} \cdot \mathbf{y}$ and the **norm** $|\mathbf{x}|$
   built from it,
 
-...the whole package — set + operations + inner product + norm — is called
-**Euclidean $k$-space**. It's the natural generalization of the line, the plane, and
-3D space to any number of dimensions, keeping all the geometric ideas (length,
-distance, angle) intact.
-
+Tthe whole package : set + operations + inner product + norm — is called
+**Euclidean $k$-space**. 
 ---
 
 ## 15. Theorem 
@@ -673,14 +670,14 @@ facts hold:
 
 | Property | Statement | Plain-language meaning |
 |---|---|---|
-| (a) | $|\mathbf{x}| \ge 0$ | length is never negative |
-| (b) | $|\mathbf{x}| = 0 \iff \mathbf{x} = \mathbf{0}$ | only the origin has zero length |
-| (c) | $|\alpha \mathbf{x}| = |\alpha||\mathbf{x}|$ | scaling a vector by $\alpha$ scales its length by $|\alpha|$ |
-| (d) | $|\mathbf{x} \cdot \mathbf{y}| \le |\mathbf{x}||\mathbf{y}|$ | the Cauchy–Schwarz inequality |
-| (e) | $|\mathbf{x} + \mathbf{y}| \le |\mathbf{x}| + |\mathbf{y}|$ | the triangle inequality — going "directly" is never longer than going via a detour |
-| (f) | $|\mathbf{x} - \mathbf{z}| \le |\mathbf{x} - \mathbf{y}| + |\mathbf{y} - \mathbf{z}|$ | triangle inequality again, phrased as distances between three points |
+| (a) | $$|\mathbf{x}| \ge 0$$ | length is never negative |
+| (b) | $$|\mathbf{x}| = 0 \iff \mathbf{x} = \mathbf{0}$$ | only the origin has zero length |
+| (c) | $$|\alpha \mathbf{x}| = |\alpha||\mathbf{x}|$$ | scaling a vector by $$\alpha$$ scales its length by $|\alpha|$ |
+| (d) | $$|\mathbf{x} \cdot \mathbf{y}| \le |\mathbf{x}||\mathbf{y}|$$ | the Cauchy–Schwarz inequality |
+| (e) | $$|\mathbf{x} + \mathbf{y}| \le |\mathbf{x}| + |\mathbf{y}|$$ | the triangle inequality — going "directly" is never longer than going via a detour |
+| (f) | $$|\mathbf{x} - \mathbf{z}| \le |\mathbf{x} - \mathbf{y}| + |\mathbf{y} - \mathbf{z}|$$ | triangle inequality again, phrased as distances between three points |
 
-These are exactly the properties that make $|\mathbf{x} - \mathbf{y}|$ behave like a
+These are exactly the properties that make $$|\mathbf{x} - \mathbf{y}|$$ behave like a
 sensible notion of "distance" between two points — this is what eventually lets you
 define open sets, limits, and continuity in $\mathbb{R}^k$, all using the same
 machinery you'll soon see for metric spaces in general.
