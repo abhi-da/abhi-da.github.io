@@ -226,7 +226,7 @@ $$t\uparrow \Rightarrow y_2\uparrow$$
 
 This traces out a curved trajectory (A → B → C → D) that rises, peaks near the $\dot{y_2}=0$ nullcline, and then declines — consistent with the vector-field arrows in each quadrant of the phase diagram.
 
-![Phase Diagram]({{ '/assets/images/phase-diagrams/2.jpeg' | relative_url }})
+![Phase Diagram]({{ '/assets/images/phase-diagrams/4.jpeg' | relative_url }})
 
 > **Note:** The curved arrows and the A→B→C→D path above are only meant to *illustrate how a phase diagram is read* — they are not a literal plot of the actual solution $(y_1(t), y_2(t))$.
 >
