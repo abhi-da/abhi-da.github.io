@@ -132,7 +132,7 @@ $$y = 2 + Ce^{-x^3}$$
 
 ## Part 2: Phase Diagrams
 
-### Introduction (Mar 11)
+### Introduction 
 > Reading or drawing a phase diagram is really no easy [sic — "not"] Rocket Science. Suppose we're given 2 simple ODEs:
 
 $$\dot{y_1} = \frac{dy_1}{dt} = 0.06y_1(t) - y_2(t) + 1.4$$
@@ -149,7 +149,7 @@ $$\dot{y_2} = \frac{dy_2}{dt} = -0.004y_1(t) + 0.04$$
 
 ![Plot Axes]({{ '/assets/images/phase-diagrams/1.jpeg' | relative_url }})
 
-### Plotting the Nullclines (Mar 13)
+### Plotting the Nullclines 
 > Then, we draw $\dot{y_1}=0$ and $\dot{y_2}=0$.
 
 - Line $\dot{y_2}=0$: $y_2 = 0.06y_1(t) + 1.4$ (upward sloping line, intercept 1.4)
@@ -200,7 +200,7 @@ $$\dot{y_2} < 0$$
 - **Quadrant 3:** $\dot{y_1} < 0,\ \dot{y_2} < 0$
 - **Quadrant 4:** $\dot{y_1} < 0,\ \dot{y_2} > 0$
 
-### Direction Arrows (Mar 18)
+### Direction Arrows
 > Now, let's see how would $y_1$ & $y_2$ move given any initial point.
 
 Arrows are drawn in each quadrant showing the direction of motion implied by the signs of $\dot{y_1}, \dot{y_2}$ (e.g., Quadrant ① → up-right, Quadrant ③ → down-left, etc.), consistent with the sign table above.
