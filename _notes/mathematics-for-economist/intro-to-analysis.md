@@ -257,7 +257,7 @@ $$F = \{x \in \mathbb{R} : x > 0\} \quad \text{(all positive reals)}.$$
 $F$ is bounded below (e.g. by $\alpha = 0$), but **not bounded above** — no real
 number $\beta$ can satisfy $x \le \beta$ for every positive $x$, since $\beta + 1$ is
 always a bigger positive number. This is the kind of set where "bounded above" fails
-in a very concrete, checkable way.
+.
 
 ---
 ## 7. Definition - Supremum and Infimum
@@ -453,9 +453,7 @@ $B$ bounded below means (By DEfinition) there exists **at least one** $\alpha_0 
 $x \ge \alpha_0$ for every $x \in B$. That $\alpha_0$ is, by definition, a lower bound
 of $B$ — so $\alpha_0 \in L$. One element is enough to make $L$ nonempty.
  
-*If this failed:* if $B$ weren't bounded below, $L$ could be empty, and "sup of the
-empty set" isn't something Definition 1.8 lets you talk about — the whole argument
-would collapse at step one.
+
  
 ---
  
@@ -467,7 +465,7 @@ $$y \in L \iff y \le x \text{ for every } x \in B. \tag{$\ast$}$$
  
 Now fix any *one* particular $x_0 \in B$, and look at ($\ast$) from $x_0$'s point of
 view: every $y \in L$ satisfies $y \le x_0$. But "every element of a set is $\le$ some
-fixed value" is *exactly* Definition 1.7's condition for that fixed value to be an
+fixed value" is *exactly* the condition for that fixed value to be an
 **upper bound** of the set. Here the set is $L$, and the fixed value is $x_0$. So
 $x_0$ is an upper bound of $L$. Since $x_0 \in B$ was arbitrary, **every** $x \in B$ is
 an upper bound of $L$.
@@ -477,7 +475,7 @@ an upper bound of $L$.
 **"Thus $L$ is bounded above."**
  
 We just found at least one upper bound of $L$ (any $x \in B$ works, and $B \ne
-\emptyset$), so by Definition 1.7, $L$ is bounded above.
+\emptyset$), so by Definition , $L$ is bounded above.
  
 **"Our hypothesis about $S$ implies therefore that $L$ has a supremum in $S$; call it
 $\alpha$."**
@@ -1014,4 +1012,4 @@ $$$h$ is exactly "how much room is left" between $$q$$ and the edge of $$E$$. Si
 E = N_r(p)$$, we know $$d(p,q) < r$$, so $$h = r - d(p,q) > 0$$ , that's *why* such an $h$
 exists at all. The triangle inequality then guarantees that shrinking the radius
 around $$q$$ down to $$h$$ keeps you safely inside the original ball around $$p$$, no
-matter which point $$s$$ you pick within that smaller radius.
+matter which point $$s$ you pick within that smaller radius.
