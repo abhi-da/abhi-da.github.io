@@ -1,11 +1,11 @@
 ---
 layout: single
-title: "Intro to Analysis"
+title: "Some concept used in Microeconomic - Simplified"
 date: 2026-08-03
 subject: "Mathematics for Economists"
 toc: true
 wide: true
-order: 11
+order: 12
 ---
 <style>
   /* Override theme container limits for screen view */
