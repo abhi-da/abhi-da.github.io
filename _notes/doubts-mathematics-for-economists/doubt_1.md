@@ -264,7 +264,7 @@ This is precisely why our proof splits into two distinct cases:
 #### Case II: $$M_X^*$$ is an upper bound, but not the supremum
 
 * If $$M_X^*$$ is an upper bound but not the supremum, there exists another upper bound $$M_X^{**}$$ such that $$M_X^{**} < M_X^*$$.
-* Let us choose $$\varepsilon = M_X^* - M_X^{**}$$. Since $$M_X^{**}} < M_X^*$$, it follows that $$\varepsilon > 0$$.
+* Let us choose $$\varepsilon = M_X^* - M_X^{**}$$. Since $$M_X^{**} < M_X^{*}$$, it follows that $$\varepsilon > 0$$.
 * Because $$M_X^{**}$$ is an upper bound, every element $$x' \in X$$ satisfies:
 
 $$x' \le M_X^{**} = M_X^* - \varepsilon < M_X^*$$
