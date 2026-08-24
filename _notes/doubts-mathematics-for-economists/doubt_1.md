@@ -223,5 +223,57 @@ Therefore, no upper bound can be strictly less than $$M_X^*$$, proving that $$M_
 Thus, $$M_X^* = \sup X$$.  We proved $$B \implies A$$.
 
 
+### Part 2: Proving $$B \implies A$$ ("If") [By Contrapositive]
+
+
+
+Instead of a direct proof, we use **contraposition**:
+
+
+$$\sim A \implies \sim B$$
+
+Where **Statement $$A$$** is $$M_X^* = \sup X$$, and **Statement $$B$$** is the conjunction of conditions (1) and (2):
+
+1. $$M_X^*$$is an upper bound of $$X$$.
+2. $$\forall \varepsilon > 0, \exists x' \in X$$, $$M_X^* - \varepsilon < x' \le M_X^*$$.
+
+By De Morgan's Laws, the negation ($$\sim B$$) is an **"OR"** statement:
+
+1. $$M_X^*$$ is **not** an upper bound of $$X$$, **OR**
+2. $$\exists \varepsilon > 0, \forall x' \in X$, $x' \le M_X^* - \varepsilon$$.
+
+We assume $$\sim A$$ ($$M_X^* \neq \sup X$$) and show that it forces $$\sim B$$ to be true by two distinct cases.
+
+
+To be a supremum ($$\alpha = \sup X$$), a number must satisfy an **AND** condition: it must be an upper bound ($$\alpha$$ is an upper bound of $$X$$) $$\land$$ it must be the least upper bound ($$\forall \gamma < \alpha$$, $$\gamma$$ is not an upper bound of $$X$$). Both conditions have to simultaneously hold true.[**From the definition of supremum**]
+
+Therefore, when we want to prove something is not the supremum ($$\sim A$$ or $$M_X^* \neq \sup X$$), we are saying that the definition of supremum has failed. Because it required both things to be true together, failing to be a supremum means at least one of those conditions broke down. That brings us right back to De Morgan's Law:
+
+If the "AND" definition fails $$\sim (P \land Q)$$, it means $$\sim P \lor \sim Q$$ ([Condition 1 failed] $$\lor$$ [Condition 2 failed]).
+
+This is precisely why our proof splits into two distinct cases:
+
+* **Case I:** It failed because it's not even an upper bound to begin with ($$\sim P$$).
+* **Case II:** It failed because, even though it is an upper bound ($$P$$), it's not the least one (meaning $$\sim Q$$).
+
+#### Case I: $$M_X^*$$ is not an upper bound of $$X$$
+
+* If $$M_X^*$$ is not an upper bound of $$X$$, then condition (1) of statement $$B$$ is directly violated.
+* Since part (1) of the "OR" statement for $$\sim B$$ is satisfied, $$\sim B$$ holds true.
+
+#### Case II: $$M_X^*$$ is an upper bound, but not the supremum
+
+* If $$M_X^*$$ is an upper bound but not the supremum, there exists another upper bound $$M_X^{**}$$ such that $$M_X^{**} < M_X^*$$.
+* Let us choose $$\varepsilon = M_X^* - M_X^{**}$$. Since $$M_X^{**}} < M_X^*$$, it follows that $$\varepsilon > 0$$.
+* Because $$M_X^{**}$$ is an upper bound, every element $$x' \in X$$ satisfies:
+
+$$x' \le M_X^{**} = M_X^* - \varepsilon < M_X^*$$
+
+
+* This means there exists an $$\varepsilon > 0$$ for which **no** element in $$X$$ can satisfy $$M_X^* - \varepsilon < x'$$, directly violating condition (2) of statement $$B$$. 
+* So part (2) of the "OR" statement for $$\sim B$$ is satisfied (Cause part 2 of B is not satisfied, $$\sim B$$ holds true.
+
+In all cases, $$\sim A \implies \sim B$$. Therefore, by contraposition, $$B \implies A$$, establishing that $$M_X^* = \sup X$$.
+
 
 
