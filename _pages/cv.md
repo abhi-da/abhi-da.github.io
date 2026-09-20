@@ -52,7 +52,7 @@ St. Xavier's College, Ranchi University
 ## Working Papers
 
 - **Pricing, Technology, and Enforcement in Markets with Digital Piracy: A Hotelling Approach** *(with Prabhat Sahu)*  
-  Target journal: *International Journal of Industrial Organization*
+ 
 
 
 ---
@@ -78,7 +78,7 @@ Currently none.
 
 ## Teaching
 
-Served as Teaching Assistant for the course Mathematics for Economist, Microeconomics II and Macroeconomics I
+Served as Teaching Assistant for the course Mathematics for Economist, Microeconomics II and Macroeconomics I at IGIDR
 
 ---
 
