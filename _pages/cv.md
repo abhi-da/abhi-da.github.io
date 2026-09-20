@@ -65,8 +65,7 @@ Currently none.
 
 ## Conference Presentations
 
-- **Competitive Altruism in Public Goods Provision**  
-  ICEPAD 2026, BITS Pilani Goa Campus.
+
 
 - **Pricing, Technology, and Enforcement in Markets with Digital Piracy: A Hotelling Approach**  
   Crossroads 2026, CDS, Trivandrum.

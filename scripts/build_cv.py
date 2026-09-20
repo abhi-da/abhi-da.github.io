@@ -89,7 +89,7 @@ def split_sections(body: str):
 
 
 EDUCATION_ENTRY_RE = re.compile(
-    r"\*\*(?P<degree>.+?)\*\*\s*<span class=\"cv-year\">(?P<years>.+?)</span>\s*\n"
+    r"\*\*(?P<degree>.+?)\*\*\s*<span class=\"cv-year\">(?P<years>.+?)</span>\s*\n?"
     r"(?P<inst>[^\n]+?)\s*(?:\n\*Advisor:\*\s*(?P<advisor>[^\n]+))?"
     r"(?=\n\*\*|\Z)",
     re.MULTILINE,
@@ -112,18 +112,18 @@ def parse_education(text: str):
 
 def parse_bullets(text: str):
     """Parse a '- item\n  continuation' style bulleted list, joining wrapped
-    continuation lines into each item."""
+    continuation lines into each item, filtering out empty entries."""
     items = []
     current = None
     for line in text.splitlines():
-        if line.startswith("- "):
-            if current:
-                items.append(current)
-            current = line[2:].strip()
+        if line.strip().startswith("- "):
+            if current and current.strip():
+                items.append(current.strip())
+            current = line.strip()[2:].strip()
         elif line.strip() and current is not None:
             current += " " + line.strip()
-    if current:
-        items.append(current)
+    if current and current.strip():
+        items.append(current.strip())
     return items
 
 
@@ -140,12 +140,17 @@ def parse_label_value_bullets(text: str):
 def classify_and_parse(heading: str, text: str) -> dict:
     """Auto-detect the shape of a section's markdown and parse it accordingly.
     This is what lets new sections in cv.md 'just work' with no code changes:
-      - degree/year entries        -> type 'education'
+      - degree/year entries         -> type 'education'
       - '- **Label:** value' lines -> type 'labelvalue'
       - any other '- ' bullet list -> type 'bullets'
       - otherwise                  -> type 'prose'
     """
-    if not text.strip():
+    cleaned_text = text.strip()
+    if not cleaned_text:
+        return {"heading": heading, "type": "prose", "prose": ""}
+
+    # Filter out empty or placeholder text like "Currently none."
+    if cleaned_text.lower() in ("currently none.", "none"):
         return {"heading": heading, "type": "prose", "prose": ""}
 
     if EDUCATION_ENTRY_RE.search(text):
@@ -155,10 +160,15 @@ def classify_and_parse(heading: str, text: str) -> dict:
     if bullet_lines:
         if all(SKILLS_LINE_RE.match(l.strip()) for l in bullet_lines):
             return {"heading": heading, "type": "labelvalue", "pairs": parse_label_value_bullets(text)}
+        
+        parsed_items = parse_bullets(text)
+        if not parsed_items:
+            return {"heading": heading, "type": "prose", "prose": ""}
+            
         return {"heading": heading, "type": "bullets",
-                "bullet_items": [md_inline_to_tex(i) for i in parse_bullets(text)]}
+                "bullet_items": [md_inline_to_tex(i) for i in parsed_items]}
 
-    return {"heading": heading, "type": "prose", "prose": md_inline_to_tex(text.strip())}
+    return {"heading": heading, "type": "prose", "prose": md_inline_to_tex(cleaned_text)}
 
 
 def main():
