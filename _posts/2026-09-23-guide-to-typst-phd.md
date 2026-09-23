@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Guide to Typst - PhD (Generated using AI)"
-date: 2026-23-09
+date: 2026-09-23
 category: "Guide"
 subcategory: "PhD"
 tags: [PhD, Guide]
