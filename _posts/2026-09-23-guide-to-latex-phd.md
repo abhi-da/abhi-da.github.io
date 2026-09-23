@@ -11,7 +11,7 @@ classes: wide
 # LaTeX for Economics Research: A Practical Guide
 ### For PhD Students Working in Network Economics, Industrial Organization, Game Theory & Digital Piracy
 
-This guide is meant to be plundered for snippets. Every example uses real economic notation and terminology (network externalities, Cournot competition, piracy deterrence, regression tables with fixed effects) instead of generic `foo`/`bar` placeholders, so the code is copy-paste-ready for actual papers, problem sets, and job market presentations. The package choices reflect general best practice across economics PhD programs rather than any single department's house style — if your program or target journal supplies its own class/style file, defer to that over the generic settings shown here.
+This guide is meant to be plundered for snippets. Every example uses real economic notation and terminology instead of generic `foo`/`bar` placeholders, so the code is copy-paste-ready for actual papers, problem sets, and job market presentations. The package choices reflect general best practice across economics PhD programs rather than any single department's house style — if your program or target journal supplies its own class/style file, defer to that over the generic settings shown here.
 
 > **Using Overleaf?** Everything below works unchanged, since Overleaf runs a full, current TeX Live distribution — every package mentioned in this guide (`booktabs`, `natbib`, `siunitx`, Beamer themes, etc.) is already installed, so there's nothing to download or configure locally. The two places where Overleaf changes your workflow rather than your code are: (1) you never type compile commands yourself — Overleaf recompiles automatically as you type (or on clicking "Recompile"), and (2) the underlying compiler and bibliography tool are picked from menus rather than flags. Both are called out inline wherever they come up (Section 5.1 on bibliographies, and the boilerplate uploads in Sections 4 and 6).
 
@@ -25,6 +25,7 @@ This guide is meant to be plundered for snippets. Every example uses real econom
 4. [Figures & Graphics](#4-figures--graphics)
 5. [References & Bibliography](#5-references--bibliography)
 6. [Presentations (Beamer)](#6-presentations-beamer)
+7. [Useful Online Tools](#7-useful-online-tools)
 
 ---
 
@@ -659,6 +660,79 @@ For `metropolis`, install via your TeX distribution's package manager and use:
 ### 6.5 Title Page Fields
 
 The title page is generated automatically from preamble metadata via `\frame{\titlepage}` (or `\maketitle` inside a frame) — see the boilerplate above for the full set of `\title`, `\subtitle`, `\author`, `\institute`, `\date` fields.
+
+---
+
+## 7. Useful Online Tools
+
+A handful of browser-based tools are worth keeping bookmarked — they save real time on the fiddly, non-theoretical parts of writing a paper (retyping a table from a scanned source, tracking down a symbol's command name, drawing a diagram) without needing anything installed locally.
+
+| Tool | What It Does | Link |
+|---|---|---|
+| SimpleTex | Converts a photo or screenshot of printed or handwritten math into LaTeX source — point it at an equation in a PDF, a textbook, or a phone photo of a whiteboard and it returns the corresponding `\[ ... \]` code | `https://simpletex.cn/` |
+| Tables Generator | A spreadsheet-style visual editor for building LaTeX tables — paste data in from Excel/CSV or type directly into the grid, and it exports `booktabs`-ready `tabular` code | `https://www.tablesgenerator.com/` |
+| TikZ Editor | A live, in-browser editor for TikZ diagrams (network graphs, game trees, causal diagrams) with instant rendering, useful for prototyping a diagram before pasting the final `tikzpicture` code into your paper | `https://tikz.dev/editor/` |
+| LaTeX-OCR (pix2tex) | Converts an image of a single mathematical expression into LaTeX code; the same tool also has a "draw" mode for sketching an individual unfamiliar symbol to get its LaTeX command name, and can be pointed at a photo of a page of handwritten notes to extract the math into LaTeX | `https://lukas-blecher.github.io/LaTeX-OCR/` |
+
+> **Note on LaTeX-OCR:** all three math-recognition uses above (expression-from-image, symbol-from-drawing, and notes-from-photo) point to the same tool — it handles all three from the one interface, so there's no need to bookmark separate pages for each. For a dedicated symbol-lookup tool with a larger hand-drawn symbol database, `Detexify` (`https://detexify.kirelabs.org/classify.html`) is a common alternative worth having alongside it.
+
+None of these replace understanding the underlying LaTeX — treat their output as a first draft to check and clean up (especially OCR'd tables and equations, which can silently misread a subscript or a decimal point) rather than something to paste in and forget.
+
+### 7.1 SimpleTex — Image-to-LaTeX Conversion
+
+**Workflow:**
+
+1. Upload an image (drag-and-drop, paste from clipboard, or a file picker) containing one or more equations — a screenshot of a PDF, a scanned textbook page, or a phone photo.
+2. SimpleTex detects each equation region automatically and runs recognition on it; a live preview renders the recognized math next to the source image so you can visually check it against the original before trusting it.
+3. Click a recognized equation to get its LaTeX in a few interchangeable forms — inline (`$...$`), display (`\[...\]`), and sometimes `align`-ready — plus a one-click **Copy** button. There's no command syntax to learn on the tool's own interface; you're copying finished LaTeX, not typing anything.
+4. Paste the copied code directly into your `.tex` source inside whichever math environment you're using (Section 2.2–2.3 above).
+
+**What to double-check:** OCR on math is good but not perfect on dense subscripts, nested fractions, or unusual operators (e.g., a piracy-deterrence hazard function with several nested sums) — always compile and visually compare the rendered output against the source image rather than assuming a one-shot correct transcription, especially for anything going into a `\label{}`led equation you'll cite later.
+
+### 7.2 Tables Generator — Visual Table Builder
+
+**Workflow:**
+
+1. Choose "LaTeX Tables" from the tool's format menu (it also supports Markdown, HTML, and other outputs — make sure LaTeX is selected before you start, since switching later can reset formatting).
+2. Build the table two ways: either type directly into the spreadsheet-style grid (right-click a cell for **Insert row/column**, **Merge cells**, etc.), or paste data copied from Excel/Google Sheets/a CSV, which auto-populates the grid.
+3. Use the toolbar to set borders and alignment. For an economics-journal look, turn OFF vertical borders and keep only the outer top/bottom borders plus one line under the header row — this mirrors the `booktabs` `\toprule`/`\midrule`/`\bottomrule` convention from Section 3.1, though the raw export uses plain `\hline` rather than `booktabs` commands.
+4. Click **Generate** (or the LaTeX tab, depending on the tool's current layout) to get the `\begin{tabular}{...}...\end{tabular}` code, then **Copy to clipboard**.
+5. Paste the output into your document and manually swap `\hline` for `\toprule`/`\midrule`/`\bottomrule` (Section 3.2) if you want true `booktabs` styling — the generator's raw export doesn't call `booktabs` on its own, so this one substitution is worth doing by hand every time.
+
+**What to double-check:** the generator infers a column-alignment string (e.g., `{lccc}`) from your grid, but for a regression table with decimal-aligned coefficients you'll still want to swap the relevant columns to `d{3.3}` or `S` (Section 3.3) after pasting — the tool has no concept of `dcolumn`/`siunitx` decimal alignment.
+
+### 7.3 TikZ Editor — Live Diagram Prototyping
+
+**Workflow:**
+
+1. The editor opens with an empty `document.tex`-style pane on one side and a rendered preview on the other. Write ordinary TikZ commands directly inside the implicit `tikzpicture` environment — e.g. `\node[circle, draw] (A) at (0,0) {$i$};` for a node representing player/firm $i$, or `\draw[->] (A) -- (B);` for a directed link in a network diagram.
+2. The preview recompiles automatically (or via a **Compile**/**Run** button, depending on the editor) as you type, so you can iterate on node placement and edge routing interactively rather than recompiling your whole paper on every tweak.
+3. Common commands worth knowing going in, since the editor assumes TikZ syntax rather than teaching it: `\node` (places a labelled point or shape), `\draw` (draws a line/arrow/curve between coordinates or named nodes), `\foreach` (loops, useful for generating a ring of $n$ players in a network diagram without typing each node by hand), and the `->`/`<->` arrow-tip options inside `\draw[...]` for directed vs. undirected links.
+4. Once the diagram looks right, copy the full code block and paste it into your paper inside `\begin{figure}...\end{figure}` (Section 4.1), preceded by `\usepackage{tikz}` in your preamble.
+
+**What to double-check:** the editor's default preamble/packages may differ slightly from your paper's — if you used a TikZ library in the editor (e.g. `\usetikzlibrary{arrows.meta, positioning}` for the positioning shorthand `right=of A`), remember to add the matching `\usetikzlibrary{...}` line to your actual document preamble, or the pasted code won't compile there.
+
+### 7.4 LaTeX-OCR (pix2tex) — Expressions, Symbols, and Notes
+
+**Workflow (image-to-LaTeX):**
+
+1. Upload or paste an image containing a single mathematical expression (crop tightly around just the equation for best accuracy — including surrounding text or multiple equations in one image degrades recognition).
+2. The model returns LaTeX source in a text box, with a rendered preview above it so you can visually confirm the match before copying.
+3. Copy the code and paste it into your `.tex` source inside the appropriate math delimiters (`$...$` or `\[...\]`, Section 2.2).
+
+**Workflow (draw-a-symbol mode):**
+
+1. Switch to the tool's drawing/sketch pad (a blank canvas you draw on with mouse or trackpad).
+2. Sketch the unfamiliar symbol as closely as you can to how it appears in print — e.g. a preference-ordering symbol like $\succsim$ that you can't otherwise search for by name.
+3. The tool returns the closest-matching LaTeX command (e.g. `\succsim`) which you then add to your document, typically as one of the `amssymb` relation symbols from Section 2.1.
+
+**Workflow (handwritten notes):**
+
+1. Photograph or scan a page of handwritten derivations.
+2. Upload the full page; the tool segments and recognizes each equation region much like SimpleTex does (Section 7.1).
+3. Review each recognized line against your handwriting before pasting — handwritten OCR has a meaningfully higher error rate than printed-text OCR, especially for ambiguous handwriting (a hastily written $\gamma$ vs. $\chi$, or a subscript that could be $i$ or $j$).
+
+**What to double-check:** across all three modes, treat the output as a suggestion rather than ground truth — re-derive or at least sanity-check any recognized equation against your own notes before it goes into a paper, since a silently misread sign or exponent in, say, the Cournot best-response derivation (Section 2.3) can propagate through several downstream results before anyone notices.
 
 ---
 
