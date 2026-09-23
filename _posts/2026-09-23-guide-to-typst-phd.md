@@ -8,9 +8,9 @@ tags: [PhD, Guide]
 classes: wide
 ---
 # Typst for Economics Research: A Practical Guide
-### For PhD Students Working in Network Economics, Industrial Organization, Game Theory & Digital Piracy
 
-This guide is meant to be plundered for snippets. Every example uses real economic notation and terminology (network externalities, Cournot competition, piracy deterrence, regression tables with fixed effects) instead of generic placeholders, so the code is copy-paste-ready for actual papers, problem sets, and job market presentations. The package choices reflect general best practice across the (still young, fast-moving) Typst ecosystem rather than any single department's house style — if your program or target journal only accepts LaTeX/Word submissions, you'll still need to export to PDF at the end, which Typst does natively.
+
+This guide is meant to be plundered for snippets. Every example uses real economic notation and terminology instead of generic placeholders, so the code is copy-paste-ready for actual papers, problem sets, and job market presentations. The package choices reflect general best practice across the (still young, fast-moving) Typst ecosystem rather than any single department's house style — if your program or target journal only accepts LaTeX/Word submissions, you'll still need to export to PDF at the end, which Typst does natively.
 
 > **Using the Typst web app?** Everything below works unchanged: at `typst.app` you get a full, current Typst install with the entire package universe (`ctheorems`, `touying`, `cetz`, etc.) available via `#import "@preview/..."` with nothing to download or configure locally. The two places where the web app changes your workflow rather than your code are: (1) you never type compile commands yourself — the web app recompiles as you type, with a live preview pane, and (2) packages are fetched automatically the first time you import them rather than installed via a package manager. Both are called out inline wherever they come up (Section 5 on bibliographies, and the boilerplate in Sections 4 and 6). If you compile locally instead, install the `typst` CLI (current stable is 0.15.x) and packages are cached automatically on first `#import` too — there's no separate package-manager step even offline.
 
